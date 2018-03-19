@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" hola_ext_inject="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Higgs Electroweak Calibration</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="./projects/bootstrap.min.css">
+  <link rel="stylesheet" href="./projects/bootstrap-theme.min.css">
+
+  <!--math notation-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <style type="text/css"></style>
+  <link href="./projects/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="header">
+  <a href="http://vision.stanford.edu/">
+    <img src="./projects/cern/cernlogo.png" style="height:100px; float: left; margin-left: 20px;">
+  </a>
+  <a href="http://stanford.edu/">
+    <img src="./projects/cern/umichlogo.png" style="height:100px; float: right; margin-right: 20px;">
+  </a>
+  <h1><b>Higgs Electroweak Calibration</b>: A Research Semester at CERN</h1>
+  <div style="clear:both;"></div>
+</div>
+
+<div class="sechighlight">
+  <div class="container sec">
+    <h2>Summary</h2>
+
+    <div id="coursedesc">
+  Electroweak Calibration of the Higgs Characterization Model (my CERN research project). Particle physicists use a theory called the Standard Model to predict physics in the Large Hadron Collider. I used two Monte Carlo physics simulators to see what happens to numerical models of Higgs physics when we leave out the electroweak force.
+    </div>
+  </div>
+</div>
+
+<div class="maintext">
+    <h3> Background </h3>
+    <p>
+        How does the Higgs boson discovered at the Large Hadron Collider in 2012 resemble the scalar particle predicted by the Standard Model? We used a model-independent Effective Field Theory (EFT) approach to search for interesting deviations from Standard Model physics.
+    </p>
+    <p>
+        We focused our efforts on the HZ Higgs production mode known as Higgs radiation. When two protons collide in the Large Hadron Collider, energized gluons emit a high-energy Z boson which then radiates a Higgs boson before decaying into two muons.
+    </p>
+    <center>
+        <img src="./projects/cern/higgs_radiation_cropped.png" width="300" alt="higgs_radiation" style="max-width:60%;">
+        <br>
+        <p class="picture_summary">
+            The leading order Feynman diagram for Higgs radiation
+        </p>
+    </center>
+    <p>
+        We wanted to learn how electroweak corrections affected EFT estimates. More concretely, we sought to calibrate a popular EFT model, the Higgs Characterization (HC) Model, for electroweak contributions using simulated Higgs observabless.
+    </p>
+
+    <h3> How it works </h3>
+    <p>
+        The Higgs Characterization Model:
+        <ul>
+            <li>Uses Effective Field Theory</li>
+            <li>Assumes only Standard Model fields and symmetries</li>
+            <li>Can be used to search for new physics above the electroweak scale</li>
+        </ul>
+    </p>
+    <center>
+        <img src="./projects/cern/hc_lagrangian.png" width="400" alt="hc_lagrangian" style="max-width:60%;">
+        <br>
+        <p class="picture_summary">
+            The Higgs Characterization Lagrangian (<a target="_blank" href="http://feynrules.irmp.ucl.ac.be/wiki/HiggsCharacterisation">FeynRules</a>)
+        </p>
+    </center>
+    <p>
+        In this study, we ignored CP-odd terms (concretely, we set \(c_{\alpha}=1\) and \(s_{\alpha}=0\)). We added \(\pm \epsilon\) to scale factors \( \kappa_{H \gamma \gamma}\), \(\kappa_{H Z \gamma}\), \(\kappa_{H Z Z}\), and \( \kappa_{H \partial W}\) (where \(\epsilon\) was a small constant).
+    </p>
+    <p>
+        First we used HAWK to calculate SM Higgs observables to next-to-leading-order (NLO) accuracy with quantum chromodynamic (QCD) and electroweak (EWK) contributions. The drawback of HAWK is that it only works in the SM domain; it cannot calculate BSM physics.
+    </p>
+    <center>
+        <img src="./projects/cern/sm.png" width="400" alt="sm_template" style="max-width:70%;">
+        <br>
+        <p class="picture_summary">
+            Histogram of an observable of Higgs radiation, \(M_{Z \mu \mu}\), calculated to next-to-leading order accuracy for both QCD and EWK
+        </p>
+    </center>
+    <p>
+        Next, we evaluated SM and eight BSM variants of the process to NLO accuracy just in QCD using the Higgs Characterization Model in MadGraph.
+    </p>
+    <center>
+        <img src="./projects/cern/templates.png" width="800" alt="templates" style="max-width:100%;">
+        <br>
+        <p class="picture_summary">
+            BSM deformations (left to right) in \(\kappa_{H Z \gamma}\), \(\kappa_{H Z Z}\), \( \kappa_{H \partial W}\), and \( \kappa_{H \gamma \gamma}\)
+        </p>
+    </center>
+    <p>
+        To compare the two, we used the <a target="_blank" href="https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit">Higgs Combine</a> library to fit the Higgs Characterization Model results to their corresponding HAWK results. By treating the HAWK model as ‘observed data’ we were able to understand how and when electroweak forces resemble BSM couplings in the Higgs Characterization Model.
+    </p>
+    <p>
+        As luminosity increases, relative uncertainty in Large Hadron Collider data decreases. We increased the luminosity of our simulated data until the electroweak corrections became significant enough to resemble BSM physics. Our results enabled us to estimate the luminosities at which CERN will need to use electroweak corrections when exploring BSM physics.
+    </p>
+
+    <h3> Discussion </h3>
+    <p>
+        Our preliminary results indicate that electroweak corrections are not significant until luminosities on the order of 3,000 fb\(^{-1}\). The Large Hadron Collider will be operating at ~100 fb\(^{-1}\) in the next year; we probably will not achieve 3,000 in the next 10 years.
+    </p>
+    <p>
+        I gave a formal presentation on this project on 10 December 2015. The recording and slides are on the Michigan CERN Research Abroad Program <a target="_blank" href="https://indico.cern.ch/event/447022/">indico page</a>.
+    </p>
+
+    <center>
+      <img src="./projects/cern/cms_control_room.png" width="300" alt="cms_control_room" style="max-width:60%;">
+      <br>
+      <p class="picture_summary">
+          The <a href="http://cms.web.cern.ch/">CMS</a> control room
+      </p>
+    </center>
+
+</div>
+
+<div class="sechighlight">
+  <div id="footer">
+  Finished December 15, 2015
+  </div>
+</div>
+
+<!-- jQuery and Boostrap -->
+<script src="./projects/jquery.min.js"></script>
+<script src="./projects/bootstrap.min.js"></script>
+
+
+</body></html>

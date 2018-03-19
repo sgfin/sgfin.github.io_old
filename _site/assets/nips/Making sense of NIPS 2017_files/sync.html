@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0283)https://pippio.com/api/sync?pid=1391&ref=http%3A%2F%2F127.0.0.1%3A4000%2F2017%2F12%2F14%2Fnips%2F&it=1&iv=c10b9n36tqq0v9&it=4&iv=43a3d02f69a29f6222a1770e2660a6bd&it=4&iv=57fef06677f6a2d2ac4b08d310b7d5a050fe473a&it=4&iv=1e17603c349f94c98cf4672779ec2885337fd4a1af3fd1f57cfc379dd838ba6a -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><meta name="referrer" content="no-referrer"><script>
+		var f = function () {
+	function loadChains(chains, limit, onChainDone) {
+    function newImageLoader(url) {
+        return function () {
+            var e = new Image();
+            addListeners(e);
+            e.src = url;
+        };
+    }
+
+    function newScriptLoader(url) {
+        return function () {
+            var e = document.createElement('script');
+            e.type = 'text/javascript';
+            e.async = true;
+            addListeners(e);
+            e.src = url;
+            document.head.appendChild(e);
+        };
+    }
+
+    function newIframeLoader(url) {
+        return function () {
+            var e = document.createElement('iframe');
+            e.style.display = 'none';
+            e.width = 1;
+            e.height = 1;
+            addListeners(e);
+            e.src = url;
+            document.body.appendChild(e);
+        };
+    }
+
+    function addListeners(e) {
+        addLoadErrorListeners(e, loadNext);
+        if (typeof onChainDone === 'function') {
+            addLoadErrorListeners(e, onChainDone);
+        }
+    }
+
+    function addLoadErrorListeners(e, listener) {
+        if (typeof e.addEventListener === 'function') {
+            e.addEventListener('load', listener, false);
+            e.addEventListener('error', listener, false);
+        } else if (typeof e.attachEvent === 'function') {
+            e.attachEvent('onload', listener);
+            e.attachEvent('onerror', listener);
+        }
+    }
+
+    function loadNext() {
+        var next = loaders.shift();
+        if (typeof next === "function") {
+            setTimeout(next);
+        }
+    }
+
+    var loaders = chains.reduce(function (acc, value) {
+        var mode = value[0];
+        var url = value[1];
+
+        switch (mode) {
+            case 'image':
+                acc.push(newImageLoader(url));
+                break;
+            case 'script':
+                acc.push(newScriptLoader(url));
+                break;
+            case 'iframe':
+                acc.push(newIframeLoader(url));
+                break;
+        }
+        return acc;
+    }, []);
+
+    for (var i = 0; i < limit; i++) {
+        loadNext();
+    }
+}
+
+	var chains = [];
+	chains.push(['image', 'https://ei.rlcdn.com/448046.gif?n=1&partner_site_id=1017&m=43a3d02f69a29f6222a1770e2660a6bd&s=57fef06677f6a2d2ac4b08d310b7d5a050fe473a&s256=1e17603c349f94c98cf4672779ec2885337fd4a1af3fd1f57cfc379dd838ba6a']);
+	chains.push(['image', 'https://ib.adnxs.com/getuid?https%3A%2F%2Fs.cpx.to%2Fca.png%3Fref%3Dhttp%253A%252F%252F127.0.0.1%253A4000%252F2017%252F12%252F14%252Fnips%252F%26pid%3D11718%26url%3Dhttp%253A%252F%252F127.0.0.1%253A4000%252F2017%252F12%252F14%252Fnips%252F%26adnxs_uid%3D%24UID']);
+	chains.push(['image', 'https://ps.eyeota.net/pixel?pid=jbc9gd0&t=gif&cat=gs_auto&cat=gs_auto_misc&cat=gs_business&cat=gs_education&cat=gs_education_misc&cat=gs_entertain&cat=gs_entertain_arts&cat=gs_entertain_comedy&cat=gs_entertain_movies&cat=gs_entertain_music&cat=gs_entertain_perfarts&cat=gs_entertain_tv&cat=gs_family&cat=gs_family_children&cat=gs_fashion&cat=gs_science&cat=gs_science_space&cat=gs_tech&cat=gs_tech_cameras&cat=gs_tech_computing&cat=gs_auto&cat=gs_education&cat=gs_education_misc&cat=gs_education_university&cat=gs_entertain&cat=gs_finance&cat=gs_science&cat=gs_science_space&cat=gs_sport&cat=gs_tech&cat=gs_tech_computing']);
+	chains.push(['image', 'https://rc.rlcdn.com/456809.gif?n=2']);
+	chains.push(['image', 'https://rc.rlcdn.com/456809.gif?n=4']);
+	chains.push(['image', 'https://rc.rlcdn.com/456809.gif?n=5']);
+	chains.push(['image', 'https://rc.rlcdn.com/456809.gif?n=11']);
+	chains.push(['image', 'https://rc.rlcdn.com/456809.gif?n=3']);
+	chains.push(['image', 'https://rc.rlcdn.com/456809.gif?n=7']);
+	chains.push(['image', 'https://rc.rlcdn.com/456809.gif?n=6']);
+	chains.push(['image', 'https://rc.rlcdn.com/456809.gif?n=9']);
+	chains.push(['image', 'https://rc.rlcdn.com/456809.gif?n=10']);
+	chains.push(['image', 'https://rc.rlcdn.com/456809.gif?n=8']);
+	chains.push(['image', 'https://idsync.rlcdn.com/394479.gif?partner_uid=OzXCgluiDNvJ9AQ9YRea3zVuVYOG-2nVuAws3w']);
+
+	loadChains(chains, 10, (typeof onDone === "function") ? onDone : null);
+		};
+
+		if (document.body) { f(); } else { document.addEventListener('DOMContentLoaded', f); }
+	</script>
+</head><body></body></html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" hola_ext_inject="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Machine Learning and fMRI</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="./projects/bootstrap.min.css">
+  <link rel="stylesheet" href="./projects/bootstrap-theme.min.css">
+
+  <!--math notation-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <style type="text/css"></style>
+  <link href="./projects/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="header">
+  <a href="http://vision.stanford.edu/">
+    <img src="./projects/cosan/cosanlogo.png" style="height:100px; float: left; margin-left: 20px;">
+  </a>
+  <a href="http://stanford.edu/">
+    <img src="./projects/cosan/dartmouthlogo.png" style="height:100px; float: right; margin-right: 20px;">
+  </a>
+  <h1><b>Machine Learning and fMRI</b>: Research at Dartmouth's Cosan Lab</h1>
+  <div style="clear:both;"></div>
+</div>
+
+<div class="sechighlight">
+  <div class="container sec">
+    <h2>Summary</h2>
+
+    <div id="coursedesc">
+      Traditionally, neuroscientists have used a simple (but computationally demanding) technique called searchlight analysis to understand fMRI data. New machine learning approaches have yielded great success as well. The goal of this project was to compare the performances of the two approaches.
+    </div>
+  </div>
+</div>
+
+  <center>
+    <img src="./projects/cosan/emotion_fmri.png" width="250" alt="fmri_slice" style="max-width:50%;">
+    <br>
+    <p class="picture_summary">
+        A correlation coefficient colormap from a negative emotional affect study (84 subjects)
+    </p>
+  </center>
+
+<div class="maintext">
+    <h3> Background </h3>
+    <p>
+        Emotional affective disorders include anxiety, depression, and psychosis. To better understand these disorders my lab uses machine learning techniques to first analyze data about a person’s brain state and then make predictions about their emotional states.
+    </p>
+    <p>
+        We are building an open-source python toolkit called <a target="_blank" href="https://github.com/ljchang/neurolearn">neurolearn</a> for these analyses.
+    </p>
+
+    <h3> How it works </h3>
+    <p>
+        The neurolearn library I am helping write will allow me to
+        <ol>
+            <li>simulate fMRI signals</li>
+            <li>run massively parallel searchlight analysis</li>
+            <li>run whole-brain machine learning analysis</li>
+        </ol>
+        We are using these features to compare the performance of searchlight analysis to whole-brain analysis.
+    </p>
+    <p>
+        Searchlight analysis measures local correlations. For every voxel in the brain, it produces yields a 'heat map' of the local correlation to, say, emotional affect.
+    </p>
+    <p>
+        The data we are analyzing has dimensions 91 x 109 x 91, meaning we perform nearly a million multivariate regressions for one searchlight analysis. Also, the number of variables in these regressions increases by a power of 3 with the radius. I parallelized the code to lower computation time from 10 days to a few hours.
+    </p>
+    <p>
+        My simulator class generates fake fMRI data with different types of activations including multivariate correlation between regions and mediation.
+    </p>
+
+    <center>
+        <img src="./projects/cosan/fmri_slices.png" width="800" alt="fmri_slices" style="max-width:90%;">
+        <br>
+        <p class="picture_summary">
+            Result of a whole-brain analysis of emotional affect
+        </p>
+    </center>
+
+    <h3> Discussion </h3>
+    <p>
+        My parallel searchlight decreases computation time by two orders of magnitude, making the next steps in this project feasible. Both the parallel searchlight and simulator are part of the neurolearn toolkit and available for public use.
+    </p>
+    <p>
+        Currently, we are running analysis on simulated data to understand how the searchlight compares to whole-brain techniques.
+    </p>
+</div>
+
+<div class="sechighlight">
+  <div id="footer">
+  Ongoing project
+  </div>
+</div>
+
+<!-- jQuery and Boostrap -->
+<script src="./projects/jquery.min.js"></script>
+<script src="./projects/bootstrap.min.js"></script>
+
+
+</body></html>

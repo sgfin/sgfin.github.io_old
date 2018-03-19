@@ -1,0 +1,18 @@
+# Site settings
+title: Sam's Research Blog
+email: sam.17(at)dartmouth.edu
+description: "Science with a spirit of adventure."
+baseurl: ""
+url: "http://greydanus.github.io"
+# twitter_username: samgreydanus
+github_username: greydanus
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+highlighter: rouge
+kramdown:
+  input: GFM
+  auto_ids: true
+  syntax_highlighter: rouge

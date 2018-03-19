@@ -1,0 +1,262 @@
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+}
+#header {
+  width: 100%;
+  height: 400px;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 40px;
+}
+.bg2 {
+  background-color: #299DB6;
+}
+#headerblob {
+  position: absolute;
+  left: 5%;
+  top: 165px;
+  width: 80%;
+}
+#headertext {
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 50px;
+  margin-left: 220px;
+}
+.imgme {
+  border: 3px solid white;
+  /* box-shadow: #AAA 0px 0px 4px 0px; */
+  float: left;
+}
+#htname {
+  font-size: 46px;
+  font-weight: 400;
+}
+#htdesc {
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: -6px;
+}
+#htem {
+  font-size: 14px;
+  font-weight: 300;
+}
+#topnav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px 5px 10px;
+  margin: 10px;
+  border: 1px solid #FFF;
+}
+#topnav a {
+  color: white;
+}
+#topnav a:hover {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#topnav ul {
+  font-size: 26px;
+}
+.svgico {
+  display: inline-block;
+}
+#timeline {
+  font-size: 20px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.timelineitem {
+  width: 100%;
+  position: relative;
+  padding: 0px 0px 20px 10px;
+  margin-left: 5%;
+  border-left: 5px solid #119;
+  text-align: left;
+}
+
+.timelineitem:before {
+  left: -8px;
+  width: 11px;
+  height: 11px;
+  background: #119;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  border-radius: 5px;
+}
+
+.tyear {
+  font-size: 30px;
+  font-weight: 200;
+  width: 100%;
+  position: relative;
+  padding: 10px 0px 0px 5px;
+  margin-left: 10px;
+  text-align: left;
+  color: #119;
+}
+
+.tdate {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: -5px;
+  color: rgb(132,0,0);
+}
+.ttitle {
+  font-size: 20px;
+}
+
+.ttitle:hover {
+  color: #119;
+}
+
+.tlink {
+  font-size:14px;
+  font-style:italic;
+  color: #B00;
+}
+
+.tauthor {
+  font-size: 15px;
+  font-weight: 300;
+  font-style: italic;
+  color: #888;
+}
+.taffiliation {
+  font-size: 12px;
+  font-weight: 300;
+  font-style: italic;
+  color: #888;
+}
+
+.tcontent {
+  margin: 2px 0 0 0;
+  color: rgb(132,0,0);
+  width: 100%;
+}
+
+.timg_border {
+  float: left;
+  width: 150px;
+  height: 150px;
+  color: rgb(132,0,0);
+  position: relative;
+  margin: 5px 20px 5px 5px;
+}
+
+.img-circle {
+    border-radius: 50%;
+    border: 5px solid gray;
+}
+
+.timage {
+    max-height: 100%;  
+    max-width: 100%; 
+    width: 100%;
+    height: auto;
+    border: 2px solid #DDD;
+}
+
+.tdesc {
+  width: 80%;
+  display:inline-block;
+  font-size: 15px;
+  font-weight: 300;
+  min-height: 167px;
+  text-indent: 50px;
+}
+
+.thigh {
+  color: #070;
+}
+.quote {
+  color: #777;
+  text-align: center;
+  font-style: italic;
+  font-weight: 300;
+  padding: 90px 0 50px;
+}
+.quote blockquote {
+  font-size: 28px;
+}
+#sitefooter {
+  height: 300px;
+  margin-top: 200px;
+  background-color: #F1F3F4;
+}
+hr.soft {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+  padding: 0;
+  margin: 0;
+}
+.showmore {
+  border: 2px solid #777;
+  padding: 5px;
+  font-size: 15px;
+  width: 100px;
+  text-align: center;
+  color: #999;
+  margin: 0px auto;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.showmore:hover {
+  color: #333;
+}
+
+.miscitem {
+  margin: 10px 0px 60px;
+}
+.miscimg img {
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+  margin-top: -10px;
+}
+.colorrect {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 10px;
+  margin-top: -10px;
+  background-color: #444;
+}
+.miscd {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.umisc {
+  font-size: 16px;
+  font-weight: 300;
+  color: #555;
+}
+.ctr {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.hht {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.ts {
+  font-size: 14px;
+  margin-bottom: 5px;
+  font-weight: 300;
+}

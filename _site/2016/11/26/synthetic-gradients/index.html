@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>A bird's eye view of synthetic gradients</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Science with a spirit of adventure.">
+    <link rel="canonical" href="http://greydanus.github.io/2016/11/26/synthetic-gradients/">
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Sam's Research Blog posts" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72311215-6', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <div style="float:left; margin-top:10px; margin-right:10px;">
+    <a href="https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_vortex_street">
+      <img src="/assets/karman.png" width="40">
+    </a>
+    </div>
+
+    <a class="site-title" href="/">Sam's Research Blog</a>
+    
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        
+          
+        
+          <a class="page-link" href="/papers/">Interesting papers</a>
+        
+        <a class="page-link" href="https://greydanus.github.io/about.html">About</a>
+      </div>
+    </nav>
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>A bird's eye view of synthetic gradients</h1>
+    <p class="meta">Nov 26, 2016</p>
+  </header>
+
+  <article class="post-content">
+  <!-- <center>
+	<img src="/assets/synthetic-gradients/intro.png" width="20%">
+</center> -->
+
+<div class="imgcap_noborder">
+	<img src="/assets/synthetic-gradients/synthgrad.gif" width="20%" />
+	<div class="thecap" style="text-align:center">Synthetic gradients in action (from the DeepMind <a href="https://deepmind.com/blog/decoupled-neural-networks-using-synthetic-gradients/">blog post)</a></div>
+</div>
+
+<p>Synthetic gradients achieve the perfect balance of crazy and brilliant. In a <a href="https://gist.github.com/greydanus/1cb90875f24015660ae91fa637f167a9">100-line Gist</a> I’ll introduce this exotic technique and use it to train a neural network.</p>
+
+<h2 id="some-theory">Some Theory</h2>
+
+<p>Backprop (gradient backpropagation) is a way to optimize neural networks. As a quick review, there are two important functions for training a neural network:</p>
+
+<ol>
+  <li>the <b>feedforward</b> function
+    <ul>
+      <li>
+        <script type="math/tex; mode=display">\hat y_i = f(x_i,\theta)</script>
+      </li>
+    </ul>
+  </li>
+  <li>the <b>loss</b> function (I’ll use <a href="http://www.chioka.in/differences-between-l1-and-l2-as-loss-function-and-regularization/">L2 loss</a>)
+    <ul>
+      <li>
+        <script type="math/tex; mode=display">L = \sum_i \frac{1}{2}(y_i-\hat y_i)^2</script>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>In supervised learning, the objective is to make the <b>feedforward</b> function approximate the true mapping from the input data <script type="math/tex">x_i</script> to the target label <script type="math/tex">y_i</script>. The input <script type="math/tex">x_i</script> could be the pixels of an image and <script type="math/tex">y_i</script> could be a label for that image. Or, <script type="math/tex">x_i</script> could be a sentence in French and <script type="math/tex">y_i</script> could be a sentence in English. The mapping could really be <a href="http://www.sciencedirect.com/science/article/pii/0893608089900208">any function</a>! The <b>loss</b> measures how well the neural network learns to approximate this mapping.</p>
+
+<div class="imgcap">
+    <img src="/assets/synthetic-gradients/mapping.jpg" width="50%" />
+    <div class="thecap" style="text-align:center">Deep learning as a type of regression (images from 2015 <a href="https://arxiv.org/abs/1409.0575">ImageNet paper</a>)</div>
+</div>
+
+<p>We can minimize the loss by adjusting each of the network’s parameters <script type="math/tex">\theta_i</script> just slightly. In order to do this, we compute the gradient of the loss function with respect to <script type="math/tex">\theta_i</script>, multiply by a small number <script type="math/tex">\alpha</script> (the learning rate), and add this to the current value of <script type="math/tex">\theta_i</script>.</p>
+
+<script type="math/tex; mode=display">\theta_i^{t+1} = \theta_i^{t} + \alpha \left( \frac{\partial{L}}{\partial{\theta_i^t}} \right)</script>
+
+<p>Hopefully this is all review. If not, check out Stanford’s <a href="https://cs231n.github.io/optimization-1/">CS231n course notes</a> or my very own <a href="https://nbviewer.jupyter.org/github/greydanus/np_nets/blob/master/mnist_nn.ipynb">math+code derivation of backprop</a>.</p>
+
+<p><strong>Theory.</strong> From a theory perspective, backprop is easy to derive and works perfectly as long as the feedforward function is <a href="https://en.wikipedia.org/wiki/Differentiable_function">differentiable</a>. Better yet, for small enough <script type="math/tex">\alpha</script>, gradient descent with backprop is guaranteed to converge. In fact, it will probably <a href="https://arxiv.org/abs/1605.07110">converge to a global minimum</a>.</p>
+
+<p><strong>Autodifferentiation.</strong> If we break the feedforward function of a neural network into its component functions, we can represent it as a directed graph where each junction is an operation and data flows along the vertices. The graph of a two-layer neural network with sigmoid activations might look like this:</p>
+
+<div class="imgcap_noborder">
+    <img src="/assets/synthetic-gradients/forward.svg" width="90%" />
+    <div class="thecap" style="text-align:center">Forward pass</div>
+</div>
+
+<p>We would implement this network in a numpy one-liner such as</p>
+
+<p><code class="highlighter-rouge">y_hat = sigmoid(np.dot(sigmoid(np.dot(x, W1) + b1), W2) + b2)</code></p>
+
+<p>During backprop, we recursively apply the chain rule to the feedforward function. Each recursive step moves the gradient backwards through one of the functions in the graph above. This means we can represent backprop using the same sort of graph:</p>
+
+<div class="imgcap_noborder">
+    <img src="/assets/synthetic-gradients/backward.svg" width="90%" />
+    <div class="thecap" style="text-align:center">Backward pass</div>
+</div>
+
+<p>See how we can map each node in the forward pass to a node in the backward pass. In other words, if we know the forward pass, we can automatically compute the backward pass. This is called <i>autodifferentiation</i> and all modern deep learning libraries (Theano, TensorFlow, Torch, etc.) can do it. The user simply builds a computational graph of the forward pass and the software handles the backwards pass. Pretty slick!</p>
+
+<div class="imgcap_noborder">
+    <img src="/assets/synthetic-gradients/full-pass.svg" width="90%" />
+    <div class="thecap" style="text-align:center">Full pass with mapping between forward and backward passes</div>
+</div>
+
+<p><strong>Locking.</strong> When we train deep models with backprop, we must evaluate the entire forward pass before computing the backward pass. Worse still, each node in the forward and backward passes must be evaluated in the order that it appears. All nodes of the graph are effectively ‘locked’ in the sense that they must wait for the remainder of the network to execute forwards and propagate error backwards before a second update.</p>
+
+<p>In practice, this causes trouble for</p>
+
+<ol>
+  <li>recurrent models (backprop through time makes the graph very deep)</li>
+  <li>training models in parallel (asynchronous cores must wait for one another)</li>
+  <li>models with different timescales (some layers must update more often than others)</li>
+</ol>
+
+<p><strong>Unlocking.</strong> The paper that inspired this blog post is <a href="https://arxiv.org/abs/1608.05343">Decoupled Neural Interfaces using Synthetic Gradients</a>. DeepMind researchers propose an ambitious method for ‘unlocking’ neural networks: <i>train a second model to predict the gradients of the first</i>. In other words, approximate</p>
+
+<script type="math/tex; mode=display">\frac{\partial{L}}{\partial{\theta_i}} = f_{Bprob}((h_i,x_i,y_i,\theta_i),(h_{i+1},x_{i+1},y_{i+1},\theta_{i+1}),...) \frac{\partial{h_i}}{\partial{\theta_i}} \approx \hat f_{Bprop}(h_i)\frac{\partial{h_i}}{\partial{\theta_i}}</script>
+
+<p>When I realized what they were trying to do, I rolled my eyes. You <i>must</i> need to know more about the model to approximate its gradients…a model to predict the gradients <i>wouldn’t</i> train quickly enough…even if it did, backprop would <i>still</i> converge more quickly…</p>
+
+<p>It turns out that simple linear regression can effectively map a layer’s activations to its gradients. More than that, <a href="https://deepmind.com/blog/decoupled-neural-networks-using-synthetic-gradients/">it gives good results</a>. I was so stunned (and frankly suspicious) that I set out to prove it.</p>
+
+<h2 id="lets-prove-it">Let’s prove it!</h2>
+
+<div class="imgcap">
+	<img src="/assets/synthetic-gradients/mnist.svg" width="55%" />
+	<div class="thecap" style="text-align:center">MNIST training samples</div>
+</div>
+
+<p><strong>The data.</strong> Just as in my <a href="https://greydanus.github.io/2016/09/05/regularization/">regularization post</a>, we’ll train our model on the MNIST classification task. I chose the MNIST dataset because it’s easy to interpret, reasonably complex, and TensorFlow <a href="https://www.tensorflow.org/versions/master/tutorials/mnist/beginners/index.html#the-mnist-data"> has a great MNIST utility</a>.</p>
+
+<p><strong>Implementing regular backprop.</strong> In a regular training loop, we load the data, send it through the feedforward function, and calculate the loss. Next we use <code class="highlighter-rouge">y_hat</code> (the model’s prediction) and <code class="highlighter-rouge">y</code> (the training labels) to calculate gradients and perform a gradient update. Check out the pseudocode for this process below.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">train_steps</span><span class="p">):</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">next_batch</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span> <span class="c"># load data</span>
+    
+    <span class="n">y_hat</span><span class="p">,</span> <span class="n">hs</span> <span class="o">=</span> <span class="n">forward</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span> <span class="c"># forward pass on MNIST model</span>
+    
+    <span class="c"># compute the average cross-entropy loss</span>
+    <span class="n">y_logprobs</span> <span class="o">=</span> <span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">y_hat</span><span class="p">[</span><span class="nb">range</span><span class="p">(</span><span class="n">batch_size</span><span class="p">),</span><span class="n">y</span><span class="p">])</span> <span class="c"># we want probs on the y labels to be large</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">y_logprobs</span><span class="p">)</span><span class="o">/</span><span class="n">batch_size</span> <span class="o">+</span> <span class="n">reg_loss</span>
+
+    <span class="n">grads</span> <span class="o">=</span> <span class="n">backward</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_hat</span><span class="p">,</span> <span class="n">hs</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span> <span class="c"># data gradients</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span> <span class="p">:</span> <span class="n">model</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">-</span> <span class="n">learning_rate</span><span class="o">*</span><span class="n">grads</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">grads</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()}</span> <span class="c"># update model</span>
+</code></pre>
+</div>
+
+<p><strong>Implementing synthetic gradients.</strong> The training loop for synthetic gradients is a little different. We load data and perform the forward pass as usual. Next, we compute the gradients by sending the <i>activations</i> from the MNIST model (<code class="highlighter-rouge">model</code>) through a second model (<code class="highlighter-rouge">smodel</code>). For every ten parameter updates of the MNIST model we perform a parameter update on <code class="highlighter-rouge">smodel</code>. The <code class="highlighter-rouge">smodel</code> updates, contained inside the <code class="highlighter-rouge">if</code> statement, use regular backprop.</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">xrange</span><span class="p">(</span><span class="n">train_steps</span><span class="p">):</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">train</span><span class="o">.</span><span class="n">next_batch</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span> <span class="c"># load data</span>
+    
+    <span class="n">y_hat</span><span class="p">,</span> <span class="n">hs</span> <span class="o">=</span> <span class="n">forward</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span> <span class="c"># forward pass on MNIST model</span>
+    <span class="n">synthetic_grads</span> <span class="o">=</span> <span class="n">sforward</span><span class="p">(</span><span class="n">hs</span><span class="p">,</span> <span class="n">smodel</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span> <span class="c"># forward pass on synthetic gradient model</span>
+
+    <span class="c"># update synthetic gradient model (smodel)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="c"># compute the MNIST model's loss and gradients...</span>
+        <span class="c"># compute smodel's loss and gradients (sgrads)...</span>
+        <span class="c"># update smodel parameters</span>
+        <span class="n">smodel</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span> <span class="p">:</span> <span class="n">smodel</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">-</span> <span class="n">slearning_rate</span><span class="o">*</span><span class="n">sgrads</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">sgrads</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()}</span>
+    
+    <span class="c"># reshape the synthetic gradients...</span>
+    <span class="c"># update the MNIST model with synthetic gradients</span>
+    <span class="n">model</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span> <span class="p">:</span> <span class="n">model</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">-</span> <span class="n">learning_rate</span><span class="o">*</span><span class="n">v</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">synthetic_grads</span><span class="o">.</span><span class="n">iteritems</span><span class="p">()}</span>
+</code></pre>
+</div>
+
+<h2 id="pros-and-cons">Pros and Cons</h2>
+
+<p><strong>Stale gradients.</strong> Let’s compare our ‘unlocked’ MNIST model to one trained with backprop using <b>stale gradients</b>. To train with stale gradients, compute the gradient with backprop once every ten steps and otherwise use it to perform a parameter update. Since we use the same gradient for multiple parameter updates, we call it ‘stale.’ Using stale gradients is a good way to compare synthetic gradients to regular gradients because both perform backprop at the same rate (just once every ten training steps).</p>
+
+<div class="imgcap_noborder">
+	<img src="/assets/synthetic-gradients/stale_vs_synth.png" width="60%" />
+	<div class="thecap" style="text-align:center">Stale vs. synthetic gradients. Final accuracies were 90.0% and 89.9% respectively</div>
+</div>
+
+<p>As we would expect for a small model, stale and synthetic gradients are evenly matched. The plot shows that the two methods converge at roughly the same rate. For wider, deeper models and more complicated versions of <code class="highlighter-rouge">smodel</code>, synthetic gradients can easily <a href="https://arxiv.org/abs/1608.05343">outperform stale ones</a>. <u>Mild pro</u>.</p>
+
+<p><strong>Visualizing the difference.</strong> A more qualitative way to compare synthetic and actual gradients is to stop the training loop at a random time step and plot heatmaps of the two, side by side.</p>
+
+<div class="imgcap_noborder">
+	<img src="/assets/synthetic-gradients/visualize1.png" width="100%" />
+	<img src="/assets/synthetic-gradients/visualize2.png" width="100%" />
+	<img src="/assets/synthetic-gradients/visualize3.png" width="100%" />
+	<div class="thecap" style="text-align:center">Visualizing gradients at the second layer of a 2-layer MNIST classifier.</div>
+</div>
+
+<p>There is a definite correspondence between actual and synthetic gradients, particularly for the darker points. Even though the synthetic model makes mistakes, it seems to be making a good overall approximation. <u>Medium pro</u>.</p>
+
+<p><strong>Runtime.</strong></p>
+
+<p><i><strong>EDIT:</strong> I made a mistake in my implementation of synthetic gradients. Runtime is not the issue I imagined it was because the targets of the synthetic gradient models should be the output activations of each layer rather than the actual gradients on the weights. I’m in the process of fixing this in my code. For now, ignore this portion of the post.</i></p>
+
+<p>The DeepMind paper was mysteriously quiet about runtime. Why? Because it’s <i>horrific!</i> For my toy model, normal backprop is 100-1000x faster. Why? Well, let’s count parameters.</p>
+
+<div class="imgcap_noborder">
+    <img src="/assets/synthetic-gradients/param-count.svg" width="100%" />
+</div>
+
+<p>Consider two adjacent, fully connected layers <script type="math/tex">l_I</script> and <script type="math/tex">l_J</script> with <script type="math/tex">m</script> and <script type="math/tex">n</script> hidden units respectively. Now construct a simple linear regression model that maps the activation <script type="math/tex">h_J</script> to <script type="math/tex">\nabla \theta_J</script> (the approximate gradient of all parameters in <script type="math/tex">l_J</script>). The dimensionality of the input is <script type="math/tex">n</script> and that of the target is <script type="math/tex">(m+1) \times n</script>. Our simple linear model will have a total of <script type="math/tex">n^2(m+1)(n+1) \approx O(mn^3)</script> parameters. This means that synthetic gradient model will be larger and more expensive to train than the original model by a factor of <script type="math/tex">O(n^2)</script>. <u>Strong con</u>!</p>
+
+<blockquote>
+  <p>Much to my surprise, synthetic gradients were able to approximate actual gradients and train a model to classify MNSIT digits. The large number of additional parameters required to make this happen, though, might be a dealbreaker.</p>
+</blockquote>
+
+<p><strong>Let’s review.</strong> Much to my surprise, synthetic gradients were able to approximate actual gradients and train a model to classify MNIST digits. The large number of additional parameters required to make this happen, though, might be a dealbreaker. Before synthetic gradients become a practical tool, researchers must find a way to reduce the number of regression parameters. In the meantime, backprop will remain supreme.</p>
+
+<h2 id="puppy-or-bagel">Puppy or Bagel?</h2>
+
+<p>Imagine you’re a researcher tossing around the idea of synthetic gradients. How could you tell whether it’s a crazy idea that will waste your time or a useful idea that will make a difference? It’s a tricky question…a little like the infamous puppy vs. bagel meme.</p>
+
+<div class="imgcap">
+	<img src="/assets/synthetic-gradients/puppy_or_bagel.jpg" width="40%" />
+	<div class="thecap" style="text-align:center">Puppy or bagel?</div>
+</div>
+
+<p>This may sound cheesy, but the trick is to eat a lot of bagels and pet a lot of puppies :). In other words, finding good research ideas means exploring the crazy ones first. <i>I really mean exploring.</i> This term I spent two weeks exploring an adversarial LSTM idea that failed horribly. That said, it taught me what I - and the deep learning algorithm I used - can and can’t do.</p>
+
+<p><strong>Another example.</strong> Science is full of crazy ideas that end up working. Take quantum mechanics and the theory of electron spin. It started in 1925 when two physics grad students (George Uhlenbeck and Samuel Goudsmit) realized that treating an electron as if it were a spinning sphere helped with their calculations. There was only one problem: the electron would need to be spinning <i>faster than the speed of light</i>. Even though this was clearly impossible, their advisor, Paul Ehrenfest, called it a <a href="https://www.lorentz.leidenuniv.nl/history/spin/spin.html">“very witty idea”</a> and <a href="https://www.scientificamerican.com/article/what-exactly-is-the-spin/">the theory of electron spin</a> was born.</p>
+
+<p>Synthetic gradients sound like a crazy idea right now, but maybe future innovations will shape them into a practical tool. They could become a key method for, say, training deep learning models on thousands of machines at once. Since asynchonicity matters as much as runtime efficiency on large computing clusters, this is not unrealistic.</p>
+
+<p><strong>Takeaway.</strong> I was surprised that synthetic gradients were so easy to implement. In fact, any enthusiastic undergraduate with CS skills (like myself) could have come up with the original idea. It’s encouraging to think that other ideas - just as crazy and brilliant - are still out there, hidden in plain sight.</p>
+
+  </article>
+
+  <!-- mathjax -->
+  
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <!-- disqus comments -->
+ 
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+       */
+      /*
+      var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          
+          s.src = '//greydanus-blog.disqus.com/embed.js';
+          
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+
+
+  
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrap">
+
+    <!-- <h2 class="footer-heading">Sam's Research Blog</h2> -->
+
+    <div class="footer-col-1 column">
+      <ul>
+        <li>Sam's Research Blog</li>
+        <!-- <li><a href="mailto:sam.17(at)dartmouth.edu">sam.17(at)dartmouth.edu</a></li> -->
+      </ul>
+    </div>
+
+    <div class="footer-col-2 column">
+      <ul>
+        <li>
+          <a href="https://github.com/greydanus">
+            <span class="icon github">
+              <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
+                c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
+                c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
+                c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
+                C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
+                c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
+                c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
+                c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
+                c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            <span class="username">greydanus</span>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+
+    <div class="footer-col-3 column">
+      <p class="text">Science with a spirit of adventure.</p>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    </body>
+</html>

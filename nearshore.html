@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" hola_ext_inject="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nearshore Physics</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="./projects/bootstrap.min.css">
+  <link rel="stylesheet" href="./projects/bootstrap-theme.min.css">
+
+  <!--math notation-->
+  <script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <style type="text/css"></style>
+  <link href="./projects/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="header">
+  <a href="http://vision.stanford.edu/">
+    <img src="./projects/nearshore/osulogo.png" style="height:100px; float: left; margin-left: 20px;">
+  </a>
+  <a href="http://stanford.edu/">
+    <img src="./projects/nearshore/ceoaslogo.png" style="height:100px; float: right; margin-right: 20px;">
+  </a>
+  <h1><b>Nearshore Physics</b>: Summer Research in the Holman Lab</h1>
+  <div style="clear:both;"></div>
+</div>
+
+<div class="sechighlight">
+  <div class="container sec">
+    <h2>Summary</h2>
+
+    <div id="coursedesc">
+      There are waves between layers of water that have slightly different densities called internal waves. In this project I wrote an algorithm that automatically recognized and tracked internal waves in time-lapse footage from the Columbia River Estuary.
+    </div>
+  </div>
+</div>
+
+    <center>
+        <iframe width="420" height="315" src="https://www.youtube.com/embed/rPyYUdgzk_k" frameborder="0" allowfullscreen></iframe>
+        <p class="picture_summary">
+            A time-lapse video of my algorithm recognizing and tracking a ship wake
+        </p>
+    </center>
+
+<div class="maintext">
+    <h3> Background </h3>
+    <p>
+        The <a target="_blank" href="http://cil-www.coas.oregonstate.edu/">Coastal Imaging Lab</a> studies physics of nearshore environments. Smoothed time-lapse videos of the ocean surface provide a wealth of information. One can even determine bathymetry from the periodicity of waves in different areas of the image.
+    </p>
+    <center>
+        <img src="./projects/nearshore/mcr.jpg" width="300" alt="mouth_of_columbia" style="max-width:60%;">
+        <br>
+        Mouth of the Columbia River
+    </center>
+    <p>
+        When reviewing videos of the Columbia River Estuary, we noticed interesting patterns created by passing ships. We had already applied smoothing to eliminate surface waves, so we realized that these signatures must be caused by internal waves.
+    </p>
+    <p>
+
+    </p>
+
+    <h3> How it works </h3>
+    <p>
+        First, I converted the video-processing task into an image-processing task by concatenating columns from each video frame into a matrix. Next, I made various horizontal shifts of this matrix and performed 2D Gaussian fits to find the brightest regions (which corresponded to a moving wake in velocity space).
+    </p>
+    <center>
+        <img src="./projects/nearshore/vertical_sums.png" width="300" alt="vertical_sums" style="max-width:60%;">
+        <br>
+        An example image product. We performed 2D Gaussian fits to find the locations of the bright regions
+    </center>
+
+    <h3> Discussion </h3>
+    <p>
+        I ran my algorithm on 200 internal wakes and manually selected the best 60. Here is one of the results:
+    </p>
+    <center>
+        <img src="./projects/nearshore/celerity_overlay.png" width="550" alt="celerity_overlay" style="max-width:100%;">
+        <br>
+    </center>
+    <p>
+        A meta-analysis of these wakes revealed interesting spatial trends:
+    </p>
+    <center>
+        <img src="./projects/nearshore/spatial_trends.png" width="550" alt="spatial_trends" style="max-width:100%;">
+        <br>
+    </center>
+    <p>
+        These patterns tell us that the speed of internal waves varies with location in estuary.
+    </p>
+    <p>
+        One explanation is that the relative depths of the saltwater wedge and the freshwater wedge vary across the estuary. If this is causing the spatial trends, my work can tell us about the shape of the <a target="_blank" href="http://oceanservice.noaa.gov/education/kits/estuaries/media/supp_estuar05a_wedge.html">salt wedge</a> at different tidal stages
+    </p>
+</div>
+
+<div class="sechighlight">
+  <div id="footer">
+  Finished August 20, 2014
+  </div>
+</div>
+
+<!-- jQuery and Boostrap -->
+<script src="./projects/jquery.min.js"></script>
+<script src="./projects/bootstrap.min.js"></script>
+
+
+</body></html>

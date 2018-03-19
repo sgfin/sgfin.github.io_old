@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" hola_ext_inject="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sam Greydanus Academic Website</title>
+  <link href="./static/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="./static/style.css" rel="stylesheet">
+  <link href="./static/css" rel="stylesheet" type="text/css">
+
+  <style type="text/css"></style></head>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-72311215-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+
+<body onload="start()">
+
+<div id="header" class="bg1">
+  <div id="topnav">
+    <ul>
+      <li><a href="http://greydanus.github.io/">blog</a></li>
+    </ul>
+  </div>
+  <div id="headerblob">
+    <img src="./static/me.jpg" class="img-circle imgme">
+    <div id="headertext">
+      <div id="htname">Sam Greydanus</div>
+      <div id="htdesc">Dartmouth Physics Major</div>
+      <div id="htem">sam.17(at)dartmouth.edu</div>
+      <div id="icons">
+        <div class="svgico">
+          <a target="_blank" href="https://github.com/greydanus"><img src="./static/octocat.svg" width="56px"></a>
+          <!-- <a target="_blank" href="https://twitter.com/samgreydanus"><img src="./static/twitter.svg" width="56px"></a> -->
+          <a target="_blank" href="https://greydanus.github.io"><img src="./static/rss.svg" width="56px"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div id="timeline">
+    <div class="timelineitem">
+      <div class="tdate">September 2017</div>
+      <div class="ttitle">DARPA's <a href="https://twitter.com/DARPA/status/872547502616182785">Explainable AI Project</a></div>
+      <div class="tdesc"><span class="thigh">Visiting researcher, Oregon State.</span></div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">April 2017</div>
+      <div class="ttitle"><a href="https://news.dartmouth.edu/news/2017/04/dartmouth-students-compete-tournament-physicists" style="color:#333;">International Physicists' Tournament</a></div>
+      <div class="tdesc"><span class="thigh">US Team, Gothenburg, Sweden</span></div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">July 2017</div>
+      <div class="ttitle">Senior Honors Thesis, Whitfield Lab</div>
+      <div class="tdesc"><span class="thigh">Quantum systems. My advisor is James Whitfield.</span></div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">Summer 2016</div>
+      <div class="ttitle">Microsoft New England</div>
+      <div class="tdesc"><span class="thigh">Azure Machine Learning Team</span></div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">Fall 2015</div>
+      <div class="ttitle">Research Semester at CERN</div>
+      <div class="tdesc">Monte Carlo simulation of <span class="thigh">Higgs Radiation</span>.</div>
+    </div>
+    <div class="timelineitem">
+      <div class="tdate">Summer 2014</div>
+      <div class="ttitle"> Oceanography REU at Oregon State</div>
+      <div class="tdesc"><span class="thigh">Nearshore physics</span> and video feature extraction.</div>
+    </div>
+<!--     <div class="timelineitem">
+     <div class="tdate">Winter 2013</div>
+      <div class="ttitle">Internship at BigML</div>
+      <div class="tdesc"><span class="thigh">Machine Learning</span> for image classification.</div>
+    </div> -->
+    <div class="timelineitem">
+      <div class="tdate">2013</div>
+      <div class="ttitle">Dartmouth College</div>
+      <div class="tdesc">Major in <span class="thigh">Physics</span>.</div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
+  <b>Bio</b>. I am an undergraduate physics student at Dartmouth College. My research experience covers particle physics, deep learning, and the neuroscience of human interactions. I am particularly excited about recurrent neural networks, deep generative models, and the scientific applications of deep learning.
+
+  <br><br>I am one of the captains of the Dartmouth Endurance Racing Team and Vice President of the Dartmouth Physics Society. In my free time, I like climbing, fishing, and being outdoors.  Before Dartmouth, I raised pigs in the countryside around Corvallis, Oregon.
+  
+</div>
+
+<hr class="soft">
+
+<div class="container">
+  <h2>Research</h2>
+  <div id="pubs">
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="./static/visualize-atari.png" height=200px>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Visualizing and Understanding Atari Agents</div>
+            <div class="pubd"><em>Accepted, <a href="http://www.interpretable-ml.org/nips2017workshop/">NIPS 2017 Interpretability Workshop</a>.</em> Deep reinforcement learning agents are effective at maximizing rewards, but it's often unclear what strategies they use to do so. As a visiting researcher at <a href="http://oregonstate.edu/ua/ncs/archives/2017/jun/research-aims-make-artificial-intelligence-explain-itself">DARPA's Explainable AI Project</a>, I wrote a paper aimed at solving this problem.</div>
+            <div class="puba">Sam Greydanus, Anurag Koul, Jonathan Dodge, Alan Fern</div>
+            <div class="pubv"></div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://goo.gl/AMAoSc">arXiv</a></li>
+                <li><a href="https://github.com/greydanus/visualize_atari">GitHub</a></li>
+                <li><a href="https://greydanus.github.io/2017/11/01/visualize-atari/">Blog post</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="./static/enigma-concept.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Learning the Enigma with Recurrent Neural Networks</div>
+            <div class="pubd">Recurrent Neural Networks (RNNs) are Turing-complete. In other words, they can approximate any function. As a tip of the hat to Alan Turing, I formulate the Enigma's decryption function as a sequence-to-sequence translation task and learn it with a large RNN.</div>
+            <div class="puba">Sam Greydanus</div>
+            <div class="pubv"></div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/1708.07576">arXiv</a></li>
+                <li><a href="https://github.com/greydanus/crypto-rnn">GitHub</a></li>
+                <li><a href="https://greydanus.github.io/2017/01/07/enigma-rnn/">Blog post</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="./static/nn-coupling.png
+            ">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Approximating Matrix Product States with Neural Networks</div>
+            <div class="pubd">The wave function is essential to most calculations in quantum mechanics and yet it’s a difficult beast to tame. In this project, I trained a neural network to approximate the ground state wave function of a many-body quantum system. This was my senior honors thesis.</div>
+            <div class="puba">Sam Greydanus, James Whitfield</div>
+            <div class="pubv"></div>
+            <div class="publ">
+              <ul>
+                <li><a href="./files/greydanus-dartmouth-thesis.pdf">Thesis</a></li>
+                <li><a href="https://github.com/greydanus/psi0nn">GitHub</a></li>
+                <li><a href="https://quantumfrontiers.com/2017/08/02/taming-wave-functions-with-neural-networks/">Blog post</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="./static/emotion_fmri.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Machine Learning for fMRI data</div>
+            <div class="pubd">Traditionally, neuroscientists have used a simple (but computationally demanding) technique called searchlight analysis to understand fMRI data. New machine learning approaches have yielded great success as well. The goal of this project was to compare the performances of the two approaches.</div>
+            <div class="puba">Sam Greydanus, Luke Chang</div>
+            <div class="pubv"></div>
+            <div class="publ">
+              <ul>
+                <!-- <li><a href="https://">PDF</a></li> -->
+                <li><a href="./files/cosan_searchlight_poster.pdf">Poster</a></li>
+                <li><a href="./cosan.html">Project</a></li>
+                <li><a href="https://github.com/ljchang/neurolearn">GitHub</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <div class="showmore" id="showmorepubs">
+    show more
+    </div>
+
+    <div id="morepubs">
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="./static/higgs_radiation.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Higgs Electroweak Calibration</div>
+            <div class="pubd">My CERN research project. Particle physicists use a theory called the Standard Model to predict physics in the Large Hadron Collider. I used two Monte Carlo physics simulators to see what happens to numerical models of Higgs physics when we leave out the electroweak force.</div>
+            <div class="puba">Sam Greydanus, Andre Mendes</div>
+            <div class="pubv"></div>
+            <div class="publ">
+              <ul>
+                <li><a href="./cern.html">Project</a></li>
+                <li><a href="https://indico.cern.ch/event/447022/">Final talk</a></li>
+                <!-- <li><a href="https://">Code (Github)</a></li> -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="./static/cat.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Image Classification project at BigML</div>
+            <div class="pubd">BigML is a machine learning startup which aims to make machine learning accessible to people without specialized backgrounds. As an intern, I tested the feasibility of using their online interface to detect cat heads from the Microsoft cat head database</div>
+            <div class="puba">Sam Greydanus, Poul Peterson</div>
+            <div class="pubv"></div>
+            <div class="publ">
+              <ul>
+                <!-- <li><a href="https://">PDF</a></li> -->
+                <!-- <li><a href="./project.html">Project</a></li> -->
+                <li><a href="https://bigml.com/">Company</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="./static/kelvin_wake.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Nearshore physics and automated ship wake detection </div>
+            <div class="pubd">There are waves between layers of water that have slightly different densities called internal waves. In this project I wrote an algorithm that automatically recognized and tracked internal waves in time-lapse footage from the Columbia River Estuary.</div>
+            <div class="puba">Sam Greydanus, Robert Holman</div>
+            <div class="pubv">AGU 2014 (Oral Presentation)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="./files/greydanus_holman.pdf">PDF</a></li>
+                <li><a href="./nearshore.html">Project</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+<hr class="soft">
+
+<div class="container">
+  <h2>Personal Projects</h2>
+  <div class="row">
+
+    <div class="col-md-4">
+      <div class="pp">
+        <a href="https://greydanus.github.io/fractal_tree/index.html">
+        <img src="./static/dfractal.png" class="img-circle imgb">
+        <div class="ppt">Fractal Tree</div>
+        </a>
+        <div class="ppd">
+        The physics of a tree blowing in the wind is very difficult to model because the system is so nonlinear. I made a numerical model of the system by expressing it as a fractal.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="pp">
+        <a href="https://github.com/greydanus/baby-a3c">
+        <img src="./static/breakout-v0.gif" class="img-circle imgb">
+        <div class="ppt">Baby A3C</div>
+        </a>
+        <div class="ppd">
+          It's amazing that deep RL agents can master complex environments using just pixels and a few rewards. While learning about these agents, I built a high-performance Atari A3C agent in just 180 lines of PyTorch.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="pp">
+        <a href="https://greydanus.github.io/friendly_qlearning/index.html">
+        <img src="./static/friendly.png" class="img-circle imgb">
+        <div class="ppt">Friendly qLearning</div>
+        </a>
+        <div class="ppd">
+          What happens when qLearning agents interact with one another? The goal of this toy JavaScript model is to create emergent social behavior. I am especially interested in discovering "social neurons" in the model's network.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="showmore" id="showmoreprojects">
+    show more
+  </div>
+
+  <div id="moreprojects">
+
+  <center>
+    <div class="row">
+
+        <div class="col-md-3">
+      <div class="pp">
+        <a href="https://pythonic-ocr.herokuapp.com/">
+        <img src="./static/cnn_ocr.png" class="img-circle imgsm">
+        <div class="ppt">Pythonic OCR</div>
+        </a>
+        <div class="ppd">
+          I trained a deep Convolutional Neural Network in Keras, then rewrote it in numpy to run as a web demo.
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="pp">
+          <a href="https://play.google.com/store/apps/details?id=doubletake.fulltilt&hl=en">
+            <img src="./static/tilt2live.png" class="img-circle imgsm">
+          <div class="ppt">Full Tilt</div>
+          </a>
+          <div class="ppd">
+             When I was first teaching myself to program, I wrote a few simple apps for Android. My best one is a spinoff of the popular iOS game Tilt to Live.
+          </div>
+        </div>
+      </div>
+
+    <div class="col-md-3">
+      <div class="pp">
+        <a href="https://gym.openai.com/evaluations/eval_qbonzReT72KkjMRBcziwQ">
+        <img src="./static/gym_pong.gif" class="img-circle imgsm">
+        <div class="ppt">Pong</div>
+        </a>
+        <div class="ppd">
+          I used a policy gradient method written in TensorFlow to beat the Atari Pong AI.
+        </div>
+      </div>
+    </div>
+
+      <div class="col-md-3">
+        <div class="pp">
+          <a href="https://gym.openai.com/evaluations/eval_hpkg5wFHQ5WUjJnnea0wkw">
+            <img src="./static/gym_cartpole.gif" class="img-circle imgsm">
+          <div class="ppt">Cartpole</div>
+          </a>
+          <div class="ppd">
+             I also solved the Cartpole control problem using Policy Gradients.
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+    <div class="row">
+
+
+      <div class="col-md-3">
+        <div class="pp">
+          <a href="https://appsto.re/us/_vcK9.i">
+            <img src="./static/dartbook.png" class="img-circle imgsm">
+          <div class="ppt">Dartbook</div>
+          </a>
+          <div class="ppd">
+             While working for the Digital Arts Lab at Dartmouth, I wrote an iOS textbook exchange app. We launched it on the App Store but disbanded soon afterwards. It is a cool little project!
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="pp">
+          <a href="https://github.com/greydanus/stereograms">
+            <img src="./static/dual_stereogram.png" class="img-circle imgsm">
+          <div class="ppt">Stereograms</div>
+          </a>
+          <div class="ppd">
+             When I discovered stereograms, I got so excited that I wrote code to make my own.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="pp">
+          <a href="https://mr-london.herokuapp.com/index">
+            <img src="./static/textgen.png" class="img-circle imgsm">
+          <div class="ppt">MrLondon</div>
+          </a>
+          <div class="ppd">
+             While learning about recurrent neural networks I trained a deep character-level model to write in the style of one of my favorite authors, Jack London.
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </center>
+</div>
+
+<hr class="soft">
+
+<div class="container">
+
+  <h2>Other</h2>
+  <div class="row">
+    <div class="col-md-6">
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="./static/nn.png" class="img-circle">
+        </div>
+        <div class="miscd">
+          I wrote a math + code introduction to neural networks and backpropagation. Uses pure numpy and a <a href="https://nbviewer.jupyter.org/github/greydanus/np_nets/blob/master/mnist_nn.ipynb">Jupyter notebook</a>.
+        </div>
+      </div>
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="./static/eye.png" class="img-circle">
+          <!-- <div class="colorrect img-circle"></div> -->
+        </div>
+        <div class="miscd">
+          An article I wrote about <a href="https://issuu.com/dartmouth_science/docs/16w_dujs_print_issue?e=0/34538453">depth perception</a> (page 27) for the Dartmouth Undergraduate Journal of Science
+        </div>
+      </div>
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="./static/psi.png" class="img-circle">
+        </div>
+        <div class="miscd">
+          A <a href="./files/p24_quantum.pdf">class project</a> about numerically modeling quantum systems in MATLAB
+        </div>
+      </div>
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="./static/matplotlib.png" class="img-circle">
+        </div>
+        <div class="miscd">
+          A <a href="https://gist.github.com/greydanus/f6eee59eaf1d90fcb3b534a25362cea4">gist</a> for dynamic plotting with matplotlib. Useful for updating loss functions within a training loop</a>.
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-6">
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="./static/synthgrad.png" class="img-circle">
+          <!-- <div class="colorrect img-circle"></div> -->
+        </div>
+        <div class="miscd">
+          I wrote a <a href="https://github.com/greydanus/np_nets"> numpy model</a> of synthetic gradients for a neural network MNIST classifier. Inspired by this <a href="https://arxiv.org/abs/1608.05343">DeepMind paper</a>.
+        </div>
+      </div>
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="./static/tensorflow.jpg" class="img-circle">
+          <!-- <div class="colorrect img-circle"></div> -->
+        </div>
+        <div class="miscd">
+          An <a href="https://nbviewer.jupyter.org/github/greydanus/dlfun/blob/master/mixture_density/mdn.ipynb">Jupyter notebook</a> about Mixture Density Networks implemented in Google's TensorFlow library
+        </div>
+      </div>
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="./static/perfect_pitch.png" class="img-circle">
+          <!-- <div class="colorrect img-circle"></div> -->
+        </div>
+        <div class="miscd">
+          Some other <a href="https://play.google.com/store/apps/developer?id=doubleTake&hl=en">Android apps</a> I wrote a few years ago are on Google Play
+        </div>
+      </div>
+
+      <div class="miscitem">
+        <div class="miscimg">
+          <img src="./static/mnist-gan.png" class="img-circle">
+        </div>
+        <div class="miscd">
+          I wrote a Generative Adversarial Network <a href="https://github.com/greydanus/mnist-gan">repo</a> for MNIST in PyTorch
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div id="sitefooter">
+</div>
+
+<script src="./static/jquery-1.11.1.min.js"></script>
+<script src="./static/bootstrap.min.js"></script>
+<script>
+
+var more_projects_shown = false;
+function start() {
+  $("#showmoreprojects").click(function() {
+    if(!more_projects_shown) {
+      $("#moreprojects").slideDown('fast', function() {
+        $("#showmoreprojects").text('hide');
+      });
+      more_projects_shown = true;
+    } else {
+      $("#moreprojects").slideUp('fast', function() {
+        $("#showmoreprojects").text('show more');
+      });
+      more_projects_shown = false;
+    }
+  });
+
+  var more_pubs_shown = false;
+  $("#showmorepubs").click(function() {
+    if(!more_pubs_shown) {
+      $("#morepubs").slideDown('fast', function() {
+        $("#showmorepubs").text('hide');
+      });
+      more_pubs_shown = true;
+    } else {
+      $("#morepubs").slideUp('fast', function() {
+        $("#showmorepubs").text('show more');
+      });
+      more_pubs_shown = false;
+    }
+  });
+
+}
+
+</script>
+</body></html>

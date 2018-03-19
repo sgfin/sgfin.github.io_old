@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Taming wave functions with neural networks</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Science with a spirit of adventure.">
+    <link rel="canonical" href="http://greydanus.github.io/2017/07/28/quantum-nn/">
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Sam's Research Blog posts" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72311215-6', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <div style="float:left; margin-top:10px; margin-right:10px;">
+    <a href="https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_vortex_street">
+      <img src="/assets/karman.png" width="40">
+    </a>
+    </div>
+
+    <a class="site-title" href="/">Sam's Research Blog</a>
+    
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        
+          
+        
+          <a class="page-link" href="/papers/">Interesting papers</a>
+        
+        <a class="page-link" href="https://greydanus.github.io/about.html">About</a>
+      </div>
+    </nav>
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>Taming wave functions with neural networks</h1>
+    <p class="meta">Jul 28, 2017</p>
+  </header>
+
+  <article class="post-content">
+  <p><em>NOTE: This is a repost from <a href="https://quantumfrontiers.com/2017/08/02/taming-wave-functions-with-neural-networks/">an article I wrote for <strong>Quantum Frontiers</strong></a>, the blog of the Institute for Quantum Information and Matter at Caltech</em></p>
+
+<div class="imgcap">
+    <img src="/assets/quantum-nn/wavf-ski.jpg" width="30%" />
+</div>
+
+<p>The wave function is essential to most calculations in quantum mechanics, and yet it’s a difficult beast to tame. Can neural networks help?</p>
+
+<h2 id="wave-functions-in-the-wild">Wave functions in the wild</h2>
+
+<blockquote>
+  <p>”\(\psi\) is a monolithic mathematical quantity that contains all the information on a quantum state, be it a single particle or a complex molecule.” – Carleo and Troyer, <a href="http://science.sciencemag.org/content/355/6325/602.full">Science</a></p>
+</blockquote>
+
+<p>The wave function, <script type="math/tex">\psi</script> , is a mixed blessing. At first, it causes unsuspecting undergrads (me) some angst via the Schrodinger’s cat paradox. This angst morphs into full-fledged panic when they encounter concepts such as nonlocality and Bell’s theorem (which, by the way, is surprisingly hard to <a href="https://phys.org/news/2017-02-physicists-loophole-bell-inequality-year-old.html">verify experimentally</a>). The real trouble with <script type="math/tex">\psi</script>, though, is that it grows exponentially with the number of entangled particles in a system. We couldn’t even hope to write the wavefunction of 100 entangled particles, much less perform computations on it…but there’s a lot to gain from doing just that.</p>
+
+<p>The thing is, we (a couple of luckless physicists) love <script type="math/tex">\psi</script> . Manipulating wave functions can give us <a href="https://www.nature.com/news/2010/100331/full/news.2010.163.html">ultra-precise timekeeping</a>, <a href="http://physicsworld.com/cws/article/news/2017/jul/11/quantum-satellites-demonstrate-teleportation-and-encryption">secure encryption</a>, and <a href="https://quantumfrontiers.com/2013/03/17/post-quantum-cryptography/">polynomial-time factoring of integers</a> (read: break RSA). Harnessing quantum effects can also produce <a href="https://www.technologyreview.com/s/544421/googles-quantum-dream-machine/">better machine learning</a>, <a href="https://phys.org/news/2013-10-feynman-wasnt-quantum-dynamics-ground.html">better physics simulations</a>, and even <a href="https://quantumfrontiers.com/2012/09/17/how-to-build-a-teleportation-machine-teleportation-protocol/">quantum teleportation</a>.</p>
+
+<h2 id="taming-the-beast">Taming the beast</h2>
+
+<p>Though <script type="math/tex">\psi</script>  grows exponentially with the number of particles in a system, most physical wave functions can be described with a lot less information. Two algorithms for doing this are the Density Matrix Renormalization Group (DMRG) and Quantum Monte Carlo (QMC).</p>
+
+<div class="imgcap">
+    <img src="/assets/quantum-nn/bonsai.png" width="30%" />
+</div>
+
+<p><strong>Density Matrix Renormalization Group (DMRG).</strong> Imagine we want to learn about trees, but studying a full-grown, 50-foot tall tree in the lab is too unwieldy. One idea is to keep the tree small, like a bonsai tree. DMRG is an algorithm which, like a bonsai gardener, prunes the wave function while preserving its most important components. It produces a compressed version of the wave function called a Matrix Product State (MPS). One issue with DMRG is that it doesn’t extend particularly well to 2D and 3D systems.</p>
+
+<div class="imgcap">
+    <img src="/assets/quantum-nn/leaf.jpg" width="15%" />
+    <img src="/assets/quantum-nn/acorn.jpg" width="15%" />
+    <img src="/assets/quantum-nn/bark.jpg" width="15%" />
+</div>
+
+<p><strong>Quantum Monte Carlo (QMC).</strong> Another way to study the concept of “tree” in a lab (bear with me on this metaphor) would be to study a bunch of leaf, seed, and bark samples. Quantum Monte Carlo algorithms do this with wave functions, taking “samples” of a wave function (pure states) and using the properties and frequencies of these samples to build a picture of the wave function as a whole. The difficulty with QMC is that it treats the wave function as a black box. We might ask, “how does flipping the spin of the third electron affect the total energy?” and QMC wouldn’t have much of a physical answer.</p>
+
+<h2 id="brains-gg-brawn">Brains <script type="math/tex">\gg</script> Brawn</h2>
+
+<div class="imgcap_noborder">
+    <img src="/assets/quantum-nn/nqs.jpg" width="40%" />
+    <div class="thecap" style="text-align:center">A schema of the Neural Quantum State (NQS) model introduced By Carleo and Troyer. The model has a Restricted Boltzman Machine (RBM) architecture. Increasing <em>M</em>, the number of units in the hidden layer, increases accuracy.</div>
+</div>
+
+<p>Neural Quantum States (NQS). Some state spaces are far too large for even Monte Carlo to sample adequately. Suppose now we’re studying a forest full of different species of trees. If one type of tree vastly outnumbers the others, choosing samples from random trees isn’t an efficient way to map biodiversity. Somehow, we need to make the sampling process “smarter”. Last year, Google DeepMind used a technique called deep reinforcement learning to do just that – and achieved fame for <a href="https://deepmind.com/research/alphago/">defeating the world champion human Go player.</a></p>
+
+<p>A recent <a href="http://science.sciencemag.org/content/355/6325/602.full">Science paper</a> by Carleo and Troyer (2017) used the same technique to make QMC “smarter” and effectively compress wave functions with neural networks. This approach, called “Neural Quantum States (NQS)”, produced several state-of-the-art results.</p>
+
+<div class="imgcap_noborder">
+    <img src="/assets/quantum-nn/mps-learn-schema.png" width="100%" />
+    <div class="thecap" style="text-align:center">A schema of the neural network model I used to obtain MPS coefficients. The Hamiltonian I'm using is a Heisenberg Hamiltonain plus extra coupling terms (see <a href="https://github.com/greydanus/psi0nn/blob/master/static/greydanus-dartmouth-thesis.pdf">my thesis</a> for details). Colors denote the magnitudes of scalar matrix elements.</div>
+</div>
+
+<p><strong>My thesis.</strong> My undergraduate thesis, which I conducted under fearless <a href="http://jdwhitfield.com/">Professor James Whitfield</a> of Dartmouth College, centered upon much the same idea. In fact, I had to abandon some of my initial work after reading the NQS paper. I then focused on using machine learning techniques to obtain MPS coefficients. Like Carleo and Troyer, I used neural networks to approximate  \psi . Unlike Carleo and Troyer, I trained my model to output a set of Matrix Product State coefficients which have physical meaning (MPS coefficients always correspond to a certain state and site, e.g. “spin up, electron number 3”).</p>
+
+<script type="math/tex; mode=display">\label{eqn:mps-definition}
+  \lvert \psi_{mps} \rangle=\sum_{s_1,\dots,s_N=1}^d Tr(A[1]^{s_1}, \dots A[N]^{s_N}) \lvert s_1, \dots s_N \rangle</script>
+
+<p><strong>A word about MPS.</strong> I should quickly explain what, exactly, a Matrix Product State <em>is</em>. Check out the equation above, which is the definition of MPS. The idea is to multiply a set of matrices, <script type="math/tex">A</script> together and take the trace of the result. Each <script type="math/tex">A</script> matrix corresponds to a particular site, <script type="math/tex">A[n]</script>, (e.g. “electron 3”) and a particular state, <script type="math/tex">A^{s_i}</script> (e.g. “spin <script type="math/tex">\frac{1}{2}</script>”). Each of the values obtained from the trace operation becomes a single coefficient of <script type="math/tex">\psi</script>, corresponding to a particular state <script type="math/tex">\lvert s_1, \dots s_N \rangle</script>.</p>
+
+<h2 id="cool--but-does-it-work">Cool – but does it work?</h2>
+
+<p><strong>Yes – for small systems.</strong> In my thesis, I considered a toy system of 4 spin-\frac{1}{2} particles interacting via the Heisenberg Hamiltonian. Solving this system is not difficult so I was able to focus on fitting the two disparate parts – machine learning and Matrix Product States – together.</p>
+
+<p>Success! My model solved for ground states with arbitrary precision. Even more interestingly, I used it to automatically obtain MPS coefficients. Shown below, for example, is a visualization of my model’s coefficients for the <a href="https://en.wikipedia.org/wiki/Greenberger%E2%80%93Horne%E2%80%93Zeilinger_state">GHZ state</a>, compared with coefficients <a href="http://www2.mpq.mpg.de/Theorygroup/CIRAC/wiki/images/9/9f/Eckholt_Diplom.pdf">taken from the literature</a>.</p>
+
+<div class="imgcap_noborder">
+    <img src="/assets/quantum-nn/ghz-literature.png" width="46%" />
+    <img src="/assets/quantum-nn/ghz-mps-learn.png" width="46%" />
+    <img src="/assets/quantum-nn/ghz-colorscale.png" width="7%" />
+    <div class="thecap" style="text-align:center">A visual comparison of a 4-site Matrix Product State for the GHZ state <b>a)</b> listed in the literature <b>b)</b> obtained from my neural network model.</div>
+</div>
+
+<p><strong>Limitations.</strong> The careful reader might point out that, according to the schema of my model (above), I still have to write out the full wave function. To scale my model up, I instead trained it variationally over a subspace of the Hamiltonian (just as the authors of the NQS paper did). Results are decent for larger (10-20 particle) systems, but the training itself <a href="https://stats.stackexchange.com/questions/265964/why-is-deep-reinforcement-learning-unstable">is still unstable</a>. I’ll finish ironing out the details soon, so keep an eye on arXiv<sup id="fnref:fn1"><a href="#fn:fn1" class="footnote">1</a></sup> :).</p>
+
+<h2 id="outside-the-ivory-tower">Outside the ivory tower</h2>
+
+<div class="imgcap_noborder">
+    <img src="/assets/quantum-nn/qcomputer.jpg" width="40%" />
+    <div class="thecap" style="text-align:center">A quantum computer developed by Joint Quantum Institute, U. Maryland.</div>
+</div>
+
+<p>Quantum computing is a field that’s poised to <a href="https://www.nature.com/news/quantum-computers-ready-to-leap-out-of-the-lab-in-2017-1.21239">take on commercial relevance</a>. Taming the wave function is one of the big hurdles we need to clear before this happens. Hopefully my findings will have a small role to play in making this happen.</p>
+
+<p>On a more personal note, thank you for reading about my work. As a recent undergrad, I’m still new to research and I’d love to hear constructive comments or criticisms. If you found this post interesting, check out my research blog.</p>
+
+<div class="footnotes">
+  <ol>
+    <li id="fn:fn1">
+      <p>arXiv is an online library for electronic preprints of scientific papers <a href="#fnref:fn1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
+
+  </article>
+
+  <!-- mathjax -->
+  
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <!-- disqus comments -->
+ 
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+       */
+      /*
+      var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          
+          s.src = '//greydanus-blog.disqus.com/embed.js';
+          
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+
+
+  
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrap">
+
+    <!-- <h2 class="footer-heading">Sam's Research Blog</h2> -->
+
+    <div class="footer-col-1 column">
+      <ul>
+        <li>Sam's Research Blog</li>
+        <!-- <li><a href="mailto:sam.17(at)dartmouth.edu">sam.17(at)dartmouth.edu</a></li> -->
+      </ul>
+    </div>
+
+    <div class="footer-col-2 column">
+      <ul>
+        <li>
+          <a href="https://github.com/greydanus">
+            <span class="icon github">
+              <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
+                c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
+                c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
+                c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
+                C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
+                c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
+                c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
+                c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
+                c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            <span class="username">greydanus</span>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+
+    <div class="footer-col-3 column">
+      <p class="text">Science with a spirit of adventure.</p>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    </body>
+</html>

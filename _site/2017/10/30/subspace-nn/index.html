@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Parameter bloat</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="Science with a spirit of adventure.">
+    <link rel="canonical" href="http://greydanus.github.io/2017/10/30/subspace-nn/">
+    <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Sam's Research Blog posts" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-72311215-6', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</head>
+
+
+    <body>
+
+    <header class="site-header">
+
+  <div class="wrap">
+
+    <div style="float:left; margin-top:10px; margin-right:10px;">
+    <a href="https://en.wikipedia.org/wiki/K%C3%A1rm%C3%A1n_vortex_street">
+      <img src="/assets/karman.png" width="40">
+    </a>
+    </div>
+
+    <a class="site-title" href="/">Sam's Research Blog</a>
+    
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 18 15" enable-background="new 0 0 18 15" xml:space="preserve">
+          <path fill="#505050" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0
+            h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#505050" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484
+            h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#505050" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0
+            c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+      <div class="trigger">
+        
+          
+        
+          <a class="page-link" href="/papers/">Interesting papers</a>
+        
+        <a class="page-link" href="https://greydanus.github.io/about.html">About</a>
+      </div>
+    </nav>
+  </div>
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrap">
+      <div class="post">
+
+  <header class="post-header">
+    <h1>Parameter bloat</h1>
+    <p class="meta">Oct 30, 2017</p>
+  </header>
+
+  <article class="post-content">
+  <div class="imgcap">
+    <img src="/assets/subspace-nn/rube.png" width="40%" />
+    <div class="thecap" style="text-align:center">Some things, like the "self-operated napkin", are just too complicated!</div>
+</div>
+
+<p>Do we REALLY need over 100,000 free parameters to build a good MNIST classifier? It turns out that we can eliminate 50-90% of them.</p>
+
+<h2 id="how-many-parameters-is-enough">How many parameters is enough?</h2>
+
+<p>The fruit fly was to genetics what the MNIST dataset is to deep learning: the ultimate case study. The idea is to classify handwritten digits between 0 and 9 using 28x28 pixel images. A few examples of these images are shown:</p>
+
+<div class="imgcap_noborder">
+    <img src="/assets/subspace-nn/mnist.png" width="25%" />
+    <div class="thecap" style="text-align:center">Examples taken from the MNIST dataset.</div>
+</div>
+
+<p><strong>Ughh, not MNIST tutorials again.</strong> There is an endless supply of tutorials that describe how to train an MNIST classifier. Looking over them recently, I noticed something: they all use a LOT of parameters. Here are a few examples:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Author</th>
+      <th style="text-align: center">Framework</th>
+      <th style="text-align: center">Type</th>
+      <th style="text-align: center">Free parameters</th>
+      <th style="text-align: center">Test accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="https://www.tensorflow.org/get_started/mnist/beginners">TensorFlow</a></td>
+      <td style="text-align: center">TensorFlow</td>
+      <td style="text-align: center">Fully connected</td>
+      <td style="text-align: center">7,850</td>
+      <td style="text-align: center">92%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/pytorch/examples/tree/master/mnist">PyTorch</a></td>
+      <td style="text-align: center">PyTorch</td>
+      <td style="text-align: center">Convolutional</td>
+      <td style="text-align: center">21,840</td>
+      <td style="text-align: center">99.0%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://elitedatascience.com/keras-tutorial-deep-learning-in-python#step-10">Elite Data Science</a></td>
+      <td style="text-align: center">Keras</td>
+      <td style="text-align: center">Convolutional</td>
+      <td style="text-align: center">113,386</td>
+      <td style="text-align: center">99\(^+\)%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://machinelearningmastery.com/handwritten-digit-recognition-using-convolutional-neural-networks-python-keras/">Machine Learning Mastery</a></td>
+      <td style="text-align: center">Keras</td>
+      <td style="text-align: center">Convolutional</td>
+      <td style="text-align: center">149,674</td>
+      <td style="text-align: center">98.9%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/Lasagne/Lasagne/blob/master/examples/mnist.py">Lasagne</a></td>
+      <td style="text-align: center">Lasagne</td>
+      <td style="text-align: center">Convolutional</td>
+      <td style="text-align: center">160,362</td>
+      <td style="text-align: center">99\(^+\)%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="http://caffe.berkeleyvision.org/gathered/examples/mnist.html">Caffe</a></td>
+      <td style="text-align: center">Caffe</td>
+      <td style="text-align: center">Convolutional</td>
+      <td style="text-align: center">366,030</td>
+      <td style="text-align: center">98.9%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://machinelearningmastery.com/handwritten-digit-recognition-using-convolutional-neural-networks-python-keras/">Machine Learning Mastery</a></td>
+      <td style="text-align: center">Keras</td>
+      <td style="text-align: center">Fully connected</td>
+      <td style="text-align: center">623,290</td>
+      <td style="text-align: center">98%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://github.com/Lasagne/Lasagne/blob/master/examples/mnist.py">Lasagne</a></td>
+      <td style="text-align: center">Lasagne</td>
+      <td style="text-align: center">Fully connected</td>
+      <td style="text-align: center">1,276,810</td>
+      <td style="text-align: center">98-99%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="https://www.tensorflow.org/get_started/mnist/pros">TensorFlow</a></td>
+      <td style="text-align: center">Tensorflow</td>
+      <td style="text-align: center">Convolutional</td>
+      <td style="text-align: center">3,274,625</td>
+      <td style="text-align: center">99.2%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>It would seem that you have two options: use a small number of weights and get low accuracy (TensorFlow’s logistic regression example) or use 100,000\(^+\) weights and get 99\(^+\)% accuracy (the PyTorch example is a notable exception). I think this leads to a common misconception that the best way to gain a few percentage points in accuracy is to double the size of your model.</p>
+
+<p><strong>MNIST lite</strong>. I was interested in how slightly smaller models would perform on the MNIST task, so I built and trained a few:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Framework</th>
+      <th style="text-align: center">Structure</th>
+      <th style="text-align: center">Type</th>
+      <th style="text-align: center">Free parameters</th>
+      <th style="text-align: center">Test accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">PyTorch</td>
+      <td style="text-align: center">784 <script type="math/tex">\mapsto</script> 16 <script type="math/tex">\mapsto</script> 10</td>
+      <td style="text-align: center">Fully connected</td>
+      <td style="text-align: center">12,730</td>
+      <td style="text-align: center">94.5%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PyTorch</td>
+      <td style="text-align: center">784 <script type="math/tex">\mapsto</script> 32 <script type="math/tex">\mapsto</script> 10</td>
+      <td style="text-align: center">Fully connected</td>
+      <td style="text-align: center">25,450</td>
+      <td style="text-align: center">96.5%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PyTorch</td>
+      <td style="text-align: center">784 <script type="math/tex">\mapsto</script> (6,4x4) <script type="math/tex">\mapsto</script> (6,4x4) <script type="math/tex">\mapsto</script> 25 <script type="math/tex">\mapsto</script> 10</td>
+      <td style="text-align: center">Convolutional</td>
+      <td style="text-align: center">3,369</td>
+      <td style="text-align: center">95.6%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PyTorch</td>
+      <td style="text-align: center">784 <script type="math/tex">\mapsto</script> (8,4x4) <script type="math/tex">\mapsto</script> (16,4x4) <script type="math/tex">\mapsto</script> 32 <script type="math/tex">\mapsto</script> 10</td>
+      <td style="text-align: center">Convolutional</td>
+      <td style="text-align: center">10,754</td>
+      <td style="text-align: center">97.6%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>You can find the code on my <a href="https://github.com/greydanus/subspace-nn">GitHub</a>. As you can see, it’s still possible to obtain models that get 95\(^+\)% accuracy with fewer than 10<script type="math/tex">^4</script> parameters. That said, we can do even better…</p>
+
+<h2 id="optimizing-subspaces">Optimizing subspaces</h2>
+
+<blockquote>
+  <p>“Make everything as simple as possible, but not simpler.” – Albert Einstein</p>
+</blockquote>
+
+<p><strong>The trick.</strong> When I interviewed with <em>anonymous</em> at <em>anonymous</em> earlier this year, we discussed the idea of optimizing <em>subspaces</em>. In other words, if the vector <script type="math/tex">\theta</script> contains all the parameters of a deep network, you might define <script type="math/tex">\theta = P \omega</script> where the vector <script type="math/tex">\omega</script> lives in some smaller-dimensional space and <script type="math/tex">P</script> is a projector matrix. Then, instead of optimizing <script type="math/tex">\theta</script>, you could optimize <script type="math/tex">\omega</script>. With this trick, we can choose an arbitrary number of free parameters to optimize without changing the model’s architecture. In math, the training objective becomes:</p>
+
+<script type="math/tex; mode=display">\omega = \arg\min_{\mathbf{\omega}}  -\frac{1}{n} \sum_X (y\ln \hat y +(1-y)\ln (1-\hat y)) \quad \mathrm{where} \quad \hat y = f_{NN}(\theta, X) \quad \mathrm{and} \quad \theta = P \omega</script>
+
+<p>If you want to see this idea in code, check out my <a href="https://github.com/greydanus/subspace-nn">subspace-nn</a> repo on GitHub.</p>
+
+<p><strong>Results.</strong> I tested this idea on the model from the PyTorch tutorial because it was the smallest model that achieved 99\(^+\)% test accuracy. The results were fascinating.</p>
+
+<p>As shown below, cutting the number of free parameters in half (down to 10,000 free parameters) causes the test accuracy to drop by only 0.2%. This is substantially better than the “MNIST lite” model I trained with 10,754 free parameters. Cutting the subspace down to 3,000 free parameters produces a test accuracy of 97% which is still pretty good.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Framework</th>
+      <th style="text-align: center">Free parameters</th>
+      <th style="text-align: center">Test accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">PyTorch</td>
+      <td style="text-align: center">21,840</td>
+      <td style="text-align: center">99.0%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PyTorch</td>
+      <td style="text-align: center">10,000</td>
+      <td style="text-align: center">98.8%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PyTorch</td>
+      <td style="text-align: center">3,000</td>
+      <td style="text-align: center">97.0%</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PyTorch</td>
+      <td style="text-align: center">1,000</td>
+      <td style="text-align: center">93.5%</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="imgcap_noborder">
+    <img src="/assets/subspace-nn/conv-large-accuracy.png" width="70%" />
+</div>
+
+<p><strong>Ultra small subspaces.</strong> We can take this idea even futher and optimize our model in subspaces with well below 1,000 parameters. Shown below are test accuracies for subspaces of size 3, 10, 30, 100, 300, and 1000. Interestingly, I tried the same thing with a fully connected model and obtained nearly identical curves.</p>
+
+<div class="imgcap_noborder">
+    <img src="/assets/subspace-nn/conv-accuracy.png" width="70%" />
+    <div class="thecap" style="text-align:center">Performing optimization in very small subspaces. Some of these training trajectories have not reached convergence; the 1,000-parameter model, for example, will converge to 93.5% accuracy after several more epochs.</div>
+</div>
+
+<!-- <div class="imgcap_noborder">
+    <img src="/assets/subspace-nn/fc-accuracy.png" width="70%">
+</div> -->
+
+<h2 id="takeaways">Takeaways</h2>
+
+<p><strong>Update.</strong> My friend, (anonymous), just finished a <a href="https://openreview.net/forum?id=ryup8-WCW&amp;noteId=ryup8-WCW">paper about this</a>. Much more <strong>#rigorous</strong> than this post and definitely worth checking out: <em>“solving the cart-pole RL problem is in a sense 100 times easier than classifying digits from MNIST.”</em></p>
+
+<p><strong>Literature.</strong> The idea that MNIST classifiers are dramatically overparameterized is not new. The most common way to manage this issue is by adding a sparsity term (weight decay) to the loss function. At the end of the day, this doesn’t exactly place a hard limit on the number of free parameters. One interesting approach, from <a href="https://arxiv.org/pdf/1606.02580.pdf">Convolution by Evolution</a><script type="math/tex">^\dagger</script>, is to <em>evolve</em> a neural network with 200 parameters. The authors used this technique to train a denoising autoencoder so it’s difficult to directly compare their results to ours.</p>
+
+<p>There are several other papers that try to minimize the number of free parameters. However, I couldn’t find any papers that used the subspace optimization trick. Perhaps it is a new and interesting tool.</p>
+
+<p><strong>Bloat.</strong> The immediate takeaway is that most MNIST classifiers have <em>parameter bloat</em>. In other words, they have many more free parameters than they really need. You should be asking yourself: is it worth doubling the parameters in a model to gain an additional 0.2% accuracy? I imagine that the more complex deep learning models (ResNets, VGG, etc.) also have this issue.</p>
+
+<p>Training a model with more parameters than you’ll need is fine as long as you know what you’re doing. However, you should have a general intuition for <em>how much</em> parameter bloat you’ve introduced. I hope this post helps with that intuition :)</p>
+
+<p>      <script type="math/tex">^\dagger</script>Parts of this paper are a little questionable…for example, the ‘filters’ they claim to evolve in Figure 5 are just circles.</p>
+
+  </article>
+
+  <!-- mathjax -->
+  
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <!-- disqus comments -->
+ 
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+       *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+       *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+       */
+      /*
+      var disqus_config = function () {
+          this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+          this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      */
+      (function() {  // DON'T EDIT BELOW THIS LINE
+          var d = document, s = d.createElement('script');
+          
+          s.src = '//greydanus-blog.disqus.com/embed.js';
+          
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+  
+
+
+  
+</div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+
+  <div class="wrap">
+
+    <!-- <h2 class="footer-heading">Sam's Research Blog</h2> -->
+
+    <div class="footer-col-1 column">
+      <ul>
+        <li>Sam's Research Blog</li>
+        <!-- <li><a href="mailto:sam.17(at)dartmouth.edu">sam.17(at)dartmouth.edu</a></li> -->
+      </ul>
+    </div>
+
+    <div class="footer-col-2 column">
+      <ul>
+        <li>
+          <a href="https://github.com/greydanus">
+            <span class="icon github">
+              <svg version="1.1" class="github-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+                <path fill-rule="evenodd" clip-rule="evenodd" fill="#C2C2C2" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761
+                c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32
+                c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472
+                c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037
+                C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65
+                c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261
+                c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082
+                c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129
+                c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            <span class="username">greydanus</span>
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+
+    <div class="footer-col-3 column">
+      <p class="text">Science with a spirit of adventure.</p>
+    </div>
+
+  </div>
+
+</footer>
+
+
+    </body>
+</html>
