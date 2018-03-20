@@ -21,8 +21,8 @@ I actually think it's pretty magical that these common distributions just pop ou
 Recall that [information entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)) is a mathematical framework for quantifying "uncertainty."  The formula for the information entropy of a random variable is
 $$H(x) = \int p(x)\ln p(x)dx $$
 .  	
-In statistics/information theory, the [maximum entropy probability distribution](https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution) is $\text{(you guessed it!\)}$ the distribution that, given any constraints, has maximum entropy.  Given a choice of distributions, the "Principle of Maximum Entropy" tells us that the maximum entropy distribution is the best.  Here's a snippet of the idea from the [wikipedia page](https://en.wikipedia.org/wiki/Principle_of_maximum_entropy):
->The principle of maximum entropy states that, subject to precisely stated prior data $\text{(such as a proposition that expresses testable information)}$, the probability distribution which best represents the current state of knowledge is the one with largest entropy.
+In statistics/information theory, the [maximum entropy probability distribution](https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution) is (you guessed it!) the distribution that, given any constraints, has maximum entropy.  Given a choice of distributions, the "Principle of Maximum Entropy" tells us that the maximum entropy distribution is the best.  Here's a snippet of the idea from the [wikipedia page](https://en.wikipedia.org/wiki/Principle_of_maximum_entropy):
+>The principle of maximum entropy states that, subject to precisely stated prior data (such as a proposition that expresses testable information), the probability distribution which best represents the current state of knowledge is the one with largest entropy.
 
 > Another way of stating this: Take precisely stated prior data or testable information about a probability distribution function. Consider the set of all trial probability distributions that would encode the prior data. According to this principle, the distribution with maximal information entropy is the proper one.
 
@@ -57,7 +57,7 @@ In this case, since we are deriving probability distributions, the integral of t
 
 With all that, we can begin:
 
-## 1. Derivation of maximum entropy probability distribution with no other constraints $\text{(uniform distribution)}$
+## 1. Derivation of maximum entropy probability distribution with no other constraints (uniform distribution)
 
 First, we solve for the case where the only constraint is that the distribution is a pdf, which we will see is the uniform distribution. To maximize entropy, we want to minimize the following function:
 
@@ -75,8 +75,8 @@ $$p(x)=e^{1 -\lambda_{0}}$$
 
 $$\int_{a}^{b} p(x)dx=1=\int_{a}^{b} e^{-\lambda_{0}+1}dx$$
 
-Note: To check if this is a minimum $\text{(which would maximize entropy given the
-way the equation was set up)}$, we also need to see if the second
+Note: To check if this is a minimum (which would maximize entropy given the
+way the equation was set up), we also need to see if the second
 derivative with respect to p(x) is positive here or not, which it
 clearly always is:
 
@@ -121,13 +121,13 @@ $$p(x)=\begin{cases}
 0 & \text{otherwise}
 \end{cases}$$
 
-## 2. Derivation of maximum entropy probability distribution for given fixed mean $\mu$ and variance $\sigma^{2}$ $\text{(gaussian distribution)}$
+## 2. Derivation of maximum entropy probability distribution for given fixed mean $\mu$ and variance $\sigma^{2}$ (gaussian distribution)
 
 Now, for the case when we have a specified mean and variance, which we will see is the gaussian distribution.  To maximize entropy, we want to minimize the following function:
 
 $$J(p)=\int p(x)\ln p(x)dx-\lambda_{0}\left(\int p(x)dx-1\right)-\lambda_{1}\left(\int p(x)(x-\mu)^{2}dx-\sigma^{2}\right)$$
 
-, where the first constraint is the definition of pdf and the second is the definition of the variance $\text{(which also gives us the mean for free)}$.  Taking the derivative with respect ot p(x) and setting to zero,
+, where the first constraint is the definition of pdf and the second is the definition of the variance (which also gives us the mean for free).  Taking the derivative with respect ot p(x) and setting to zero,
 
 $$\frac{\delta J}{\delta p(x)}=1+\ln p(x)-\lambda_{0}-\lambda_{1}(x-\mu)^{2}=0$$
 
@@ -209,7 +209,7 @@ $$=\frac{1}{\sqrt{2\pi\sigma^{2}}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}$$
 
 which we can note is, by definition, the pdf of the Gaussian!
 
-## 3. Derivation of maximum entropy probability distribution of half-bounded random variable with fixed mean $\bar{r}$ $\text{(exponential distribution)}$
+## 3. Derivation of maximum entropy probability distribution of half-bounded random variable with fixed mean $\bar{r}$ exponential distribution)
 
 Now, constrain on a fixed mean, but no fixed variance, which we will see is the exponential distribution. To maximize entropy, we want to minimize the following function:
 
@@ -305,11 +305,11 @@ that we can provide a normalization constant that will result in
 integration to 1.
 
 Looking at the function
-$e^{\lambda_{0}-1+\Sigma_{i=1}^{N}\lambda_{i}f_{i}(x)}$ $\text{(which must
-remain finite for all }x\text{)}$, we can thus conclude that
+$e^{\lambda_{0}-1+\Sigma_{i=1}^{N}\lambda_{i}f_{i}(x)}$ (which must
+remain finite for all x), we can thus conclude that
 $\lambda_{0}-1+\Sigma_{i=1}^{N}\lambda_{i}f_{i}(x)$ must not converge to
-positive infinity, but may converge to negative infinity $\text{(because it
-would cause the exponential to converge to zero)}$ or to any finite value
+positive infinity, but may converge to negative infinity (because it
+would cause the exponential to converge to zero) or to any finite value
 as $x$ approaches positive or negative infinity. The only components of
 this function that depend on $x$ are the polynomail constraints of form
 $f_{i}(x)=\Sigma_{j=1}^{M}b_{j}x^{j}$. As such, these constraints are
@@ -325,7 +325,7 @@ $f_{i}$ will be satisfied. In short, the only way to guarantee that
 $f_{i}$ remain either positive for negative will be if the dominant
 component of the polynomial $f_{i}$ is of an EVEN order for all $i$ s.t.
 $\lambda_{i}\neq0$. If the dominant component is odd, then $f_{i}$ will
-either move from negative infinity to positive infinity $\text{(or, if negated,
-from positive infinity to negative infinity)}$ as x moves across the
+either move from negative infinity to positive infinity (or, if negated,
+from positive infinity to negative infinity) as x moves across the
 domain, which means that no finite and nonzero $\lambda_{i}$ could be
 chosen to maintain the criteria outlined above.
