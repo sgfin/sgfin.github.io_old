@@ -28,7 +28,7 @@ $$\Sigma = E[(X-E[X])(X-E[X])^{T}] = \int p(x)(x-\mu)(x-\mu)^{T}dx$$
 
 $$H=\frac{N}{2}\ln\left(2\pi e\right)+\frac{1}{2}\ln\det C$$
 
-Part of the reason why I do this is because the second part of the derivation involves a "trace trick" that I want to remember how to use for the future.  The key to the "trace trick" is to recognize that a matrix $\text{(slash set of multiplied matrices)}$ is 1x1, and that the value of any such matrix is, by definition, equal to its trace.  This then allows you to invoke the quasi-commutative property of the trace:
+Part of the reason why I do this is because the second part of the derivation involves a "trace trick" that I want to remember how to use for the future.  The key to the "trace trick" is to recognize that a matrix (slash set of multiplied matrices) is 1x1, and that the value of any such matrix is, by definition, equal to its trace.  This then allows you to invoke the quasi-commutative property of the trace:
 
 $$\text{tr}(UVW)=\text{tr}(WUV)$$
 
@@ -71,7 +71,7 @@ $$\ln\left((\sqrt{2\pi})^{N}\sqrt{\det C}\right)$$
 
 $$=\frac{N}{2}\ln\left(2\pi\right)+\frac{1}{2}\ln\det C$$
 
-### Second term  $\text{(Trace Trick Coming!)}$
+### Second term  (Trace Trick Coming!)
 
 Now we consider the second ln term
 
