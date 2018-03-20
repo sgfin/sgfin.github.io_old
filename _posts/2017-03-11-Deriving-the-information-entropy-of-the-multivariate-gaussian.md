@@ -60,11 +60,11 @@ $$-\int p(x)*\ln\left(\frac{1}{(\sqrt{2\pi})^{N}\sqrt{\det C}}\right)dx$$
 
 $$=\int p(x)*\ln\left((\sqrt{2\pi})^{N}\sqrt{\det C}\right)$$
 
-since all the terms other than $p(x)$ form a constant,
+since all the terms other than $$p(x)$$ form a constant,
 
 $$=\left(\ln\left((\sqrt{2\pi})^{N}\sqrt{\det C}\right)\right)\int p(x)$$
 
-and because $p(x)$ is a PDF, it integrates to 1. Thus, this component of
+and because $$p(x)$$ is a PDF, it integrates to 1. Thus, this component of
 the equation is
 
 $$\ln\left((\sqrt{2\pi})^{N}\sqrt{\det C}\right)$$
