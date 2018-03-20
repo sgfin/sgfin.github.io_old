@@ -79,13 +79,13 @@ $$-\int p(x)\ln\left(e^{-\frac{1}{2}(x-\mu)^{T}\Sigma^{-1}(x-\mu)}\right)dx$$
 
 $$=\int p(x)\frac{1}{2}\ln\left(e^{(x-\mu)^{T}\Sigma^{-1}(x-\mu)}\right)dx$$
 
-because $(x-\mu)^{T}$ is a 1 x N matrix, $\Sigma^{-1}$ is a N x N
-matrix, and $(x-\mu)$ is a N x 1 matrix, the matrix product
-$(x-\mu)^{T}\Sigma^{-1}(x-\mu)$ is a 1 x 1 matrix. Further, because the
+because $$(x-\mu)^{T}$$ is a 1 x N matrix, $$\Sigma^{-1}$$ is a N x N
+matrix, and $$(x-\mu)$$ is a N x 1 matrix, the matrix product
+$$(x-\mu)^{T}\Sigma^{-1}(x-\mu)$$ is a 1 x 1 matrix. Further, because the
 trace of any 1 x 1 matrix
-$\text{tr}(A)=\Sigma_{i=1}^{n}A_{i,i}=A_{1,1}=A$, we can conclude that
+$$\text{tr}(A)=\Sigma_{i=1}^{n}A_{i,i}=A_{1,1}=A$$, we can conclude that
 the 1 x 1 matrix
-$(x-\mu)^{T}\Sigma^{-1}(x-\mu)=\text{tr}((x-\mu)^{T}\Sigma^{-1}(x-\mu))$.
+$$(x-\mu)^{T}\Sigma^{-1}(x-\mu)=\text{tr}((x-\mu)^{T}\Sigma^{-1}(x-\mu))$$.
 
 As such, our term becomes
 
@@ -94,13 +94,13 @@ $$=\int p(x)\frac{1}{2}\ln\left(e^{\text{tr}\left[(x-\mu)^{T}\Sigma^{-1}(x-\mu)\
 $$=\frac{1}{2}\int p(x)\ln\left(e^{\text{tr}\left[(x-\mu)^{T}\Sigma^{-1}(x-\mu)\right]}\right)dx$$
 
 , which, by the quasi-commutativity property of the trace function,
-$\text{tr}(UVW)=\text{tr}(WUV)$,
+$$\text{tr}(UVW)=\text{tr}(WUV)$$,
 
 $$=\frac{1}{2}\int p(x)\ln\left(e^{\text{tr}\left[\Sigma^{-1}(x-\mu)(x-\mu)^{T}\right]}\right)dx$$
 
-. Because $p(x)$ is a scalar and the natural logarithm and exponentials
+. Because $$p(x)$$ is a scalar and the natural logarithm and exponentials
 may cancel, the properties of the trace function allow us to push the
-$p(x)$ and the integral inside of the trace, so
+$$p(x)$$ and the integral inside of the trace, so
 
 $$=\frac{1}{2}\int\ln\left(e^{\text{tr}\left[\Sigma^{-1}p(x)(x-\mu)(x-\mu)^{T}\right]}\right)dx$$
 
