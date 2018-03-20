@@ -1,11 +1,11 @@
 # Site settings
 title: Sam's Research Blog
-email: sam.17(at)dartmouth.edu
-description: "Science with a spirit of adventure."
+email: samuel_finlayson@hms.harvard.edu
+description: "MD-PhD student working with Zak Kohane"
 baseurl: ""
-url: "http://greydanus.github.io"
+url: "http://sgfin.github.io"
 # twitter_username: samgreydanus
-github_username: greydanus
+github_username: sgfin
 
 # Build settings
 markdown: kramdown
