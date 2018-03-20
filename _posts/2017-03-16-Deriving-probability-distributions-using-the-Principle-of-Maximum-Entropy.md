@@ -34,7 +34,7 @@ In statistics/information theory, the [maximum entropy probability distribution]
 
 Given the above, we can use the maximum entropy principle to derive the best probability distribution for a given use.  A useful tool in doing so is the Lagrange Multiplier \([Khan Acad article](https://www.khanacademy.org/math/multivariable-calculus/applications-of-multivariable-derivatives/constrained-optimization/a/lagrange-multipliers-single-constraint), [wikipedia](https://en.wikipedia.org/wiki/Lagrange_multiplier)\), which helps us maximize or minimize a function under a given set of constraints.
 
-For a single variable function $f(x)$ subject to the constraint $g(x) = c$, the lagrangian is of the form:
+For a single variable function $$f(x)$$ subject to the constraint $$g(x) = c$$, the lagrangian is of the form:
 $$\mathcal{L}(x,\lambda) = f(x) - \lambda(g(x)- c)$$
 , which is then differentiated and set to zero to find a solution.
 
@@ -53,7 +53,7 @@ $$\begin{cases}
 g_{1}(x)=\dots=g_{M}(x)=0
 \end{cases}$$
 
-In this case, since we are deriving probability distributions, the integral of the pdf must sum to one, and as such, every derivation will include the constraint $(\int p(x)dx-1)=0$.
+In this case, since we are deriving probability distributions, the integral of the pdf must sum to one, and as such, every derivation will include the constraint $$(\int p(x)dx-1)=0$$.
 
 With all that, we can begin:
 
@@ -63,7 +63,7 @@ First, we solve for the case where the only constraint is that the distribution 
 
 $$J(p)=\int_{a}^{b} p(x)\ln p(x)dx-\lambda_{0}\left(\int_{a}^{b} p(x)dx-1\right)$$
 
-.  Taking the derivative with respect ot p(x) and setting to zero,
+.  Taking the derivative with respect ot $$p(x)$$ and setting to zero,
 
 $$\frac{\delta J}{\delta p(x)}=1+\ln p(x)-\lambda_{0}=0$$
 
@@ -77,7 +77,7 @@ $$\int_{a}^{b} p(x)dx=1=\int_{a}^{b} e^{-\lambda_{0}+1}dx$$
 
 Note: To check if this is a minimum (which would maximize entropy given the
 way the equation was set up), we also need to see if the second
-derivative with respect to p(x) is positive here or not, which it
+derivative with respect to $$p(x)$$ is positive here or not, which it
 clearly always is:
 
 $$\frac{\delta J}{\delta p(x)^{2}dx}=\frac{1}{p(x)}$$
@@ -102,7 +102,7 @@ $$\lambda_{0} = 1 -\ln \frac{1}{b-a}$$
 
 ### Putting Together
 
-Plugging the constraint $\lambda_{0} = 1 -\ln \frac{1}{b-a}$ into the pdf $p(x)=e^{1 -\lambda_{0}}$, we have:
+Plugging the constraint $$\lambda_{0} = 1 -\ln \frac{1}{b-a}$$ into the pdf $$p(x)=e^{1 -\lambda_{0}}$$, we have:
 
 $$p(x)=e^{1 -\lambda_{0}}$$
 
@@ -114,14 +114,14 @@ $$p(x)=e^{\ln \frac{1}{b-a}}$$
 
 $$p(x)=\frac{1}{b-a}$$
 
-.  Of course, this is only defined in the range between $a$ and $b$, however, so the final function is:
+.  Of course, this is only defined in the range between $$a$$ and $$b$$, however, so the final function is:
 
 $$p(x)=\begin{cases}
 \frac{1}{b-a} & a\leq x \leq b\\
 0 & \text{otherwise}
 \end{cases}$$
 
-## 2. Derivation of maximum entropy probability distribution for given fixed mean $\mu$ and variance $\sigma^{2}$ (gaussian distribution)
+## 2. Derivation of maximum entropy probability distribution for given fixed mean $$\mu$$ and variance $$\sigma^{2}$$ (gaussian distribution)
 
 Now, for the case when we have a specified mean and variance, which we will see is the gaussian distribution.  To maximize entropy, we want to minimize the following function:
 
@@ -143,7 +143,7 @@ and
 
 $$\int p(x)(x-\mu)^{2}dx=\sigma^{2}=\int e^{-\lambda_{0}+1-\lambda_{1}(x-\mu)^{2}}(x-\mu)^{2}dx$$
 
-Again, $\frac{\delta J}{\delta p(x)^{2}dx}=\frac{1}{p(x)}$ is always positive, so our solution will be minimum.
+Again, $$\frac{\delta J}{\delta p(x)^{2}dx}=\frac{1}{p(x)}$$ is always positive, so our solution will be minimum.
 
 ### Satisfy first constraint
 
@@ -209,7 +209,7 @@ $$=\frac{1}{\sqrt{2\pi\sigma^{2}}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}$$
 
 which we can note is, by definition, the pdf of the Gaussian!
 
-## 3. Derivation of maximum entropy probability distribution of half-bounded random variable with fixed mean $\bar{r}$ exponential distribution)
+## 3. Derivation of maximum entropy probability distribution of half-bounded random variable with fixed mean $$\bar{r}$$ exponential distribution)
 
 Now, constrain on a fixed mean, but no fixed variance, which we will see is the exponential distribution. To maximize entropy, we want to minimize the following function:
 
@@ -229,8 +229,8 @@ $$0=1+\ln p(x)-\lambda_{0}-\lambda_{1}x$$
 
 $$p(x)=e^{-\lambda_{0}+1+-\lambda x}$$
 
-, which must satisfy the constaints $\int_{0}^{\infty}p(x)dx=1$ and
-$\int_{0}^{\infty}x*p(x)dx-\bar{r}$.
+, which must satisfy the constaints $$\int_{0}^{\infty}p(x)dx=1$$ and
+$$\int_{0}^{\infty}x*p(x)dx-\bar{r}$$.
 
 ### Satisfying first constraint 
 
@@ -250,7 +250,7 @@ $$\int_{0}^{\infty}x*e^{-\lambda_{0}+1-\lambda_{1}x}dx=\bar{r}$$
 
 $$\int_{0}^{\infty}x*e^{-\lambda_{0}+1}e^{\lambda_{1}x}dx=\bar{r}$$
 
-substituting in $\lambda_{1}=e^{-\lambda_{0}+1}$ from above
+substituting in $$\lambda_{1}=e^{-\lambda_{0}+1}$$ from above
 
 $$\int_{0}^{\infty}x*\lambda_{1}e^{\lambda_{1}x}dx=\bar{r}$$
 
@@ -258,7 +258,7 @@ $$\int_{0}^{\infty}x*\lambda_{1}e^{\lambda_{1}x}dx=\bar{r}$$
 
 Rather than evaluating this last integral above, we can simply stop and
 note that in evaluating our constraints we have stumbled upon the
-formula for an exponential random variable with parameter $\lambda$!
+formula for an exponential random variable with parameter $$\lambda$$!
 
 More explicitly:
 
@@ -266,8 +266,8 @@ $$\int_{0}^{\infty}x*\lambda_{1}e^{\lambda_{1}x}dx=\bar{r}$$
 
 $$\int_{0}^{\infty}x*p(x)dx=\bar{r}$$
 
-where $p(x)=\lambda e^{\lambda x}$, the pdf of the exponential function
-for $x\ge0$, where $\lambda=\frac{1}{\bar{r}}$.
+where $$p(x)=\lambda e^{\lambda x}$$, the pdf of the exponential function
+for $$x\ge0$$, where $$\lambda=\frac{1}{\bar{r}}$$.
 
 In other words,
 
@@ -276,9 +276,9 @@ $$p(x)=\begin{cases}
 0 & x<0
 \end{cases}$$
 
-## 4. Maximum entropy of random variable over range $R$ with set of constraints $\left\langle f_{n}(x)\right\rangle =\alpha_{n}$ with $n=1\dots N$ and $f_{n}$ is of polynomial order
+## 4. Maximum entropy of random variable over range $$R$$ with set of constraints $$\left\langle f_{n}(x)\right\rangle =\alpha_{n}$$ with $$n=1\dots N$$ and $$f_{n}$$ is of polynomial order
 
-$f_{n}$ must be even order for all enforced constratins.
+$$f_{n}$$ must be even order for all enforced constraints.
 
 Following the same approach as above:
 
@@ -290,10 +290,10 @@ $$0=-1-\ln p(x)+\lambda_{0}+\Sigma_{i=1}^{N}\lambda_{i}f_{i}(x)$$
 
 $$p(x)=e^{\lambda_{0}-1+\Sigma_{i=1}^{N}\lambda_{i}f_{i}(x)}$$
 
-all where $f_{i}(x)=\Sigma_{j=1}^{M}b_{j}x^{j}$.
+all where $$f_{i}(x)=\Sigma_{j=1}^{M}b_{j}x^{j}$$.
 
 We now consider the conditions in which the random variable can be
-defined in the entire domain $(-\infty,\infty)$. Looking at the
+defined in the entire domain $$(-\infty,\infty)$$. Looking at the
 normalization constraint,
 
 $$\int p(x)dx=\int e^{\lambda_{0}-1+\Sigma_{i=1}^{N}\lambda_{i}f_{i}(x)}dx=1$$
@@ -305,27 +305,27 @@ that we can provide a normalization constant that will result in
 integration to 1.
 
 Looking at the function
-$e^{\lambda_{0}-1+\Sigma_{i=1}^{N}\lambda_{i}f_{i}(x)}$ (which must
+$$e^{\lambda_{0}-1+\Sigma_{i=1}^{N}\lambda_{i}f_{i}(x)}$$ (which must
 remain finite for all x), we can thus conclude that
-$\lambda_{0}-1+\Sigma_{i=1}^{N}\lambda_{i}f_{i}(x)$ must not converge to
+$$\lambda_{0}-1+\Sigma_{i=1}^{N}\lambda_{i}f_{i}(x)$$ must not converge to
 positive infinity, but may converge to negative infinity (because it
 would cause the exponential to converge to zero) or to any finite value
-as $x$ approaches positive or negative infinity. The only components of
-this function that depend on $x$ are the polynomail constraints of form
-$f_{i}(x)=\Sigma_{j=1}^{M}b_{j}x^{j}$. As such, these constraints are
+as $$x$$ approaches positive or negative infinity. The only components of
+this function that depend on $$x$$ are the polynomail constraints of form
+$$f_{i}(x)=\Sigma_{j=1}^{M}b_{j}x^{j}$$. As such, these constraints are
 the only components at risk to force the function towards infinity,
-provided that $\lambda_{0}\neq\infty.$ Therefore, because the
-$\lambda_{i}$ corresponding to can any $f_{i}$ can be positive or
+provided that $$\lambda_{0}\neq\infty.$$ Therefore, because the
+$$\lambda_{i}$$ corresponding to can any $$f_{i}$$ can be positive or
 negative, the function will be able to be defined so long
-$f_{i}(x)=\Sigma_{j=1}^{M}b_{j}x^{j}<\infty$ for all $x$, or
-$f_{i}(x)=\Sigma_{j=1}^{M}b_{j}x^{j}>-\infty$ for all $x.$
+$$f_{i}(x)=\Sigma_{j=1}^{M}b_{j}x^{j}<\infty$$ for all $$x$$, or
+$$f_{i}(x)=\Sigma_{j=1}^{M}b_{j}x^{j}>-\infty$$ for all $$x.$$
 
 Finally, we can consider the conditions for which these criteria for
-$f_{i}$ will be satisfied. In short, the only way to guarantee that
-$f_{i}$ remain either positive for negative will be if the dominant
-component of the polynomial $f_{i}$ is of an EVEN order for all $i$ s.t.
-$\lambda_{i}\neq0$. If the dominant component is odd, then $f_{i}$ will
+$$f_{i}$$ will be satisfied. In short, the only way to guarantee that
+$$f_{i}$$ remain either positive for negative will be if the dominant
+component of the polynomial $$f_{i}$$ is of an EVEN order for all $$i$$ s.t.
+$$\lambda_{i}\neq0$$. If the dominant component is odd, then $$f_{i}$$ will
 either move from negative infinity to positive infinity (or, if negated,
 from positive infinity to negative infinity) as x moves across the
-domain, which means that no finite and nonzero $\lambda_{i}$ could be
+domain, which means that no finite and nonzero $$\lambda_{i}$$ could be
 chosen to maintain the criteria outlined above.
