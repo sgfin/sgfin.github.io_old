@@ -314,11 +314,9 @@ will maximize the probability the model assigns to an incorrect class.
 Single-step and iterative approaches have been proposed [@Madry2017].
 
 <div class="imgcap">
-	<img src="/assets/adversarial_lecture_notes/fgsm.png" width="45%">
-    <img src="/assets/adversarial_lecture_notes/pgd.png" width="45%">
-	<div class="thecap" style="text-align:center">Fig 6. Gradient updates for FGSM (a) vs. PGD (b) where $$x$$ is the training
-example, the box is the space of perturbations and $$\delta$$ is a
-particular perturbation.</div>
+	<img src="/assets/adversarial_lecture_notes/fgsm.png" width="224px">
+    <img src="/assets/adversarial_lecture_notes/pgd.png" width="224px">
+	<div class="thecap" style="text-align:center">Fig 6. Gradient updates for FGSM (a) vs. PGD (b) where $$x$$ is the training example, the box is the space of perturbations and $$\delta$$ is a particular perturbation.</div>
 </div>
 
 
