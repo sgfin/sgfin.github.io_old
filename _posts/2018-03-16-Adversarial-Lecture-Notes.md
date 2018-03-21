@@ -8,7 +8,7 @@ mathjax: true
 bibliography: '/assets/adversarial_lecture_notes/bib.bib'
 ---
 
-These notes are based on an excellent lecture given by Aleksander Madry at MIT on 3/14/2018.
+These notes are based on an excellent lecture given by Aleksander Madry at MIT on 3/14/2018.  Prepared with the help of Anastasiya Belyaeva and Ryan Chung.
 
 -   [Introduction: Security threats in the Deep Learning
     Pipeline](#introduction-security-threats-in-the-deep-learning-pipeline)
