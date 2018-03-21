@@ -316,7 +316,7 @@ Single-step and iterative approaches have been proposed [@Madry2017].
 <div class="imgcap">
 	<img src="/assets/adversarial_lecture_notes/fgsm.png" width="224px">
     <img src="/assets/adversarial_lecture_notes/pgd.png" width="224px">
-	<div class="thecap" style="text-align:center">Fig 6. Gradient updates for FGSM (a) vs. PGD (b) where $$x$$ is the training example, the box is the space of perturbations and $$\delta$$ is a particular perturbation.</div>
+	<div class="thecap" style="text-align:center">Fig 6. Gradient updates for FGSM (a) vs. PGD (b) where x is the training example, the box is the space of perturbations and delta is a particular perturbation.</div>
 </div>
 
 
@@ -380,7 +380,7 @@ this behavior by performing many restarts. As shown in Figure
 distribution.
 
 <div class="imgcap">
-    <img src="/assets/adversarial_lecture_notes/dist_local_maxima.png" width="45%">
+    <img src="/assets/adversarial_lecture_notes/dist_local_maxima.png" width="90%">
 	<div class="thecap" style="text-align:center">Fig 8. Values of the local maxima given by the cross-entropy loss for five
 examples from the MNIST and CIFAR10 evaluation datasets. For each
 example, PGD is started uniformly at random around the example and
@@ -402,7 +402,7 @@ complicated decision boundary can be learned, smaller number of
 adversarial examples will be misclassified.
 
 <div class="imgcap">
-    <img src="/assets/adversarial_lecture_notes/boundary.png" width="45%">
+    <img src="/assets/adversarial_lecture_notes/boundary.png" width="60%">
 	<div class="thecap" style="text-align:center">Fig 9. Natural classification (left) vs. adversarial boundaries (right) corresponding to $$\ell_{\infty}$$ ball around training points.</div>
 </div>
 
@@ -419,7 +419,7 @@ networks a robust and accurate solution can be achieved with PGD
 adversary.
 
 <div class="imgcap">
-    <img src="/assets/adversarial_lecture_notes/capacity.png" width="45%">
+    <img src="/assets/adversarial_lecture_notes/capacity.png" width="50%">
 	<div class="thecap" style="text-align:center">Fig 10. Average accuracy and average loss vs. capacity of convolutional neural
 networks trained with natural examples, FGSM adversary and PGD adversary.</div>
 </div>
@@ -432,7 +432,7 @@ the original adversarial training optimization problem is indeed being
 solved during training.
 
 <div class="imgcap">
-    <img src="/assets/adversarial_lecture_notes/itworks.png" width="45%">
+    <img src="/assets/adversarial_lecture_notes/itworks.png" width="50%">
 	<div class="thecap" style="text-align:center">Fig 11. Value of adversarial loss function on MNIST and CIFAR10 datasets during training.</div>
 </div>
 
