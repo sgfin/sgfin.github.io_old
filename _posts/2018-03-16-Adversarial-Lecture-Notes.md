@@ -55,11 +55,11 @@ discuss several key limitations to current deep learning systems, and
 attempt to provide principled formulations for why they exist and how we
 might address them.
 
-* -Training: data poisoning
+* - Training: data poisoning
 
-* -Inference: adversarial examples
+* - Inference: adversarial examples
 
-* -Profitable deployment: model stealing
+* - Profitable deployment: model stealing
 
 ## Adversarial examples 101
 
@@ -123,13 +123,13 @@ The choice of how to define $$\Delta$$ is very domain-specific and should
 thus be chosen after carefully considering the problem at hand. Common
 approaches include:
 
-* -Norm bound: none of the pixels are perturbed by more than
+* - Norm bound: none of the pixels are perturbed by more than
     $$\epsilon$$, i.e. $$||\delta|| \leq \epsilon$, most commonly $$L_2$$ or
     $$L_\infty$$
 
-* -VGG similarity: cosine similarity between models
+* - VGG similarity: cosine similarity between models
 
-* -Rotations and translations
+* - Rotations and translations
 
 For the purpose of this class, we will generally assume that
 $$\Delta = ||\delta||_\infty \leq \epsilon$$.
