@@ -91,8 +91,8 @@ gibbon.[]{data-label="fig:panda"}](panda){width="0.6\linewidth"}
 Let’s try to formulate adversarial examples more mathematically, from
 the perspective of optimization. Recall that our fundamental problem of
 supervised learning is to provide an accurate mapping from an input
-$x_i$ to an output $y_i$ by optimizing over some set of model parameters
-$\theta$. This can be formulated as a minimization problem
+$$x_i$$ to an output $$y_i$$ by optimizing over some set of model parameters
+$$\theta$$. This can be formulated as a minimization problem
 
 $$\begin{aligned}
 \min_\theta \text{loss}(\theta, x_i, y_i)\end{aligned}$$
@@ -103,32 +103,32 @@ descent algorithm over continuously differentiable model parameters.
 The above approach has been the workhorse of supervised learning this
 decade. However, it only takes a small tweak to this optimization
 paradigm to find adversarial examples. To execute an adversarial attack,
-we take our model parameters $\theta$ as fixed and instead optimize over
-our *inputs*. More specifically, we search for a perturbation $\delta$
-that can be added to $x_i$ to *maximize* the resulting model loss:
+we take our model parameters $$\theta$$ as fixed and instead optimize over
+our *inputs*. More specifically, we search for a perturbation $$\delta$$
+that can be added to $$x_i$$ to *maximize* the resulting model loss:
 
 $$\begin{aligned}
 \max_{\delta\in\Delta} \text{loss}(\theta, x_i + \delta, y_i)\end{aligned}$$
 
-If $\delta$ is unconstrained, an attack could be taken as the difference
+If $$\delta$$ is unconstrained, an attack could be taken as the difference
 between one class and another. However, this wouldn’t be rightfully
-considered as an adversarial example. As such, we constrain the $\delta$
-to be from a class of appropriate perturbations $\Delta$.
+considered as an adversarial example. As such, we constrain the $$\delta$$
+to be from a class of appropriate perturbations $$\Delta$$.
 
-The choice of how to define $\Delta$ is very domain-specific and should
+The choice of how to define $$\Delta$$ is very domain-specific and should
 thus be chosen after carefully considering the problem at hand. Common
 approaches include:
 
 -   Norm bound: none of the pixels are perturbed by more than
-    $\epsilon$, i.e. $||\delta|| \leq \epsilon$, most commonly $L_2$ or
-    $L_\infty$
+    $$\epsilon$$, i.e. $$||\delta|| \leq \epsilon$, most commonly $$L_2$$ or
+    $$L_\infty$$
 
 -   VGG similarity: cosine similarity between models
 
 -   Rotations and translations
 
 For the purpose of this class, we will generally assume that
-$\Delta = ||\delta||_\infty \leq \epsilon$.
+$$\Delta = ||\delta||_\infty \leq \epsilon$$.
 
 # Properties of Adversarial Examples
 
@@ -265,9 +265,9 @@ machine learning optimization task to suit our particular goals.
 Specifically, we can build supervised learning models that are robust to
 adversarial examples by modifying our learning problem to account for
 adversarial perturbations. This can be achieved by finding parameters
-$\theta$ that minimize the adversarial loss, which is the highest loss
-of a given data point after a perturbation $\delta$ out of all allowed
-perturbations $\Delta$:
+$$\theta$$ that minimize the adversarial loss, which is the highest loss
+of a given data point after a perturbation $$\delta$$ out of all allowed
+perturbations $$\Delta$$:
 
 $$\begin{aligned}
 \min_{\theta} E_{(x,y) \sim \mathcal{D}} \big[\max_{\delta\in\Delta} \text{loss}(\theta, x + \delta, y) \big] \end{aligned}$$
@@ -304,20 +304,20 @@ well for this task.
 # Adversarial Attacks
 
 The adversarial problem boils down to finding the optimal direction to
-move within the box of radius $\delta$ surrounding each input $x_i$ that
+move within the box of radius $$\delta$$ surrounding each input $$x_i$$ that
 will maximize the probability the model assigns to an incorrect class.
 Single-step and iterative approaches have been proposed [@Madry2017].
 
 [0.45]{}
 
-![Gradient updates for FGSM (a) vs. PGD (b) where $x$ is the training
-example, the box is the space of perturbations and $\delta$ is a
+![Gradient updates for FGSM (a) vs. PGD (b) where $$x$$ is the training
+example, the box is the space of perturbations and $$\delta$$ is a
 particular perturbation.](fgsm.png){width="0.5\linewidth"}
 
 [0.45]{}
 
-![Gradient updates for FGSM (a) vs. PGD (b) where $x$ is the training
-example, the box is the space of perturbations and $\delta$ is a
+![Gradient updates for FGSM (a) vs. PGD (b) where $$x$$ is the training
+example, the box is the space of perturbations and $$\delta$$ is a
 particular perturbation.](pgd.png){width="0.5\linewidth"}
 
 ## Fast Gradient Sign Method (FGSM)
@@ -330,7 +330,7 @@ $$\begin{aligned}
 \delta = \eta \nabla_x \text{loss}(\theta, x_i, y_i)\end{aligned}$$
 
 In this case, the set of perturbations is constrained such that
-$||\delta||_\infty\leq\epsilon$, resulting in the following gradient
+$$||\delta||_\infty\leq\epsilon$$, resulting in the following gradient
 update:
 
 $$\begin{aligned}
@@ -345,7 +345,7 @@ networks suggests that these models are stepwise linear.
 
 Projected Gradient Descent (PGD) methods involves using FGSM with
 multiple steps. Additionally, we constrain the perturbation to within
-the permitted box around $x_i$. To ensure this, each time PGD takes a
+the permitted box around $$x_i$$. To ensure this, each time PGD takes a
 step, it checks if it has moved out of the box, and applies a projection
 back into the box if necessary (Figure \[fig:pgd\]). PGD is naturally
 more expensive than FGSM, but allows for more effective attacks.
@@ -388,13 +388,13 @@ outliers.[]{data-label="fig:local_maxima"}](dist_local_maxima){width="0.9\linewi
 Training against strong adversarial examples requires a stronger
 classifier with more capacity to distribguish one class from another.
 Figure \[fig:boundary\] shows that a simple linear decision boundary is
-unable to seprate all adversarial examples within $\ell_{\infty}$ of the
+unable to seprate all adversarial examples within $$\ell_{\infty}$$ of the
 training point because it is not complex enough. However, when a more
 complicated decision boundary can be learned, smaller number of
 adversarial examples will be misclassified.
 
 ![Natural classification (left) vs. adversarial boundaries (right)
-corresponding to $\ell_{\infty}$ ball around training
+corresponding to $$\ell_{\infty}$$ ball around training
 points.[]{data-label="fig:boundary"}](boundary){width="0.9\linewidth"}
 
 This intuition has been captured via experimental results that trained
