@@ -55,11 +55,11 @@ discuss several key limitations to current deep learning systems, and
 attempt to provide principled formulations for why they exist and how we
 might address them.
 
--   Training: data poisoning
+* Training: data poisoning
 
--   Inference: adversarial examples
+* Inference: adversarial examples
 
--   Profitable deployment: model stealing
+* Profitable deployment: model stealing
 
 ## Adversarial examples 101
 
