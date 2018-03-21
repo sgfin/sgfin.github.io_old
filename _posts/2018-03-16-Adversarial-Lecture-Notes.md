@@ -36,9 +36,8 @@ bibliography: '/assets/adversarial_lecture_notes/bib.bib'
     attacks](#properties-of-adversarial-attacks)
 -   [Conclusions](#conclusions)
 
-[Lecture 11: Adversarial Examples and Misclassification Attacks]{}
 
-# Introduction: Security threats in the Deep Learning Pipeline
+## Introduction: Security threats in the Deep Learning Pipeline
 
 The dramatic success of AlexNet in the 2012 ImageNet challenge
 [@alexnet] ushered in – seemingly overnight – a veritable deep learning
@@ -60,9 +59,9 @@ might address them.
 
 -   Profitable deployment: model stealing
 
-# Adversarial examples 101
+## Adversarial examples 101
 
-## History and examples
+### History and examples
 
 Adversarial examples are inputs to machine learning models that an
 attacker has crafted to force the model to break. Adversarial examples
@@ -89,7 +88,7 @@ image into a
 gibbon.</div>
 </div>
 
-## Mathematical formulation
+### Mathematical formulation
 
 Let’s try to formulate adversarial examples more mathematically, from
 the perspective of optimization. Recall that our fundamental problem of
@@ -133,9 +132,9 @@ approaches include:
 For the purpose of this class, we will generally assume that
 $$\Delta = ||\delta||_\infty \leq \epsilon$$.
 
-# Properties of Adversarial Examples
+## Properties of Adversarial Examples
 
-## Adversarial examples (probably) arise from linearities
+### Adversarial examples (probably) arise from linearities
 
 Adversarial examples have been shown to exist for every class of machine
 learning models ever tested, including simple single-layer models. To
@@ -166,7 +165,7 @@ are *piecewise linear* or locally linear. As such, linear perturbations
 just like the above are thought to drive adversarial examples in deep
 networks [@goodfellow2014].
 
-## Adversarial examples are not random
+### Adversarial examples are not random
 
 While it may be tempting to assume that adversarial examples are a
 product of the models poor robustness to random noise, empirical studies
@@ -211,7 +210,7 @@ into any any class you desire in most cases (Figure
 </div>
 
 
-## A word of caution
+### A word of caution
 
 A cottage industry has sprung up generating various ad hoc defenses to
 specific adversarial attacks. Time and time again, these defenses have
@@ -228,9 +227,9 @@ please don’t add to the noise by blindly assuming you’ve solved this
 problem with another simple trick. Instead, study the literature and see
 what has been tried and consider how your idea might relate.
 
-# A principled approach to avoiding adversarial examples
+## A principled approach to avoiding adversarial examples
 
-## Why we shouldn’t be surpised that adversarial examples arise from our typical formulations of supervised learning
+### Why we shouldn’t be surpised that adversarial examples arise from our typical formulations of supervised learning
 
 As we attempt to avoid adversarial examples, it is first important to
 note that the phenomenon as it currently exists does not necessarily
@@ -263,7 +262,7 @@ orthogonal to the empirical minimization problem above. Since, we never
 asked our machine learning algorithm not to have adversarial examples,
 we should not be surprised to find adversarial examples
 
-## Towards a paradigm for adversarially robust generalization
+### Towards a paradigm for adversarially robust generalization
 
 Once an understanding has been established of the task that our machine
 learning algorithm is solving and not solving, we can redefine our
@@ -307,14 +306,12 @@ Although the formulation above is non-convex, we hope that our deep
 learning methods for solving highly non-convex problems will perform
 well for this task.
 
-# Adversarial Attacks
+## Adversarial Attacks
 
 The adversarial problem boils down to finding the optimal direction to
 move within the box of radius $$\delta$$ surrounding each input $$x_i$$ that
 will maximize the probability the model assigns to an incorrect class.
 Single-step and iterative approaches have been proposed [@Madry2017].
-
-[0.45]{}
 
 <div class="imgcap">
 	<img src="/assets/adversarial_lecture_notes/fgsm.png" width="45%">
@@ -325,7 +322,7 @@ particular perturbation.</div>
 </div>
 
 
-## Fast Gradient Sign Method (FGSM)
+### Fast Gradient Sign Method (FGSM)
 
 The fast gradient sign method (FGSM) (Figure 6) was the first
 general adversarial attack proposed and represents the optimal single
@@ -346,7 +343,7 @@ for the parameters of this network. particular training example. The
 fact that this method can find adversarial examples in complex neural
 networks suggests that these models are stepwise linear.
 
-## Projected Gradient Descent Methods (PGD)
+### Projected Gradient Descent Methods (PGD)
 
 Projected Gradient Descent (PGD) methods involves using FGSM with
 multiple steps. Additionally, we constrain the perturbation to within
@@ -355,7 +352,7 @@ step, it checks if it has moved out of the box, and applies a projection
 back into the box if necessary (Figure 6). PGD is naturally
 more expensive than FGSM, but allows for more effective attacks.
 
-# Properties of adversarial attacks
+## Properties of adversarial attacks
 
 Through experiments using MNIST and CIFAR10, the following properties of
 adversarial training have been observed [@Madry2017]:
@@ -442,7 +439,7 @@ solved during training.
 </div>
 
 
-# Conclusions
+## Conclusions
 
 Deep learning models are susceptible to adversarial examples where the
 differences between training and adversarial images are
