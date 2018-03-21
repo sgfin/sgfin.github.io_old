@@ -447,5 +447,3 @@ examples are not random noise, but are a subspace of perturbations. A
 variety of approaches that come up with new attack and defense methods
 have been coming out. Recently a new paradigm that explicitly optimizes
 for robustness to attacks has been developed.
-
-{% bibliography %}
