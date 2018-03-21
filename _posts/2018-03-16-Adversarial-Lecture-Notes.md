@@ -5,7 +5,6 @@ title:  "Notes on adversarial examples"
 excerpt: "Based on a lecture by Aleksander Madry at MIT on 3/14/2018"
 date:   2018-03-16 10:00:00
 mathjax: true
-bibliography: '/assets/adversarial_lecture_notes/bib.bib'
 ---
 
 These notes are based on an excellent lecture given by Aleksander Madry at MIT on 3/14/2018.  Prepared with the help of Anastasiya Belyaeva and Ryan Chung.
