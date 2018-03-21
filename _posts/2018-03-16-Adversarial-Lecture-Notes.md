@@ -368,7 +368,7 @@ performance than FGSM (Figure 7), which linearizes the
 inner maximization problem.
 
 <div class="imgcap">
-    <img src="/assets/adversarial_lecture_notes/pgd_fgsm.png" width="45%">
+    <img src="/assets/adversarial_lecture_notes/pgd_fgsm.png" width="40%">
 	<div class="thecap" style="text-align:center">Fig 7. The choice of attack method - FGSM (red) vs. PGD (blue)
 matters.</div>
 </div>
