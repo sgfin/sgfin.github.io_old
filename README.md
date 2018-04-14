@@ -1,2 +1,2 @@
-# sgfin.github.io_new
+# sgfin.github.io
 Academic blog, with design stolen from Sam Greydanus, who stole it from Andrej Karpathy...
