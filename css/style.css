@@ -219,6 +219,11 @@ hr.soft {
   color: #333;
 }
 
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .miscitem {
   margin: 10px 0px 60px;
 }

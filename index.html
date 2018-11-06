@@ -68,7 +68,6 @@
       <div class="ttitle">Harvard University</div>
       <div class="tdesc">PhD Candidate, <span class="thigh">Systems Biology</span></div>
       <div class="tdesc">Advisor: Isaac Kohane</div>
-      <div class="tdesc">Thesis Committee: Alexander Rush, Deborah Marks, Allon Klein</div>
     </div>
     <div class="timelineitem">
       <div class="tdate">2014-Present</div>
@@ -95,11 +94,28 @@
 
 <hr class="soft">
 
+
+
 <div class="container">
   <h2>Selected Research</h2>
+
+  <center>
+  <div class="flex-container">
+    <div class="showmore" showmore-group="paper" id="showaisafetypapers" style="display:inline-block;border-width:2px;border-style:solid;border-color:#777;font-size: 20px;">
+      AI Safety </div> 
+    <div class="showmore" showmore-group="paper" id="shownlppapers" style="display:inline-block;border-width:2px;border-style:solid;border-color:#777;font-size: 20px;">
+    NLP</div>
+      <div class="showmore" showmore-group="paper" id="show_clinicalInf_papers" style="display:inline-block;border-width:2px;border-style:solid;border-color:#777;font-size: 20px; ">
+      Clinical Informatics</div>
+      <div class="showmore" showmore-group="paper" id="show_misc_papers" style="display:inline-block;border-width:2px;border-style:solid;border-color:#777;font-size: 20px; ">
+      Misc.</div>
+    </div>
+
+  </center>
+
   <div id="pubs">
 
-    <div class="pubwrap">
+    <div data-type="paper" paper-type="aisafety" class="pubwrap">
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
@@ -124,7 +140,7 @@
     </div>
   </div>
 
-    <div class="pubwrap">
+    <div data-type="paper" paper-type="nlp"  class="pubwrap">
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
@@ -134,7 +150,7 @@
         <div class="col-md-6">
           <div class="pub">
             <div class="pubt">Building the Graph of Medicine from Millions of Clinical Narratives</div>
-            <div class="pubd"><em>Nature Scientific Data</em>. Abstract: Electronic health records (EHR) represent a rich and relatively untapped resource for characterizing the true nature of clinical practice and for quantifying the degree of inter-relatedness of medical entities such as drugs, diseases, procedures and devices. We provide a unique set of co-occurrence matrices, quantifying the pairwise mentions of 3 million terms mapped onto 1 million clinical concepts, calculated from the raw text of 20 million clinical notes spanning 19 years of data...
+            <div class="pubd"><em>Scientific Data</em>. Abstract: Electronic health records (EHR) represent a rich and relatively untapped resource for characterizing the true nature of clinical practice and for quantifying the degree of inter-relatedness of medical entities such as drugs, diseases, procedures and devices. We provide a unique set of co-occurrence matrices, quantifying the pairwise mentions of 3 million terms mapped onto 1 million clinical concepts, calculated from the raw text of 20 million clinical notes spanning 19 years of data...
             <div class="puba">Sam Finlayson, Paea LePendu, Nigam Shah</div>
             <div class="pubv"></div>
             <div class="publ">
@@ -151,7 +167,7 @@
   </div>
 
 <!-- Add this style to whatever the bottom row is-->
-  <div class="pubwrap" style="border-bottom: none; padding-bottom:0px; margin-bottom:30px;">
+  <div data-type="paper" paper-type="clinical_inf"  class="pubwrap"">
       <div class="row">
         <div class="col-md-6">
           <div class="pubimg">
@@ -178,6 +194,29 @@
     </div>
   </div>
 
+  <div data-type="paper" paper-type="misc"  class="pubwrap" style="border-bottom: none; padding-bottom:0px; margin-bottom:30px;">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <img src="./assets/microbiome/gurry_fig2.png" height=400px>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Predictability and persistence of prebiotic dietary supplementation in a healthy human cohort</div>
+            <div class="pubd"><em>Scientific Reports</em>. Abstract: Dietary interventions to manipulate the human gut microbiome for improved health have received increasing attention. However, their design has been limited by a lack of understanding of the quantitative impact of diet on a host’s microbiota. We present a highly controlled diet perturbation experiment in a healthy, human cohort in which individual micronutrients are spiked in against a standardized background. We identify strong and predictable responses of specific microbes across participants consuming ...
+            <div class="puba">Thomas Gurry, <em>HST Microbiome Consortium</em>, ... Eric Alm</div>
+            <div class="pubv"></div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://www.nature.com/articles/s41598-018-30783-1">Paper</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
     <div class="showmore" id="showmorepubs">
@@ -187,7 +226,7 @@
     <div id="morepubs">
 
     <div class="pubwrap" style="border-bottom: none; padding-bottom:0px; margin-bottom:30px;">
-      <div class="row">
+      <div  data-type="paper" paper-type="clinical_inf" class="row">
         <div class="col-md-6">
           <div class="pubimg">
             <img src="./static/m_ofx27002-fig1.jpeg" height=200px>
@@ -209,78 +248,11 @@
       </div>
     </div>
   </div>
-
   </div>
 
-<!--
-<hr class="soft">
-
-<div class="container">
-  <h2>Personal Projects</h2>
-  <div class="row">
-
-    <div class="col-md-4">
-      <div class="pp">
-        <a href="https://greydanus.github.io/fractal_tree/index.html">
-        <img src="./static/dfractal.png" class="img-circle imgb">
-        <div class="ppt">Fractal Tree</div>
-        </a>
-        <div class="ppd">
-        The physics of a tree blowing in the wind is very difficult to model because the system is so nonlinear. I made a numerical model of the system by expressing it as a fractal.
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="showmore" id="showmoreprojects">
-    show more
-  </div>
-
-  <div id="moreprojects">
-
-  <center>
-    <div class="row">
-
-        <div class="col-md-3">
-      <div class="pp">
-        <a href="https://pythonic-ocr.herokuapp.com/">
-        <img src="./static/cnn_ocr.png" class="img-circle imgsm">
-        <div class="ppt">Pythonic OCR</div>
-        </a>
-        <div class="ppd">
-          I trained a deep Convolutional Neural Network in Keras, then rewrote it in numpy to run as a web demo.
-        </div>
-      </div>
-    </div>
+</div></body>
 
 
-  </div>
-    </center>
-</div>
-
-<hr class="soft">
-
-<div class="container">
-
-  <h2>Other</h2>
-  <div class="row">
-    <div class="col-md-6">
-
-      <div class="miscitem">
-        <div class="miscimg">
-          <img src="./static/nn.png" class="img-circle">
-        </div>
-        <div class="miscd">
-          I wrote a math + code introduction to neural networks and backpropagation. Uses pure numpy and a <a href="https://nbviewer.jupyter.org/github/greydanus/np_nets/blob/master/mnist_nn.ipynb">Jupyter notebook</a>.
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
-
--->
 
 <div id="sitefooter">
 </div>
@@ -319,6 +291,86 @@ function start() {
       more_pubs_shown = false;
     }
   });
+
+  var show_aisafety_papers = true;
+  $("#showaisafetypapers").click(function() {
+    if(!show_aisafety_papers) {
+      $('[data-type=paper]').each(function() {
+        $('[paper-type*=aisafety]').slideDown('fast', function() {
+          $("#showaisafetypapers").css('border', '2px solid #777');
+        })
+      });
+      show_aisafety_papers = true;
+    } else {
+      $('[data-type=paper]').each(function() {
+        $('[paper-type*=aisafety]').slideUp('fast', function() {
+          $("#showaisafetypapers").css('border', '2px solid #CCC');
+        })
+      });
+      show_aisafety_papers = false;
+    }
+  });
+
+   var show_nlp_papers = true;
+  $("#shownlppapers").click(function() {
+    if(!show_nlp_papers) {
+      $('[data-type=paper]').each(function() {
+        $('[paper-type*=nlp]').slideDown('fast', function() {
+          $("#shownlppapers").css('border', '2px solid #777');
+        })
+      });
+      show_nlp_papers = true;
+    } else {
+      $('[data-type=paper]').each(function() {
+        $('[paper-type*=nlp]').slideUp('fast', function() {
+          $("#shownlppapers").css('border', '2px solid #CCC');
+        })
+      });
+      show_nlp_papers = false;
+    }
+  });
+
+   var show_clinicalInf_papers = true;
+  $("#show_clinicalInf_papers").click(function() {
+    if(!show_clinicalInf_papers) {
+      $('[data-type=paper]').each(function() {
+        $('[paper-type*=clinical_inf]').slideDown('fast', function() {
+          $("#show_clinicalInf_papers").css('border', '2px solid #777');
+        })
+      });
+      show_clinicalInf_papers = true;
+    } else {
+      $('[data-type=paper]').each(function() {
+        $('[paper-type*=clinical_inf]').slideUp('fast', function() {
+          $("#show_clinicalInf_papers").css('border', '2px solid #CCC');
+        })
+      });
+      show_clinicalInf_papers = false;
+    }
+  });
+
+   var show_misc_papers = true;
+  $("#show_misc_papers").click(function() {
+    if(!show_misc_papers) {
+      $('[data-type=paper]').each(function() {
+        $('[paper-type*=misc]').slideDown('fast', function() {
+          $("#show_misc_papers").css('border', '2px solid #777');
+        })
+      });
+      show_misc_papers = true;
+    } else {
+      $('[data-type=paper]').each(function() {
+        $('[paper-type*=misc]').slideUp('fast', function() {
+          $("#show_misc_papers").css('border', '2px solid #CCC');
+        })
+      });
+      show_misc_papers = false;
+    }
+  });
+
+
+}
+</script>
 
 }
 
