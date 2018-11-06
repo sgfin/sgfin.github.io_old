@@ -11,7 +11,7 @@ html, body {
   margin-bottom: 40px;
 }
 .bg1 {
-  background-image: url('dartmouthpano.jpg');
+  background-image: url('headerbackground.jpg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: auto 100%;
@@ -78,6 +78,7 @@ html, body {
   padding: 5px 10px 5px 10px;
   margin: 10px;
   border: 1px solid #FFF;
+  background-color: #000000;
 }
 #topnav a {
   color: white;
@@ -313,6 +314,22 @@ hr.soft {
   margin-bottom: 50px;
 }
 .showmore:hover {
+  color: #333;
+}
+
+.showmore-papers {
+    border: 2px solid #777;
+    padding: 5px;
+    font-size: 15px;
+    width: 150px;
+    text-align: center;
+    color: #999;
+    margin: 0px auto;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.showmore-papers:hover {
   color: #333;
 }
 
