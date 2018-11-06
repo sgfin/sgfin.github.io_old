@@ -317,6 +317,22 @@ hr.soft {
   color: #333;
 }
 
+.showmore-papers {
+    border: 2px solid #777;
+    padding: 5px;
+    font-size: 15px;
+    width: 150px;
+    text-align: center;
+    color: #999;
+    margin: 0px auto;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.showmore-papers:hover {
+  color: #333;
+}
+
 .miscitem {
   margin: 10px 0px 60px;
 }
