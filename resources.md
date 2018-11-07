@@ -95,7 +95,7 @@ I take absolutely no credit for these, all of which have been freely distributed
 
 | File | Description   |
 | :-----------: |:-------------:|
-| Ruder Gradient Descent Overview [website](http://ruder.io/optimizing-gradient-descent/index.html) [PDF](/files/notes/ruder_gradient.pdf) |  Great overview of gradient descent algorithms. |
+| [Ruder Gradient Descent Overview](http://ruder.io/optimizing-gradient-descent/index.html) [(PDF here)](/files/notes/ruder_gradient.pdf) |  Great overview of gradient descent algorithms. |
 |  [Bottou Large-Scale Optimization](/files/notes/bottou_optimization.pdf) |  Notes on Optimization from Bottou, Curtis, and Nocedal. Downloaded from [arxiv](https://arxiv.org/abs/1606.04838). |
 
 
