@@ -35,7 +35,7 @@ I take absolutely no credit for these, all of which have been freely distributed
 |  [CS231N DL for Vision](http://cs231n.github.io/)  |  Amazing notes from Andrej Karapthy, with lectures on Youtube as well. |
 |  [CS224 Deep Learning for NLP 2017](/files/notes/CS229_Linear_Algebra.pdf)  |  Fantastic course notes on Deep Learning for NLP from Stanford's [CS224](http://web.stanford.edu/class/cs224n/). Github repo [here](https://github.com/stanfordnlp/cs224n-winter17-notes/blob/master/notes1.pdf) |
 |[Boyd Convex Optimization Book](http://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)| Famous and freely available textbook from Boyd and Vandenberghe, accompanied by slides and Youtube videos|
-|  NYU Optimization Notes [2016](/files/notes/NYU_Optimization_2016.pdf) and [2017](/files/notes/NYU_Optimization_2017.pdf) |  Fantastic course notes on Optimization-based data analysis from NYU [2016 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_spring16/notes.html) and [2017 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_fall17/schedule.html). |
+|  NYU Optimization-based Data Analysis [2016](/files/notes/NYU_Optimization_2016.pdf) and [2017](/files/notes/NYU_Optimization_2017.pdf) |  Fantastic course notes on Optimization-based data analysis from NYU [2016 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_spring16/notes.html) and [2017 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_fall17/schedule.html). |
 
 
 ## Tutorials, (Specific) Lecture Notes, and Overview Papers
