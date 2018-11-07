@@ -46,7 +46,6 @@ I take absolutely no credit for these, all of which have been freely distributed
 | :-----------: |:-------------:|
 |  [CS 229 Linear Algebra Notes](/files/notes/CS229_Linear_Algebra.pdf)  |  Linear algebra reference from Stanford's Machine Learning [Course](http://cs229.stanford.edu/materials.html). |
 |  [Matrix Calc for DL](/files/notes/Matrix_Calc_for_DL.pdf)  |  Nice overview of matrix calculus for deep learning from Parr/Howard on [arxiv](https://arxiv.org/abs/1802.01528). |
-|  [Boyd Applied Linear Algebra](/files/notes/boyd_vmls.pdf)  |  Freely available book from Boyd and Vandenberghe on Applied LA [website](http://vmls-book.stanford.edu/). |
 
 
 ### Probability and Statistics
