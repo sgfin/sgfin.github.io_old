@@ -80,7 +80,7 @@ I take absolutely no credit for these, all of which have been freely distributed
 |[Distill Attention](https://distill.pub/2016/augmented-rnns/)|  |
 |[Chris Olah on Word Embeddings](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)| |
 |[Chris Olah Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)| |
-|  [Goldberg's Primer on NNs for NLP](/files/notes/Goldber_Primer_Neural_Nets_NLP.pdf)  |  Overview of Deep Learning for NLP from Yoav Goldber [downloaded from here](http://u.cs.biu.ac.il/~yogo/nnlp.pdf). |
+|  [Goldberg's Primer on NNs for NLP](/files/notes/Goldber_Primer_Neural_Nets_NLP.pdf)  |  Overview of Deep Learning for NLP from Yoav Goldberg [downloaded from here](http://u.cs.biu.ac.il/~yogo/nnlp.pdf). |
 
 
 ### Information Theory
