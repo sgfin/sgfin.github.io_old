@@ -157,10 +157,10 @@ This section is fledgling at best, but was my real motivation in making this pag
 | [Chris Olah's Blog](http://colah.github.io/) | Essentially everything on here is gold. I am so grateful for the hours he must put into these posts.|
 |[distill.pub](https://distill.pub)| Distill navigates a really interesting gap between super-blog and research journal. I wish that we had more publications like this. |
 |[Pytorch Tutorials](https://pytorch.org/tutorials/) | The tutorials put out by the pytorch developers are really fantastic. Easy to see why the community is growing so fast. |
-| (Sebastian Ruder's blog)[http://ruder.io/] | Sebastian has produced a lot of really great explanations, like the one on gradient descent methods I linked to above. He also maintains a [website tracking progress on NLP benchmarks](https://nlpprogress.com/)| 
-| (Berkeley AI Research (BAIR) Blog)[https://bair.berkeley.edu/blog/] | BAIR produces a lot of great research, and uses this blog to release more accessible presentations of their papers. | 
-| (Off the Convex Path)[https://www.offconvex.org/] | Nice blog on machine learning and optimization. | 
-| (Ferenc Huszár's blog)[https://www.inference.vc/] | Pretty popular blog that has a lot of explorations/musings on ML from an author with a rigorous mathematical perspective | 
+| [Sebastian Ruder's blog](http://ruder.io/) | Sebastian has produced a lot of really great explanations, like the one on gradient descent methods I linked to above. He also maintains a [website tracking progress on NLP benchmarks](https://nlpprogress.com/)| 
+| [Berkeley AI Research (BAIR) Blog](https://bair.berkeley.edu/blog/) | BAIR produces a lot of great research, and uses this blog to release more accessible presentations of their papers. | 
+| [Off the Convex Path](https://www.offconvex.org/) | Nice blog on machine learning and optimization. | 
+| [Ferenc Huszár's blog](https://www.inference.vc/) | Pretty popular blog that has a lot of explorations/musings on ML from an author with a rigorous mathematical perspective | 
 |  [Thibaut Lienart's Blog](https://tlienart.github.io/pub/csml.html)  |  This website has some notes on math and optimization that seem interesting.  |
 
 
