@@ -25,9 +25,9 @@ This is a not-particularly-systematic attempt to curate a handful of my favorite
 
 - [_Cheatsheets_](#cheatsheets): Provide structured access to useful bits of information on the order of *seconds*.
 
-The middle section is both the most incomplete and the section that I am most excited about.  I hope to use it to capture the best explanations of tricky topics that I have read online, to make it easier to re-learn them later when I inevitably forget.  (In a perfect world, [Chris Olah](http://colah.github.io/) and/or [distill.pub](https://distill.pub) would just write an article on everything, but in the meantime I have to gather scraps from everywhere else.)
+Finally, I've added a section with links to [a few miscellanous websites](#misc) that often produce great content.
 
-I take absolutely no credit for these, all of which have been freely distributed by the original authors. Since I've been burned by broken links before, I've stored the raw PDFs, where possible. However, I've tried to link out to the original sources. If you're one of the creators of these -- thank you! -- and you want me to take the raw file down, just let me know.
+Of the above, the second section is both the most incomplete and the one that I am most excited about.  I hope to use it to capture the best explanations of tricky topics that I have read online, to make it easier to re-learn them later when I inevitably forget.  (In a perfect world, [Chris Olah](http://colah.github.io/) and/or [distill.pub](https://distill.pub) would just write an article on everything, but in the meantime I have to gather scraps from everywhere else.)
 
 If you stumble upon this list and have suggestions for me to add (especially for the middle section!), please feel free to reach out!  But I'm only trying to post things on here that I've read, so it may be caught in my to-read list for a while before it makes it on here.  Of course, the source for this webpage is [on github](https://github.com/sgfin/sgfin.github.io/blob/master/resources.md), so you can also just take it.
 
@@ -50,13 +50,13 @@ If you stumble upon this list and have suggestions for me to add (especially for
 |  [CS231N DL for Vision](http://cs231n.github.io/)  |  Amazing notes from Andrej Karapthy, with lectures on Youtube as well. |
 |  [CS224 Deep Learning for NLP 2017](/files/notes/CS229_Linear_Algebra.pdf)  |  Fantastic course notes on Deep Learning for NLP from Stanford's [CS224](http://web.stanford.edu/class/cs224n/). Github repo [here](https://github.com/stanfordnlp/cs224n-winter17-notes/blob/master/notes1.pdf) |
 |  [CMU CS 11-747](http://www.phontron.com/class/nn4nlp2018/schedule.html)  |  Fantastic course  on Deep Learning for NLP from CMU's Graham Neubig. Really great lecture videos on Youtube [here](https://www.youtube.com/playlist?list=PLbdKUKMAnh9Qqs5uwEBDfRb_L3YaLbRKq) |
-|[Boyd Convex Optimization Book](http://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)| Famous and freely available textbook from Boyd and Vandenberghe, accompanied by slides and Youtube videos|
+|[Boyd Convex Optimization Book](http://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)| Famous and freely available textbook from Boyd and Vandenberghe, accompanied by [slides](https://web.stanford.edu/class/ee364a/lectures.html) and Youtube videos. More advanced follow-up class [here](https://web.stanford.edu/class/ee364b/lectures.html)|
 |  NYU Optimization-based Data Analysis [2016](/files/notes/NYU_Optimization_2016.pdf) and [2017](/files/notes/NYU_Optimization_2017.pdf) |  Fantastic course notes on Optimization-based data analysis from NYU [2016 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_spring16/notes.html) and [2017 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_fall17/schedule.html). |
 |[Berkeley Deep Reinforcement Learning](http://rll.berkeley.edu/deeprlcourse/)| RL class from Berkely taught by top dogs in the field, lectures posted to Youtube.|
 |[Sutton and Barto Open RL Book](http://incompleteideas.net/book/the-book-2nd.html)| De-facto standard intro to RL, even though the textbook is only now about to be published!|
 |[MathematicalMonk](https://www.youtube.com/user/mathematicalmonk)| This guy is amazing. Some 250 youtube tutorials on ML, Probability, and Information Theory.  What's great about these playlists is any individual video could go into section 2!|
 
-
+https://ee227c.github.io/
 
 ## <a name="tutorials"></a> Tutorials, Overviews, and (Individual) Lecture Notes
 
@@ -149,6 +149,19 @@ This section is fledgling at best, but was my real motivation in making this pag
 |  [Python scikit-learn cheatsheet](/files/cheatsheets/Python_cheatsheet_scikit.pdf)  |  Cheatsheet for python's ML package, scikit-learn. Downloaded from [Datacamp](https://www.datacamp.com).|
 |  [Python seaborn tutorial](https://seaborn.pydata.org/tutorial.html)  |  Tutorial for python's plotting system, seaborn. Haven't found a great one yet for matplotlib. |
 
+
+## <a name="misc"></a> A few miscellaneous websites
+
+| File | Description   |
+| :-----------: |:-------------:|
+| [Chris Olah's Blog](http://colah.github.io/) | Essentially everything on here is gold. I am so grateful for the hours he must put into these posts.|
+|[distill.pub](https://distill.pub)| Distill navigates a really interesting gap between super-blog and research journal. I wish that we had more publications like this. |
+|[Pytorch Tutorials](https://pytorch.org/tutorials/) | The tutorials put out by the pytorch developers are really fantastic. Easy to see why the community is growing so fast. |
+| (Sebastian Ruder's blog)[http://ruder.io/] | Sebastian has produced a lot of really great explanations, like the one on gradient descent methods I linked to above. He also maintains a [website tracking progress on NLP benchmarks](https://nlpprogress.com/)| 
+| (Berkeley AI Research (BAIR) Blog)[https://bair.berkeley.edu/blog/] | BAIR produces a lot of great research, and uses this blog to release more accessible presentations of their papers. | 
+| (Off the Convex Path)[https://www.offconvex.org/] | Nice blog on machine learning and optimization. | 
+| (Ferenc Huszár's blog)[https://www.inference.vc/] | Pretty popular blog that has a lot of explorations/musings on ML from an author with a rigorous mathematical perspective | 
+|  [Thibaut Lienart's Blog](https://tlienart.github.io/pub/csml.html)  |  This blog has some notes on math and optimization that seem interesting.  |
 
 
 
