@@ -22,15 +22,17 @@ This is a not-particularly-systematic attempt to store a handful of my favorite 
 I take absolutely no credit for these, all of which have been freely distributed by the original authors. Since I've been burned by broken links before, I've stored the raw PDFs for most of these. However, I've tried to link out to the original sources. If you're one of the creators of these -- thank you! -- and you want me to take the raw file down, just let me know.
 
 
-## Full Courses and Open Textbooks
+## Open Courses and Textbooks
 
 | File | Description   |
 | :-----------: |:-------------:|
 |  [Math for ML Book](/files/notes/mml-book.pdf)  |  Math for machine learning book by Faisal and Ong, available on [github](https://mml-book.github.io/). |
 |  [Boyd Applied Linear Algebra](/files/notes/boyd_vmls.pdf)  |  Freely available book from Boyd and Vandenberghe on Applied LA [website](http://vmls-book.stanford.edu/). |
-|  [Boyd Applied Linear Algebra](/files/notes/boyd_vmls.pdf)  |  Freely available book from Boyd and Vandenberghe on Applied LA [website](http://vmls-book.stanford.edu/). |
 |  [Doug Sparks' Stats 200](/files/notes/Stat200_2014_Merged_Sparks.pdf)  |  Nice course notes from Doug Sparks 2014 offering of [stats 200](http://stats200.stanford.edu/) |
+|  [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/)  |  Lecture Videos on youtube to accompany a very well-reviewed introductory textbook. |
+|  [Hernan and Robbins Causal Inference Book](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)  |  Long-upcoming textbook on causal inference (from the epidemiology perspective), with drafts fairly frequently updated on the web page. |
 |  [CS 229 Lecture Notes](/files/notes/CS229_Lecture_Notes.pdf)  |  Classic note set from Andrew Ngs amazing [CS229](http://cs229.stanford.edu/syllabus.html). |
+|  [ESL](https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf) and [ISL](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf)  |  Beginner (ISL) and Advanced (ESL) presentation to classic machine learning from world-class stats professors. Slides and video for a MOOC on ISL is available [here](https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/). |
 |  [CS 228 PGM Notes](https://ermongroup.github.io/cs228-notes/)  |  Really great course notes on Probabilistic Graphical Models from at Stanford. PDF expert wasn't ideal so linking only to website|
 |  [Blei Foundations of Graphical Models Course](http://www.cs.columbia.edu/~blei/fogm/2016F/index.html)  |  2016 course notes on Foundations of Graphical Models from David Blei 2016 website|
 | [Roger Grosse's CSC231 Notes](/files/notes/CS229_Linear_Algebra.pdf)  |  Notes from Roger Grosse's CSC 231 [full website here](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/). Might be the single best organized intro to DL I've found. Notes and slides are gorgeous.|
