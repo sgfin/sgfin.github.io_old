@@ -17,9 +17,13 @@ table a:link, table a:visited, table a:active{
 </style>
 
 
-This is a not-particularly-systematic attempt to store a handful of my favorite explanations of various topics I am constantly trying to better understand.  This isn't comprehensive, and in general excludes textbooks since I want to avoid any copyright issues.
+This is a not-particularly-systematic attempt to curate a handful of my favorite resources for learning statistics and machine learning.  This isn't meant to be comprehensive, and in fact is still missing the vast majority of my favorite explainers.  Rather, it's just a smattering of resources I've found myself turning to multiple times and thus would like to have in one place.
 
-I take absolutely no credit for these, all of which have been freely distributed by the original authors. Since I've been burned by broken links before, I've stored the raw PDFs for most of these. However, I've tried to link out to the original sources. If you're one of the creators of these -- thank you! -- and you want me to take the raw file down, just let me know.
+The middle section -- Tutorials, Overviews, and (Individual) Lecture Notes -- is both the most incomplete and the section that I am the most excited about.  I hope to use it to capture the best explanations of tricky topics that I have read online, to make it easier to re-learn them later when I inevitably forget.  (In a perfect world, [Chris Olah](http://colah.github.io/) and/or [distill.pub](https://distill.pub) would just write an article on everything, but in the meantime I have to gather scraps from everywhere else.)
+
+I take absolutely no credit for these, all of which have been freely distributed by the original authors. Since I've been burned by broken links before, I've stored the raw PDFs, where possible. However, I've tried to link out to the original sources. If you're one of the creators of these -- thank you! -- and you want me to take the raw file down, just let me know.
+
+If you stumble upon this list and have suggestions for me to add (especially for the middle section!), please feel free to reach out!  Stuff in the flavor of distill.pub, depth-first learning, good blog or medium posts, etc. is what I'm after.  But I'm only trying to post things on here that I've read, so it may be caught in my to-read list for a while before it makes it on here.  Of course, the source for this webpage is also [on github](https://github.com/sgfin/sgfin.github.io/blob/master/resources.md), so you can also just take it.
 
 
 ## Open Courses and Textbooks
@@ -90,7 +94,9 @@ I take absolutely no credit for these, all of which have been freely distributed
 |[Distill Feature Visualization](https://distill.pub/2017/feature-visualization/)| Running theme: If it's only distill.pub, read it. |
 |[Chris Olah Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)| Chris Olah is a master of his craft, and here offers a fantastic overview of LSTMs and GRUs.|
 |[Chris Olah on Word Embeddings](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)| Chris Olah explaining world embeddings and the like.|
+|[The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html)| Harvard's Sasha Rush created a line-by-line annotation of "Attention is All You Need" that also serves as a working notebook. Pedagogical brilliance, and it would be awesome to do this for a couple papers per year.|
 |  [Goldberg's Primer on NNs for NLP](/files/notes/Goldber_Primer_Neural_Nets_NLP.pdf)  |  Overview of Deep Learning for NLP from Yoav Goldberg [downloaded from here](http://u.cs.biu.ac.il/~yogo/nnlp.pdf). |
+
 
 
 ### Information Theory
