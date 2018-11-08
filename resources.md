@@ -44,6 +44,7 @@ If you stumble upon this list and have suggestions for me to add (especially for
 |  [Fast.Ai](https://www.fast.ai/)  |  Wonderful set of intro lectures and accompanying notebooks from Jeremy Howard and Rachel Thomas. |
 |  [CS231N DL for Vision](http://cs231n.github.io/)  |  Amazing notes from Andrej Karapthy, with lectures on Youtube as well. |
 |  [CS224 Deep Learning for NLP 2017](/files/notes/CS229_Linear_Algebra.pdf)  |  Fantastic course notes on Deep Learning for NLP from Stanford's [CS224](http://web.stanford.edu/class/cs224n/). Github repo [here](https://github.com/stanfordnlp/cs224n-winter17-notes/blob/master/notes1.pdf) |
+|  [CMU CS 11-747](http://www.phontron.com/class/nn4nlp2018/schedule.html)  |  Fantastic course  on Deep Learning for NLP from CMU's Graham Neubig. Really great lecture videos on Youtube [here](https://www.youtube.com/playlist?list=PLbdKUKMAnh9Qqs5uwEBDfRb_L3YaLbRKq) |
 |[Boyd Convex Optimization Book](http://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)| Famous and freely available textbook from Boyd and Vandenberghe, accompanied by slides and Youtube videos|
 |  NYU Optimization-based Data Analysis [2016](/files/notes/NYU_Optimization_2016.pdf) and [2017](/files/notes/NYU_Optimization_2017.pdf) |  Fantastic course notes on Optimization-based data analysis from NYU [2016 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_spring16/notes.html) and [2017 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_fall17/schedule.html). |
 |[Berkeley Deep Reinforcement Learning](http://rll.berkeley.edu/deeprlcourse/)| RL class from Berkely taught by top dogs in the field, lectures posted to Youtube.|
@@ -96,7 +97,7 @@ If you stumble upon this list and have suggestions for me to add (especially for
 |[Chris Olah on Word Embeddings](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)| Chris Olah explaining world embeddings and the like.|
 |[The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html)| Harvard's Sasha Rush created a line-by-line annotation of "Attention is All You Need" that also serves as a working notebook. Pedagogical brilliance, and it would be awesome to do this for a couple papers per year.|
 |  [Goldberg's Primer on NNs for NLP](/files/notes/Goldber_Primer_Neural_Nets_NLP.pdf)  |  Overview of Deep Learning for NLP from Yoav Goldberg [downloaded from here](http://u.cs.biu.ac.il/~yogo/nnlp.pdf). |
-
+|  [Neubig's Tutorial on NNs for NLP](/files/notes/neubig_nmt_seq2seq.pdf)  |  Overview of Deep Learning for NLP from Graham Neubig. Downloaded from [arxiv](https://arxiv.org/pdf/1703.01619.pdf) and pairs nicely with his course and videos. |
 
 
 ### Information Theory
