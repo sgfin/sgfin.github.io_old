@@ -37,9 +37,9 @@ If you stumble upon this list and have suggestions for me to add (especially for
 | File | Description   |
 | :-----------: |:-------------:|
 |  [Math for ML Book](/files/notes/mml-book.pdf)  |  Math for machine learning book by Faisal and Ong, available on [github](https://mml-book.github.io/). |
-|  [Boyd Applied Linear Algebra](/files/notes/boyd_vmls.pdf)  |  Freely available book from Boyd and Vandenberghe on Applied LA [website](http://vmls-book.stanford.edu/). |
+|  [Boyd Applied Linear Algebra](http://vmls-book.stanford.edu/vmls.pdf)  |  Freely available book from Boyd and Vandenberghe on Applied LA ([website](http://vmls-book.stanford.edu/)). |
 |  [Doug Sparks' Stats 200](/files/notes/Stat200_2014_Merged_Sparks.pdf)  |  Nice course notes from Doug Sparks 2014 offering of [stats 200](http://stats200.stanford.edu/) |
-|  [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/)  |  Lecture Videos on youtube to accompany a very well-reviewed introductory textbook. |
+|  [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/)  |  Lecture Videos on [youtube](https://www.youtube.com/playlist?list=PLDcUM9US4XdM9_N6XUUFrhghGJ4K25bFc) accompany this very well-reviewed introductory textbook. |
 |  [Hernan and Robbins Causal Inference Book](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)  |  Long-upcoming textbook on causal inference (from the epidemiology perspective), with drafts fairly frequently updated on the web page. |
 |  [CS 229 Lecture Notes](/files/notes/CS229_Lecture_Notes.pdf)  |  Classic note set from Andrew Ng's amazing [CS229](http://cs229.stanford.edu/syllabus.html). |
 |  [ESL](https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf) and [ISL](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf) from Hastie et al |  Beginner (ISL) and Advanced (ESL) presentation to classic machine learning from world-class stats professors. Slides and video for a MOOC on ISL is available [here](https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/). |
