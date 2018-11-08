@@ -42,7 +42,7 @@ I take absolutely no credit for these, all of which have been freely distributed
 |  NYU Optimization-based Data Analysis [2016](/files/notes/NYU_Optimization_2016.pdf) and [2017](/files/notes/NYU_Optimization_2017.pdf) |  Fantastic course notes on Optimization-based data analysis from NYU [2016 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_spring16/notes.html) and [2017 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_fall17/schedule.html). |
 
 
-## Tutorials, (Specific) Lecture Notes, and Overview Papers
+## Tutorials, Overviews, and (Individual) Lecture Notes
 
 ### Fundamentals
 
