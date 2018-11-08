@@ -19,9 +19,9 @@ table a:link, table a:visited, table a:active{
 
 This is a not-particularly-systematic attempt to curate a handful of my favorite resources for learning statistics and machine learning.  This isn't meant to be comprehensive, and in fact is still missing the vast majority of my favorite explainers.  Rather, it's just a smattering of resources I've found myself turning to multiple times and thus would like to have in one place.  The organizatiion is as follows:
 
-* [_Open Courses and Textbooks_](#courses):  Cover a fairly *broad* topic reasonably *comprehensively*, and would take *weeks to months* to work through start-to-finish.
-* [_Tutorials, Overviews, and (Individual) Lecture Notes_](#tutorials): Explain a *specific* topic extremely *clearly*, and take *minutes to hours* (or a few days tops) to work through from start-to-finish.
-* [_Cheatsheets_](#cheatsheets): Provide structured access to useful bits of information on the order of *seconds*.
+- [_Open Courses and Textbooks_](#courses):  Cover a fairly *broad* topic reasonably *comprehensively*, and would take *weeks to months* to work through start-to-finish.
+- [_Tutorials, Overviews, and (Individual) Lecture Notes_](#tutorials): Explain a *specific* topic extremely *clearly*, and take *minutes to hours* (or a few days tops) to work through from start-to-finish.
+- [_Cheatsheets_](#cheatsheets): Provide structured access to useful bits of information on the order of *seconds*.
 
 The middle section is both the most incomplete and the section that I am most excited about.  I hope to use it to capture the best explanations of tricky topics that I have read online, to make it easier to re-learn them later when I inevitably forget.  (In a perfect world, [Chris Olah](http://colah.github.io/) and/or [distill.pub](https://distill.pub) would just write an article on everything, but in the meantime I have to gather scraps from everywhere else.)
 
