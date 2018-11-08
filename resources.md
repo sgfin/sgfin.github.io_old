@@ -23,7 +23,7 @@ The middle section -- Tutorials, Overviews, and (Individual) Lecture Notes -- is
 
 I take absolutely no credit for these, all of which have been freely distributed by the original authors. Since I've been burned by broken links before, I've stored the raw PDFs, where possible. However, I've tried to link out to the original sources. If you're one of the creators of these -- thank you! -- and you want me to take the raw file down, just let me know.
 
-If you stumble upon this list and have suggestions for me to add (especially for the middle section!), please feel free to reach out!  Stuff in the flavor of distill.pub, depth-first learning, good blog or medium posts, etc. is what I'm after.  But I'm only trying to post things on here that I've read, so it may be caught in my to-read list for a while before it makes it on here.  Of course, the source for this webpage is also [on github](https://github.com/sgfin/sgfin.github.io/blob/master/resources.md), so you can also just take it.
+If you stumble upon this list and have suggestions for me to add (especially for the middle section!), please feel free to reach out!  Stuff in the flavor of distill.pub, depth-first learning, good blog or medium posts, etc. is what I'm after.  But I'm only trying to post things on here that I've read, so it may be caught in my to-read list for a while before it makes it on here.  Of course, the source for this webpage is [on github](https://github.com/sgfin/sgfin.github.io/blob/master/resources.md), so you can also just take it.
 
 
 ## Open Courses and Textbooks
