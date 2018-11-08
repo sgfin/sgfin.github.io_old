@@ -17,18 +17,20 @@ table a:link, table a:visited, table a:active{
 </style>
 
 
-This is a not-particularly-systematic attempt to curate a handful of my favorite resources for learning statistics and machine learning.  This isn't meant to be comprehensive, and in fact is still missing the vast majority of my favorite explainers.  Rather, it's just a smattering of resources I've found myself turning to multiple times and thus would like to have in one place.
+This is a not-particularly-systematic attempt to curate a handful of my favorite resources for learning statistics and machine learning.  This isn't meant to be comprehensive, and in fact is still missing the vast majority of my favorite explainers.  Rather, it's just a smattering of resources I've found myself turning to multiple times and thus would like to have in one place.  The organizatiion is as follows:
 
-The middle section -- Tutorials, Overviews, and (Individual) Lecture Notes -- is both the most incomplete and the section that I am the most excited about.  I hope to use it to capture the best explanations of tricky topics that I have read online, to make it easier to re-learn them later when I inevitably forget.  (In a perfect world, [Chris Olah](http://colah.github.io/) and/or [distill.pub](https://distill.pub) would just write an article on everything, but in the meantime I have to gather scraps from everywhere else.)
+* [_Open Courses and Textbooks_](#courses):  Cover a fairly *broad* topic reasonably *comprehensively*, and would take *weeks to months* to work through start-to-finish.
+* [_Tutorials, Overviews, and (Individual) Lecture Notes_](#tutorials): Explain a *specific* topic extremely *clearly*, and take *minutes to hours* (or a few days tops) to work through from start-to-finish.
+* [_Cheatsheets_](#cheatsheets): Provide structured access to useful bits of information on the order of *seconds*.
+
+The middle section is both the most incomplete and the section that I am most excited about.  I hope to use it to capture the best explanations of tricky topics that I have read online, to make it easier to re-learn them later when I inevitably forget.  (In a perfect world, [Chris Olah](http://colah.github.io/) and/or [distill.pub](https://distill.pub) would just write an article on everything, but in the meantime I have to gather scraps from everywhere else.)
 
 I take absolutely no credit for these, all of which have been freely distributed by the original authors. Since I've been burned by broken links before, I've stored the raw PDFs, where possible. However, I've tried to link out to the original sources. If you're one of the creators of these -- thank you! -- and you want me to take the raw file down, just let me know.
 
 If you stumble upon this list and have suggestions for me to add (especially for the middle section!), please feel free to reach out!  But I'm only trying to post things on here that I've read, so it may be caught in my to-read list for a while before it makes it on here.  Of course, the source for this webpage is [on github](https://github.com/sgfin/sgfin.github.io/blob/master/resources.md), so you can also just take it.
 
 
-## Open Courses and Textbooks
-
-Resources here are those that cover a fairly *broad* topic reasonably *comprehensively*, and would take weeks to months to work through start-to-finish.
+## <a name="courses"></a> Open Courses and Textbooks
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -54,9 +56,7 @@ Resources here are those that cover a fairly *broad* topic reasonably *comprehen
 
 
 
-## Tutorials, Overviews, and (Individual) Lecture Notes
-
-Resources here are those that cover a *specific* topic extremely *clearly*, and take minutes-to-hours (or a few days tops) to work through from start-to-finish.  I consider these to be the most valuable.
+## <a name="tutorials"></a> Tutorials, Overviews, and (Individual) Lecture Notes
 
 This section is fledgling at best, but was my real motivation in making this page. Archetypes include basically anything on distill.pub, good blog or medium posts, etc.  Depth-first learning looks like a great access point here, but I haven't gotten to do more than skim any of those, yet.
 
@@ -124,9 +124,7 @@ This section is fledgling at best, but was my real motivation in making this pag
 |  [Bottou Large-Scale Optimization](/files/notes/bottou_optimization.pdf) |  Notes on Optimization from Bottou, Curtis, and Nocedal. Downloaded from [arxiv](https://arxiv.org/abs/1606.04838). |
 
 
-## Cheatsheets
-
-Resources here are those that provide access to individual factoids on the order of seconds.
+## <a name="cheatsheets"></a> Cheatsheets
 
 ### Math
 
