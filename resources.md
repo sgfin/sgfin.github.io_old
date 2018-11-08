@@ -103,11 +103,24 @@ This section is fledgling at best, but was my real motivation in making this pag
 |[Distill Building Interpretability](https://distill.pub/2018/building-blocks/)| Coolest visualizations of NN internals I've ever seen|
 |[Distill Feature Visualization](https://distill.pub/2017/feature-visualization/)| Running theme: If it's only distill.pub, read it. |
 |[Chris Olah Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)| Chris Olah is a master of his craft, and here offers a fantastic overview of LSTMs and GRUs.|
+
+
+### Natural Language Processing
+
+| File | Description   |
+| :-----------: |:-------------:|
 |[Chris Olah on Word Embeddings](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)| Chris Olah explaining world embeddings and the like.|
 |[The Annotated Transformer](http://nlp.seas.harvard.edu/2018/04/03/attention.html)| Harvard's Sasha Rush created a line-by-line annotation of "Attention is All You Need" that also serves as a working notebook. Pedagogical brilliance, and it would be awesome to do this for a couple papers per year.|
 |  [Goldberg's Primer on NNs for NLP](/files/notes/Goldber_Primer_Neural_Nets_NLP.pdf)  |  Overview of Deep Learning for NLP from Yoav Goldberg [downloaded from here](http://u.cs.biu.ac.il/~yogo/nnlp.pdf). |
 |  [Neubig's Tutorial on NNs for NLP](/files/notes/neubig_nmt_seq2seq.pdf)  |  Overview of Deep Learning for NLP from Graham Neubig. Downloaded from [arxiv](https://arxiv.org/pdf/1703.01619.pdf) and pairs nicely with his course and videos. |
 
+
+### Reinforcement Learning 
+
+| File | Description   |
+| :-----------: |:-------------:|
+|[Karpathy's Pong From Pixels](http://karpathy.github.io/2016/05/31/rl/)| Andrej Karpathy has a real gift for didactics. This is a self-contained explanation of deep reinforcement learning sufficient to understand a basic atari agent. |
+|[Weng's A (Long) Peek into RL](https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html)| A nice blog post covering the foundations of reinforcement learning|
 
 ### Information Theory
 
@@ -116,6 +129,8 @@ This section is fledgling at best, but was my real motivation in making this pag
 |[Chris Olah Visual Information Theory](http://colah.github.io/posts/2015-09-Visual-Information/)| As always, Chris Olah creates an amazing presentation both in words and images.  Goal is to visualize key information theory concepts.|
 |[Cover and Thomas Ch2 - Entropy and Information](/files/notes/Cover_and_Thomas_ch2_entropy.pdf)| The extremely well-written introductory chapter from the classic information theory textbook.|
 |[Cover and Thomas Ch11 - Info Theory and Statistics](/files/notes/Cover_and_Thomas_ch11_info_and_stats.pdf)| The information theory and statistics chapter from the classic information theory textbook.|
+|[Deriving Probability Distributions from Maximum Entropy Principle](https://sgfin.github.io/2017/03/16/Deriving-probability-distributions-using-the-Principle-of-Maximum-Entropy/)| It feels slimey and self-serving to include this, but I wrote this post to better understand how information theory can be used to understand/derive common probability distributions from first principles.|
+|[Deriving the information entropy of the multivariate gaussian](https://sgfin.github.io/2017/03/11/Deriving-the-information-entropy-of-the-multivariate-gaussian/)| Another blog post I wrote to try to understand information theory + statistics.|
 
 
 ### Optimization
