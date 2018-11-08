@@ -24,6 +24,7 @@ I take absolutely no credit for these, all of which have been freely distributed
 
 ## Open Courses and Textbooks
 
+
 | File | Description   |
 | :-----------: |:-------------:|
 |  [Math for ML Book](/files/notes/mml-book.pdf)  |  Math for machine learning book by Faisal and Ong, available on [github](https://mml-book.github.io/). |
@@ -36,12 +37,14 @@ I take absolutely no credit for these, all of which have been freely distributed
 |  [CS 228 PGM Notes](https://ermongroup.github.io/cs228-notes/)  |  Really great course notes on Probabilistic Graphical Models from at Stanford. PDF expert wasn't ideal so linking only to website|
 |  [Blei Foundations of Graphical Models Course](http://www.cs.columbia.edu/~blei/fogm/2016F/index.html)  |  2016 course notes on Foundations of Graphical Models from David Blei 2016 website|
 | [Roger Grosse's CSC231 Notes](/files/notes/CS229_Linear_Algebra.pdf)  |  Notes from Roger Grosse's CSC 231 [full website here](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/). Might be the single best organized intro to DL I've found. Notes and slides are gorgeous.|
+|  [Fast.Ai](https://www.fast.ai/)  |  Wonderful set of intro lectures and accompanying notebooks from Jeremy Howard and Rachel Thomas. |
 |  [CS231N DL for Vision](http://cs231n.github.io/)  |  Amazing notes from Andrej Karapthy, with lectures on Youtube as well. |
 |  [CS224 Deep Learning for NLP 2017](/files/notes/CS229_Linear_Algebra.pdf)  |  Fantastic course notes on Deep Learning for NLP from Stanford's [CS224](http://web.stanford.edu/class/cs224n/). Github repo [here](https://github.com/stanfordnlp/cs224n-winter17-notes/blob/master/notes1.pdf) |
 |[Boyd Convex Optimization Book](http://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)| Famous and freely available textbook from Boyd and Vandenberghe, accompanied by slides and Youtube videos|
 |  NYU Optimization-based Data Analysis [2016](/files/notes/NYU_Optimization_2016.pdf) and [2017](/files/notes/NYU_Optimization_2017.pdf) |  Fantastic course notes on Optimization-based data analysis from NYU [2016 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_spring16/notes.html) and [2017 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_fall17/schedule.html). |
 |[Berkeley Deep Reinforcement Learning](http://rll.berkeley.edu/deeprlcourse/)| RL class from Berkely taught by top dogs in the field, lectures posted to Youtube.|
 |[Sutton and Barto Open RL Book](http://incompleteideas.net/book/the-book-2nd.html)| De-facto standard intro to RL, even though the textbook is only now about to be published!|
+
 
 
 ## Tutorials, Overviews, and (Individual) Lecture Notes
