@@ -68,7 +68,7 @@ This section is fledgling at best, but was my real motivation in making this pag
 | File | Description   |
 | :-----------: |:-------------:|
 |  [CS 229 Linear Algebra Notes](/files/notes/CS229_Linear_Algebra.pdf)  |  Linear algebra reference from Stanford's Machine Learning [Course](http://cs229.stanford.edu/materials.html). |
-|  [Matrix Calc for DL](/files/notes/Matrix_Calc_for_DL.pdf)  |  Nice overview of matrix calculus for deep learning from Parr/Howard on [arxiv](https://arxiv.org/abs/1802.01528). |
+|  [Matrix Calc for DL](https://explained.ai/matrix-calculus/index.html) [(pdf here)](/files/notes/Matrix_Calc_for_DL.pdf)  |  Nice overview of matrix calculus for deep learning from Parr/Howard on [arxiv](https://arxiv.org/abs/1802.01528). |
 
 
 ### Probability and Statistics
