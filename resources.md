@@ -165,7 +165,7 @@ This section is fledgling at best, but was my real motivation in making this pag
 |  [Python seaborn tutorial](https://seaborn.pydata.org/tutorial.html)  |  Tutorial for python's plotting system, seaborn. Haven't found a great one yet for matplotlib. |
 
 
-## <a name="misc"></a> A few miscellaneous websites
+## <a name="misc"></a> Miscellaneous websites
 
 | File | Description   |
 | :-----------: |:-------------:|
