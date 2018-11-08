@@ -22,10 +22,11 @@ This is a not-particularly-systematic attempt to store a handful of my favorite 
 I take absolutely no credit for these, all of which have been freely distributed by the original authors. Since I've been burned by broken links before, I've stored the raw PDFs for most of these. However, I've tried to link out to the original sources. If you're one of the creators of these -- thank you! -- and you want me to take the raw file down, just let me know.
 
 
-## Full Courses and Textbooks
+## Full Courses and Open Textbooks
 
 | File | Description   |
 | :-----------: |:-------------:|
+|  [Boyd Applied Linear Algebra](/files/notes/boyd_vmls.pdf)  |  Freely available book from Boyd and Vandenberghe on Applied LA [website](http://vmls-book.stanford.edu/). |
 |  [Boyd Applied Linear Algebra](/files/notes/boyd_vmls.pdf)  |  Freely available book from Boyd and Vandenberghe on Applied LA [website](http://vmls-book.stanford.edu/). |
 |  [Doug Sparks' Stats 200](/files/notes/Stat200_2014_Merged_Sparks.pdf)  |  Nice course notes from Doug Sparks 2014 offering of [stats 200](http://stats200.stanford.edu/) |
 |  [CS 229 Lecture Notes](/files/notes/CS229_Lecture_Notes.pdf)  |  Classic note set from Andrew Ngs amazing [CS229](http://cs229.stanford.edu/syllabus.html). |
@@ -75,11 +76,11 @@ I take absolutely no credit for these, all of which have been freely distributed
 
 | File | Description   |
 | :-----------: |:-------------:|
-|[Distill Building Interpretability](https://distill.pub/2018/building-blocks/)|  |
-|[Distill Feature Visualization](https://distill.pub/2017/feature-visualization/)|  |
-|[Distill Attention](https://distill.pub/2016/augmented-rnns/)|  |
-|[Chris Olah on Word Embeddings](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)| |
-|[Chris Olah Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)| |
+|[Distill Attention](https://distill.pub/2016/augmented-rnns/)| Amazingly clear presentation of the attention mechanism and its (early) variants |
+|[Distill Building Interpretability](https://distill.pub/2018/building-blocks/)| Coolest visualizations of NN internals I've ever seen|
+|[Distill Feature Visualization](https://distill.pub/2017/feature-visualization/)| Running theme: If it's only distill.pub, read it. |
+|[Chris Olah Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)| Chris Olah is a master of his craft, and here offers a fantastic overview of LSTMs and GRUs.|
+|[Chris Olah on Word Embeddings](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/)| Chris Olah explaining world embeddings and the like.|
 |  [Goldberg's Primer on NNs for NLP](/files/notes/Goldber_Primer_Neural_Nets_NLP.pdf)  |  Overview of Deep Learning for NLP from Yoav Goldberg [downloaded from here](http://u.cs.biu.ac.il/~yogo/nnlp.pdf). |
 
 
