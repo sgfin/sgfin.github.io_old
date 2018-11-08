@@ -124,13 +124,13 @@ I take absolutely no credit for these, all of which have been freely distributed
 
 | File | Description   |
 | :-----------: |:-------------:|
-|  [R dplyr cheatsheet](/files/cheatsheets/R_cheatsheet_dplyr.pdf)  |  Cheatsheet for Hadley's amazing data wrangling package, dplyr. One of many from (RStudio)[https://www.rstudio.com/resources/cheatsheets/] |
-|  [R ggplot2 cheatsheet](/files/cheatsheets/R_cheatsheet_ggplot2.pdf)  |  Cheatsheet for Hadley's amazing plotting package, ggplot2. One of many from (RStudio)[https://www.rstudio.com/resources/cheatsheets/] |
+|  [R dplyr cheatsheet](/files/cheatsheets/R_cheatsheet_dplyr.pdf)  |  Cheatsheet for Hadley's amazing data wrangling package, dplyr. One of many from [RStudio](https://www.rstudio.com/resources/cheatsheets/) |
+|  [R ggplot2 cheatsheet](/files/cheatsheets/R_cheatsheet_ggplot2.pdf)  |  Cheatsheet for Hadley's amazing plotting package, ggplot2. One of many from [RStudio](https://www.rstudio.com/resources/cheatsheets/)|
 |  [SQL Joins cheatsheet](/files/cheatsheets/SQL_joins.png)  |  Graphical description of classic SQL joins w/ toy code  |
-|  [Python pandas cheatsheet](/files/cheatsheets/Python_cheatsheet_pandas.pdf)  |  Cheatsheet for python's data wrangling package, pandas. |
-|  [Python numpy cheatsheet](/files/cheatsheets/Python_cheatsheet_numpy.pdf)  |  Cheatsheet for python's numerical package, numpy. |
-|  [Python keras cheatsheet](/files/cheatsheets/Python_Keras_Cheat_Sheet.pdf)  |  Cheatsheet for python's NN package, keras. |
-|  [Python scikit-learn cheatsheet](/files/cheatsheets/Python_cheatsheet_scikit.pdf)  |  Cheatsheet for python's ML package, scikit-learn. |
+|  [Python pandas cheatsheet](/files/cheatsheets/Python_cheatsheet_pandas.pdf)  |  Cheatsheet for python's data wrangling package, pandas. Downloaded from [here](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)|
+|  [Python numpy cheatsheet](/files/cheatsheets/Python_cheatsheet_numpy.pdf)  |  Cheatsheet for python's numerical package, numpy. Downloaded from [Datacamp](https://www.datacamp.com)|
+|  [Python keras cheatsheet](/files/cheatsheets/Python_Keras_Cheat_Sheet.pdf)  |  Cheatsheet for python's NN package, keras. Downloaded from [Datacamp](https://www.datacamp.com).|
+|  [Python scikit-learn cheatsheet](/files/cheatsheets/Python_cheatsheet_scikit.pdf)  |  Cheatsheet for python's ML package, scikit-learn. Downloaded from [Datacamp](https://www.datacamp.com).|
 |  [Python seaborn tutorial](https://seaborn.pydata.org/tutorial.html)  |  Tutorial for python's plotting system, seaborn. Haven't found a great one yet for matplotlib. |
 
 
