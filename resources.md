@@ -26,6 +26,7 @@ I take absolutely no credit for these, all of which have been freely distributed
 
 | File | Description   |
 | :-----------: |:-------------:|
+|  [Math for ML Book](/files/notes/mml-book.pdf)  |  Math for machine learning book by Faisal and Ong, available on [github](https://mml-book.github.io/). |
 |  [Boyd Applied Linear Algebra](/files/notes/boyd_vmls.pdf)  |  Freely available book from Boyd and Vandenberghe on Applied LA [website](http://vmls-book.stanford.edu/). |
 |  [Boyd Applied Linear Algebra](/files/notes/boyd_vmls.pdf)  |  Freely available book from Boyd and Vandenberghe on Applied LA [website](http://vmls-book.stanford.edu/). |
 |  [Doug Sparks' Stats 200](/files/notes/Stat200_2014_Merged_Sparks.pdf)  |  Nice course notes from Doug Sparks 2014 offering of [stats 200](http://stats200.stanford.edu/) |
