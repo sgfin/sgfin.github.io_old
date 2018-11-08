@@ -89,7 +89,7 @@ I take absolutely no credit for these, all of which have been freely distributed
 
 | File | Description   |
 | :-----------: |:-------------:|
-|[Chris Olah Visual Information Theory](http://colah.github.io/posts/2015-09-Visual-Information/)| |
+|[Chris Olah Visual Information Theory](http://colah.github.io/posts/2015-09-Visual-Information/)| As always, Chris Olah creates an amazing presentation both in words and images.  Goal is to visualize key information theory concepts.|
 
 
 ### Optimization
