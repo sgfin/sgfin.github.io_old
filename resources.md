@@ -90,6 +90,8 @@ I take absolutely no credit for these, all of which have been freely distributed
 | File | Description   |
 | :-----------: |:-------------:|
 |[Chris Olah Visual Information Theory](http://colah.github.io/posts/2015-09-Visual-Information/)| As always, Chris Olah creates an amazing presentation both in words and images.  Goal is to visualize key information theory concepts.|
+|[Cover and Thomas Ch2 - Entropy and Information](/files/notes/Cover_and_Thomas_ch2_entropy.pdf)| The extremely well-written introductory chapter from the classic information theory textbook.|
+|[Cover and Thomas Ch11 - Info Theory and Statistics](/files/notes/Cover_and_Thomas_ch11_info_and_stats.pdf)| The information theory and statistics chapter from the classic information theory textbook.|
 
 
 ### Optimization
