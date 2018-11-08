@@ -161,7 +161,7 @@ This section is fledgling at best, but was my real motivation in making this pag
 | (Berkeley AI Research (BAIR) Blog)[https://bair.berkeley.edu/blog/] | BAIR produces a lot of great research, and uses this blog to release more accessible presentations of their papers. | 
 | (Off the Convex Path)[https://www.offconvex.org/] | Nice blog on machine learning and optimization. | 
 | (Ferenc Huszár's blog)[https://www.inference.vc/] | Pretty popular blog that has a lot of explorations/musings on ML from an author with a rigorous mathematical perspective | 
-|  [Thibaut Lienart's Blog](https://tlienart.github.io/pub/csml.html)  |  This blog has some notes on math and optimization that seem interesting.  |
+|  [Thibaut Lienart's Blog](https://tlienart.github.io/pub/csml.html)  |  This website has some notes on math and optimization that seem interesting.  |
 
 
 
