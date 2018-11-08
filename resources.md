@@ -84,6 +84,7 @@ I take absolutely no credit for these, all of which have been freely distributed
 
 | File | Description   |
 | :-----------: |:-------------:|
+|Adversarial Examples/Robust ML [Part 1](http://people.csail.mit.edu/madry/lab/blog/adversarial/2018/07/06/adversarial_intro/), [Part 2](http://people.csail.mit.edu/madry/lab/blog/adversarial/2018/07/11/robust_optimization_part1/), and [Part 3](http://people.csail.mit.edu/madry/lab/blog/adversarial/2018/08/10/robust_optimization_part2/) | The [Madry lab](https://people.csail.mit.edu/madry/lab/) is one of the top research groups in robust deep learning research. They put together a fantastic intro to these topics on their blog. I hope they keep making posts... |
 |[Distill Attention](https://distill.pub/2016/augmented-rnns/)| Amazingly clear presentation of the attention mechanism and its (early) variants |
 |[Distill Building Interpretability](https://distill.pub/2018/building-blocks/)| Coolest visualizations of NN internals I've ever seen|
 |[Distill Feature Visualization](https://distill.pub/2017/feature-visualization/)| Running theme: If it's only distill.pub, read it. |
