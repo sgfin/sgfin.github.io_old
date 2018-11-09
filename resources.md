@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Resources
+title: ML Resources
 permalink: /learning-resources/
 ---
 
