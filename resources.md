@@ -164,6 +164,8 @@ This section is fledgling at best, but was my real motivation in making this pag
 |  [Python keras cheatsheet](/files/cheatsheets/Python_Keras_Cheat_Sheet.pdf)  |  Cheatsheet for python's NN package, keras. Downloaded from [Datacamp](https://www.datacamp.com).|
 |  [Python scikit-learn cheatsheet](/files/cheatsheets/Python_cheatsheet_scikit.pdf)  |  Cheatsheet for python's ML package, scikit-learn. Downloaded from [Datacamp](https://www.datacamp.com).|
 |  [Python seaborn tutorial](https://seaborn.pydata.org/tutorial.html)  |  Tutorial for python's plotting system, seaborn. Haven't found a great one yet for matplotlib. |
+|  [Graphic Design cheatsheet](/files/cheatsheets/graphic_design.pdf)  |  Cute little graphic design cheatsheet downloaded from [here](https://www.psiweb.org/docs/default-source/2018-psi-conference-posters/48-julie-jones.pdf) |
+
 
 
 ## <a name="misc"></a> Miscellaneous websites
