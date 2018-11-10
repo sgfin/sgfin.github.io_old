@@ -34,6 +34,8 @@ If you stumble upon this list and have suggestions for me to add (especially for
 
 ## <a name="courses"></a> Open Courses and Textbooks
 
+I'm trying to limit to this list to things that are legally accessible online, for free.
+
 ### Foundation
 
 | File | Description   |
