@@ -34,31 +34,65 @@ If you stumble upon this list and have suggestions for me to add (especially for
 
 ## <a name="courses"></a> Open Courses and Textbooks
 
+### Foundation
+
 | File | Description   |
 | :-----------: |:-------------:|
 |  [Math for ML Book](/files/notes/mml-book.pdf)  |  Math for machine learning book by Faisal and Ong, available on [github](https://mml-book.github.io/). |
 |  [Boyd Applied Linear Algebra](http://vmls-book.stanford.edu/vmls.pdf)  |  Freely available book from Boyd and Vandenberghe on Applied LA ([website](http://vmls-book.stanford.edu/)). |
+| [MIT 6.041 Intro Probability] | John Tsitsiklis et al have put together some great resources. Their classic MIT intro to probability has been archived on [OCW](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/) and also offered on Edx ([Part 1](https://www.edx.org/course/introduction-probability-part-1-mitx-6-041-1x), [Part 2](https://www.edx.org/course/introduction-to-probability-part-2-inference-processes)). The textbook is also excellent. |
+| [Joe Blitzstein's Stat110](https://projects.iq.harvard.edu/stat110/about) | Joe Blitzstein's undergrad probability course has a high overlap in content with 6.041. Like 6.041, it also has a great textbook, [youtube](https://projects.iq.harvard.edu/stat110/youtube) videos, and an [edx](https://www.edx.org/course/introduction-to-probability-0) offering. |
+|[MathematicalMonk](https://www.youtube.com/user/mathematicalmonk)| This guy is amazing. Some 250 youtube tutorials on ML, Probability, and Information Theory.  What's great about these playlists is any individual video could go into section 2!|
+
+
+### Statistics
+
+| File | Description   |
+| :-----------: |:-------------:|
 |  [Doug Sparks' Stats 200](/files/notes/Stat200_2014_Merged_Sparks.pdf)  |  Nice course notes from Doug Sparks 2014 offering of [stats 200](http://stats200.stanford.edu/) |
 |  [Modern Statistics for Modern Biology](https://www-huber.embl.de/msmb/)  |  This online textbook is from Susan Holmes and Wolfgang Huber, and provides a nice and accessible intro to the parts of modern data science revelant to computational biologists.  It also happens to be a piece of typographic *art*, created with [bookdown](https://bookdown.org/yihui/bookdown/).  |
 |  [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/)  |  Lecture Videos on [youtube](https://www.youtube.com/playlist?list=PLDcUM9US4XdM9_N6XUUFrhghGJ4K25bFc) accompany this very well-reviewed introductory textbook. |
 |  [Hernan and Robbins Causal Inference Book](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)  |  Long-upcoming textbook on causal inference (from the epidemiology perspective), with drafts fairly frequently updated on the web page. |
+
+
+### Classic Machine Learning 
+
+| File | Description   |
+| :-----------: |:-------------:|
 |  [CS 229 Lecture Notes](/files/notes/CS229_Lecture_Notes.pdf)  |  Classic note set from Andrew Ng's amazing grad-level intro to ML: [CS229](http://cs229.stanford.edu/syllabus.html). |
 |  [ESL](https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf) and [ISL](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf) from Hastie et al |  Beginner (ISL) and Advanced (ESL) presentation to classic machine learning from world-class stats professors. Slides and video for a MOOC on ISL is available [here](https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/). |
 |  [CS 228 PGM Notes](https://ermongroup.github.io/cs228-notes/)  |  Really great course notes on Probabilistic Graphical Models from at Stanford. PDF export wasn't ideal so linking only to website.|
 |  [Blei Foundations of Graphical Models Course](http://www.cs.columbia.edu/~blei/fogm/2016F/index.html)  |  2016 course notes on Foundations of Graphical Models from David Blei 2016 website|
+
+
+### Deep Learning
+
+| File | Description   |
+| :-----------: |:-------------:|
 | [Roger Grosse's CSC231 Notes](/files/notes/CS229_Linear_Algebra.pdf)  |  Notes from Roger Grosse's CSC 231 [full website here](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/). Probably the single best intro to DL course I've found from any university. Notes and slides are gorgeous.|
 |  [Fast.Ai](https://www.fast.ai/)  |  Wonderful set of intro lectures + notebooks from Jeremy Howard and Rachel Thomas. In addition, Hiromi Suenaga has released excellent and self-contained notes of the whole series with timestamp links back to videos: [FastAI DL Part 1](https://www.kdnuggets.com/2018/07/fast-ai-deep-learning-part-1-notes.html), [FastAI DL Part 2](https://www.kdnuggets.com/2018/07/fast-ai-deep-learning-part-2-notes.html), and [FastAI ML](https://www.kdnuggets.com/2018/07/suenaga-fast-ai-machine-learning-notes.html). |
 |  [CS231N DL for Vision](http://cs231n.github.io/)  |  Amazing notes from Andrej Karapthy, with lectures on Youtube as well. |
 |  [CS224 Deep Learning for NLP 2017](/files/notes/CS229_Linear_Algebra.pdf)  |  Fantastic course notes on Deep Learning for NLP from Stanford's [CS224](http://web.stanford.edu/class/cs224n/). Github repo [here](https://github.com/stanfordnlp/cs224n-winter17-notes/blob/master/notes1.pdf) |
 |  [CMU CS 11-747](http://www.phontron.com/class/nn4nlp2018/schedule.html)  |  Fantastic course  on Deep Learning for NLP from CMU's Graham Neubig. Really great lecture videos on Youtube [here](https://www.youtube.com/playlist?list=PLbdKUKMAnh9Qqs5uwEBDfRb_L3YaLbRKq) |
 | [Deep Learning Book](https://www.deeplearningbook.org) | This textbook by Ian Goodfellow, Yoshua Bengio, and Aaron Courville is probably the closest we have to a de facto standard textbook for DL. |
+
+
+### Reinforcement Learning
+
+| File | Description   |
+| :-----------: |:-------------:|
+|[Sutton and Barto Open RL Book](http://incompleteideas.net/book/the-book-2nd.html)| De-facto standard intro to RL, even though the textbook is only now about to be published!|
+|[Berkeley Deep Reinforcement Learning](http://rll.berkeley.edu/deeprlcourse/)| RL class from Berkely taught by top dogs in the field, lectures posted to Youtube.|
+
+
+### Optimization
+
+| File | Description   |
+| :-----------: |:-------------:|
 |[Boyd Convex Optimization Book](http://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf)| Famous and freely available textbook from Boyd and Vandenberghe, accompanied by [slides](https://web.stanford.edu/class/ee364a/lectures.html) and Youtube videos. More advanced follow-up class [here](https://web.stanford.edu/class/ee364b/lectures.html)|
 |  NYU Optimization-based Data Analysis [2016](/files/notes/NYU_Optimization_2016.pdf) and [2017](/files/notes/NYU_Optimization_2017.pdf) |  Fantastic course notes on Optimization-based data analysis from NYU [2016 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_spring16/notes.html) and [2017 website](https://cims.nyu.edu/~cfgranda/pages/OBDA_fall17/schedule.html). |
-|[Berkeley Deep Reinforcement Learning](http://rll.berkeley.edu/deeprlcourse/)| RL class from Berkely taught by top dogs in the field, lectures posted to Youtube.|
-|[Sutton and Barto Open RL Book](http://incompleteideas.net/book/the-book-2nd.html)| De-facto standard intro to RL, even though the textbook is only now about to be published!|
-|[MathematicalMonk](https://www.youtube.com/user/mathematicalmonk)| This guy is amazing. Some 250 youtube tutorials on ML, Probability, and Information Theory.  What's great about these playlists is any individual video could go into section 2!|
 
-https://ee227c.github.io/
+
 
 ## <a name="tutorials"></a> Tutorials, Overviews, and (Individual) Lecture Notes
 
