@@ -1,7 +1,7 @@
 # Site settings
-title: Sam's Academic Blog
+title: Notes on Machine Learning and Medicine
 email: samuel_finlayson@hms.harvard.edu
-description: "MD-PhD student working with Zak Kohane"
+description: "By Sam Finlayson, MD-PhD student w/ Zak Kohane"
 baseurl: ""
 url: "http://sgfin.github.io"
 # twitter_username: samfin55
