@@ -666,7 +666,7 @@ div .pub-full {
 }
 @media (min-width: 768px) {
   .timelineitem:nth-child(odd) {
-    margin-left: 48%;
+    margin-left: 53%;
     border-left: 5px solid #333;
     text-align: left;
   }
@@ -677,7 +677,7 @@ div .pub-full {
     text-align: right;
   }
   .timelineitem {
-    width: 45%;
+    width: 50%;
     position: relative;
     padding: 0px 10px 0px 10px;
   }
