@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<html lang="en" hola_ext_inject="disabled"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samuel Finlayson Academic Website</title>
+  <link href="./static/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="./static/style.css" rel="stylesheet">
+  <link href="./static/css" rel="stylesheet" type="text/css">
 
-
-  <meta name="description" content="Samuel Finlayson's personal webpage -- machine learning and medince" />
-
-<meta name="keywords" content= "research, medicine, machine learning"/>
-<link rel="stylesheet" type="text/css" href="./static/about.css" media="all" />
-
-<!--[if lte IE 7]>
-<link rel="stylesheet" href="new2011/styles/np-ie67.css" type="text/css" media="all" />
-<![endif]-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js""></script>
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
-<script type="text/javascript" src="./static/js/layout.js"></script>
-<script type="text/javascript" src="./static/js/common.js"></script>
-<script type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+
+  <style type="text/css"></style></head>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122144402-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122144402-1');
 </script>
 
 <!-- toggle abstracts -->
@@ -35,105 +39,43 @@ jQuery(function(){
 });
 </script>
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122144402-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-122144402-1');
-</script>
+<body onload="start()">
 
-<!-- set title / toggle blog vs not blog -->
-
-  <title>Samuel Finlayson</title>
-
-</head>
-
-<body class="white">
-
-
-
-<div id="container">
-
-    <div class="storey border-top"> 
-
-    <div class='nav-left'> <!--class="column w405 left">-->
-
-    <h1>Sam Finlayson</h1>
-
+<div id="header" class="bg1">
+  <div id="topnav">
+    <ul >
+      <li><a href="http://sgfin.github.io/learning-resources">ML Resources + Blog</a></li>
+    </ul>
+  </div>
+  <br>
+  <div id="headerblob">
+    <img src="./static/Finlayson_Headshot.jpg" class="img-circle imgme">
+    <div id="headertext">
+      <div id="htname">Sam Finlayson</div>
+      <div id="htdesc">MD-PhD Candidate</div>
+      <div id="htem">samuel_finlayson@hms.harvard.edu</div>
+      <div id="icons">
+        <div class="svgico">
+          <a target="_blank" href="https://github.com/sgfin"><img src="./static/octocat.svg" width="56px"></a>
+          <!-- <a target="_blank" href="https://twitter.com/samfin55"><img src="./static/twitter.svg" width="56px"></a> -->
+          <a target="_blank" href="https://sgfin.github.io/learning-resources"><img src="./static/rss.svg" width="56px"></a>
+        </div>
+      </div>
     </div>
-    <div class="nav-right"> <!-- class="column w548 right extra-pad"> -->
+  </div>
+</div>
 
-      <div id="nav">
+<div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
+  <b>Bio</b>. I am a MD-PhD Student at Harvard-MIT working with Dr. Isaac Kohane.  My research interests center on the intersection of machine learning and healthcare. My current projects focus on exploring applications of deep learning to medical images, medical text, and various 'omics.
 
-        <!-- <a href="#publications">Publications</a> <br>
-        <a href="#talks">Talks</a> <br>
-        <a href="#projects">Projects</a> <br>
-        -->
+  <br><br>
 
-        <a href="https://sgfin.github.io/learning-resources/">ML Resources</a> <br>
-        <a href="https://sgfin.github.io/posts/">Posts</a> <br>
-        <a href="./assets/sgf_cv.pdf">CV</a> <br>
-        
+  In addition to my research, I am involved in Hydrocephalus by way of <a href="http://teamhydro.org">Team Hydro</a>, an organization that my family and I started to raise money/awareness for the condition in honor of my sister, Kate. I also work as a consulting clinical data scientist for <a href="http://nference.ai">nference.ai</a>.
 
-        <div class='iconwrapper'>
-            <div class='icon'>
-            <a href="https://github.com/sgfin">
-            <img src="./assets/GitHub-Mark-120px-plus.png" 
-                 style="width:40px;height:40px;">
-            </a>
-            </div>
-            <div class='icon'>
-            <input id="email-button" style="outline: none;" type="image" 
-                   src="./assets/email-14-128.png" 
-                   width="40px" height="40px" border="0" >
-            </div>
-        </div>
-        <div id="email-div" style="display:none; color:#000066;">
-            samuel_finlayson "at" hms.harvard.edu
-        </div>
+  <br><br>
 
-      </div> <!-- #nav -->
-
-    </div> <!-- .column -->
-
-    <div style="clear:both;"> </div>
-
-</div> <!-- .storey (header) -->
-
-
-
-
-    <div class="storey border-top">
-
-      <div style="display:table;">
-        <div class="headshot">
-          <img src="./static/Finlayson_Headshot.jpg" style="width:100%; max-width:180px;">
-          <!--style="width:200px;float:left;padding:10px; padding-right:30px; height:100%;">-->
-        </div>
-
-        <div class="standfirst">
-          MD-PhD Candidate<br>
-
-          <div style="font-size:18px">
-          Harvard Medical School, MIT
-          </div>
-
-          <p class="intro">
-             I am a MD-PhD Student at Harvard-MIT working with Dr. Isaac Kohane.  My research interests center on the intersection of machine learning and healthcare. My current projects focus on exploring applications of deep learning to medical images, medical text, and various 'omics.
-             <br><br>
-             In addition to my research, I am involved in Hydrocephalus by way of <a href="http://teamhydro.org">Team Hydro</a>, an organization that my family and I started to raise money/awareness for the condition in honor of my sister, Kate. I also work as a consulting clinical data scientist for <a href="http://nference.ai">nference.ai</a>.
-             <br><br>
-             For a more formal account of my work, see my <a href="/assets/sgf_cv.pdf"> Curriculum Vitae</a> or <a href="https://scholar.google.com/citations?user=7__yMlEAAAAJ&hl=en">Google Scholar</a>.
-          </p>
-        </div> <!-- .standfirst -->
-      </div><!-- table container -->
-    </div> <!-- story border-top -->
-
-    <div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
-  
+  For a more formal account of my work, see my <a href="/assets/sgf_cv.pdf"> Curriculum Vitae</a> or <a href="https://scholar.google.com/citations?user=7__yMlEAAAAJ&hl=en">Google Scholar</a> .
   
 </div>
 
@@ -281,29 +223,22 @@ jQuery(function(){
 
 </div> <!-- #container -->
 
+
+
+
 </body>
 
 
-<script>
-$('#email-button').click(function() {
-  $('#email-div').toggle('slow', function() {
-    // Animation complete.
-  });
-});
+
+<div id="sitefooter">
+</div>
+
+<script src="./static/jquery-1.11.1.min.js"></script>
+<script src="./static/bootstrap.min.js"></script>
+
+}
+
 </script>
 
-<script>
 
-$( "div.pub-info" ).click(function(event) {
-    $(this).toggleClass("pub-full");
-});
-$( "div.pub-info" ).hover(function(event) {
-    $(this).toggleClass("pub-full");
-});
-</script>
-
-</html>
-
-
-
-
+</body></html>
