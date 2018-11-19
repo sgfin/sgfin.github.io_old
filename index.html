@@ -8,7 +8,13 @@
   <link href="./static/style.css" rel="stylesheet">
   <link href="./static/css" rel="stylesheet" type="text/css">
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js""></script>
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
+
   <style type="text/css"></style></head>
+
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122144402-1"></script>
@@ -20,12 +26,25 @@
   gtag('config', 'UA-122144402-1');
 </script>
 
+<!-- toggle abstracts -->
+<script>
+jQuery(function(){
+        jQuery('#showall').click(function(){
+               jQuery('.targetDiv').show();
+        });
+        jQuery('.showSingle').click(function(){
+              //jQuery('.abstract').hide();
+              jQuery('#div'+$(this).attr('target')).slideToggle(100); //show();
+        });
+});
+</script>
+
 
 <body onload="start()">
 
 <div id="header" class="bg1">
   <div id="topnav">
-    <ul>
+    <ul >
       <li><a href="http://sgfin.github.io/learning-resources">ML Resources + Blog</a></li>
     </ul>
   </div>
@@ -90,190 +109,124 @@
 </div>
 
 <br><br>
-
-
 <hr class="soft">
 
-<div class="container">
-  <h2>Selected Research</h2>
 
-  <center>
-    <div class="showmore-papers" showmore-group="paper" id="showaisafetypapers" style="display:inline-block;">
-      AI Safety </div> 
-    <div class="showmore-papers" showmore-group="paper" id="shownlppapers" style="display:inline-block;">
-    NLP</div>
-      <div class="showmore-papers" showmore-group="paper" id="show_clinicalInf_papers" style="display:inline-block; ">
-      Clinical Informatics</div>
-      <div class="showmore-papers" showmore-group="paper" id="show_misc_papers" style="display:inline-block; ">
-      Misc.</div>
 
-  </center>
-
-<br>
-
-  <div id="pubs">
-
-    <div data-type="paper" paper-type="aisafety" class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="./assets/adversarial_examples_paper/attack_merged.png" height=400px>
+<div id="container" >
+    <!-- PUBLICATIONS ROW -->
+    <h2 id="publications">Selected Publications</h2>
+    <div class="pub">
+    <ul>
+       <li>
+        <img src="./assets/microbiome/gurry_fig2.png" class="pub-image">
+        <div class="pub-info">
+          <h3>Predictability and persistence of prebiotic dietary supplementation in a healthy human cohort</h3>
+          <p>Thomas Gurry, <em>HST Microbiome Consortium</em>, ... Eric Alm<br>
+            <i>Scientific Reports</i>, 2018 <br>
+            [<a class="showSingle", target="18">abstract</a>]
+            [<a href="https://www.nature.com/articles/s41598-018-30783-1">Paper</a>]
+          </p>
+          <div id="div18" class="abstract">
+            Dietary interventions to manipulate the human gut microbiome for improved health have received increasing attention. However, their design has been limited by a lack of understanding of the quantitative impact of diet on a host’s microbiota. We present a highly controlled diet perturbation experiment in a healthy, human cohort in which individual micronutrients are spiked in against a standardized background. We identify strong and predictable responses of specific microbes across participants consuming prebiotic spike-ins, at the level of both strains and functional genes, suggesting fine-scale resource partitioning in the human gut. No predictable responses to non-prebiotic micronutrients were found. Surprisingly, we did not observe decreases in day-to-day variability of the microbiota compared to a complex, varying diet, and instead found evidence of diet-induced stress and an associated loss of biodiversity. Our data offer insights into the effect of a low complexity diet on the gut microbiome, and suggest that effective personalized dietary interventions will rely on functional, strain-level characterization of a patient’s microbiota.
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Adversarial Attacks Against Medical Deep Learning Systems</div>
-            <div class="pubd"><em>Arxiv</em>. Abstract: The discovery of adversarial examples has raised concerns about the practical deployment of deep learning systems. In this paper, we argue that the field of medicine may be uniquely susceptible to adversarial attacks, both in terms of monetary incentives and technical vulnerability. To this end, we outline the healthcare economy and the incentives it creates for fraud, we extend adversarial attacks to three popular medical imaging tasks, and we provide concrete examples of how and why such attacks could be realistically carried out. For each of our representative medical deep learning classifiers, both white and black box attacks were both effective and human-imperceptible...
-            <div class="puba">Samuel Finlayson, Isaac Kohane, Andrew Beam</div>
-            <div class="pubv"></div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://arxiv.org/abs/1804.05296">Arxiv</a></li>
-                <li><a href="https://github.com/sgfin/adversarial-medicine">Github</a></li>
-              </ul>
-            </div>
+      </li>
+      <li>
+        <img src="./assets/adversarial_examples_paper/attack_merged.png" class="pub-image">
+        <div class="pub-info">
+          <h3>Adversarial Attacks Against Medical Deep Learning Systems</h3>
+          <p>Samuel Finlayson, Isaac Kohane, Andrew Beam<br>
+            <i>Preprint</i>, 2018 <br>
+            [<a class="showSingle", target="17">abstract</a>]
+          </p>
+          <div id="div17" class="abstract">
+            The discovery of adversarial examples has raised concerns about the practical deployment of deep learning systems. In this paper, we argue that the field of medicine may be uniquely susceptible to adversarial attacks, both in terms of monetary incentives and technical vulnerability. To this end, we outline the healthcare economy and the incentives it creates for fraud, we extend adversarial attacks to three popular medical imaging tasks, and we provide concrete examples of how and why such attacks could be realistically carried out. For each of our representative medical deep learning classifiers, both white and black box attacks were highly successful. We urge caution in deploying deep learning systems in clinical settings, and encourage the machine learning community to further investigate the domain-specific characteristics of medical learning systems.
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-    <div data-type="paper" paper-type="nlp"  class="pubwrap">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="./static/sdata201432-f1.jpg" height=200px>
+      </li>
+      <li>
+        <img src="./static/m_ofx27002-fig1.jpeg" class="pub-image">
+        <div class="pub-info">
+          <h3>Potential Adverse Effects of Broad-Spectrum Antimicrobial Exposure in the Intensive Care Unit</h3>
+          <p>Jenna Wiens, Graham Snyder, Samuel Finlayson, Monica Majoney, Leo Celi<br>
+            <i>Open Forum Infectious Diseases</i>, 2018 <br>
+            [<a class="showSingle", target="16">abstract</a>]
+            [<a href="https://academic.oup.com/ofid/article/5/2/ofx270/4762255">Paper</a>]
+          </p>
+          <div id="div16" class="abstract">
+            Background: The potential adverse effects of empiric broad-spectrum antimicrobial use among patients with suspected but subsequently excluded infection have not been fully characterized. We sought novel methods to quantify the risk of adverse effects of broad-spectrum antimicrobial exposure among patients admitted to an intensive care unit (ICU).
+            Methods: Among all adult patients admitted to ICUs at a single institution, we selected patients with negative blood cultures who also received ≥1 broad-spectrum antimicrobials. Broad-spectrum antimicrobials were categorized in ≥1 of 5 categories based on their spectrum of activity against potential pathogens. We performed, in serial, 5 cohort studies to measure the effect of each broad-spectrum category on patient outcomes. Exposed patients were defined as those receiving a specific category of broad-spectrum antimicrobial; nonexposed were all other patients in the cohort. The primary outcome was 30-day mortality. Secondary outcomes included length of hospital and ICU stay and nosocomial acquisition of antimicrobial-resistant bacteria (ARB) or Clostridium difficile within 30 days of admission.
+            Results:  Among the study cohort of 1918 patients, 316 (16.5%) died within 30 days, 821 (42.8%) had either a length of hospital stay >7 days or an ICU length of stay >3 days, and 106 (5.5%) acquired either a nosocomial ARB or C. difficile. The short-term use of broad-spectrum antimicrobials in any of the defined broad-spectrum categories was not significantly associated with either primary or secondary outcomes.
+            Conclusions: The prompt and brief empiric use of defined categories of broad-spectrum antimicrobials could not be associated with additional patient harm.
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Building the Graph of Medicine from Millions of Clinical Narratives</div>
-            <div class="pubd"><em>Scientific Data</em>. Abstract: Electronic health records (EHR) represent a rich and relatively untapped resource for characterizing the true nature of clinical practice and for quantifying the degree of inter-relatedness of medical entities such as drugs, diseases, procedures and devices. We provide a unique set of co-occurrence matrices, quantifying the pairwise mentions of 3 million terms mapped onto 1 million clinical concepts, calculated from the raw text of 20 million clinical notes spanning 19 years of data...
-            <div class="puba">Samuel Finlayson, Paea LePendu, Nigam Shah</div>
-            <div class="pubv"></div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://www.nature.com/articles/sdata201432">Paper</a></li>
-                <!-- <li><a href="https://github.com/greydanus/visualize_atari">GitHub</a></li> -->
-                <li><a href="https://datadryad.org/resource/doi:10.5061/dryad.jp917">Data</a></li>
-              </ul>
-            </div>
+      </li>
+      <li>
+        <img src="./static/nihms756241f3-mrlu1.jpg" class="pub-image">
+        <div class="pub-info">
+          <h3>Toward rapid learning in cancer treatment selection: An analytical engine for practice-based clinical data</h3>
+          <p>Samuel Finlayson, Mia Levy, Sunil Reddy, Daniel Rubin<br>
+            <i>Journal of Biomedical Informatics</i>, 2016 <br>
+            [<a class="showSingle", target="15">abstract</a>]
+            [<a href="https://www.ncbi.nlm.nih.gov/pubmed/26836975">Paper</a>]
+            [<a href="https://github.com/sgfin/mrlu">GitHub</a>]
+          </p>
+          <div id="div15" class="abstract">
+            OBJECTIVE: Wide-scale adoption of electronic medical records (EMRs) has created an unprecedented opportunity for the implementation of Rapid Learning Systems (RLSs) that leverage primary clinical data for real-time decision support. In cancer, where large variations among patient features leave gaps in traditional forms of medical evidence, the potential impact of a RLS is particularly promising. We developed the Melanoma Rapid Learning Utility (MRLU), a component of the RLS, providing an analytical engine and user interface that enables physicians to gain clinical insights by rapidly identifying and analyzing cohorts of patients similar to their own.
+            MATERIALS AND METHODS: A new approach for clinical decision support in Melanoma was developed and implemented, in which patient-centered cohorts are generated from practice-based evidence and used to power on-the-fly stratified survival analyses. A database to underlie the system was generated from clinical, pharmaceutical, and molecular data from 237 patients with metastatic melanoma from two academic medical centers. The system was assessed in two ways: (1) ability to rediscover known knowledge and (2) potential clinical utility and usability through a user study of 13 practicing oncologists.
+            RESULTS: The MRLU enables physician-driven cohort selection and stratified survival analysis. The system successfully identified several known clinical trends in melanoma, including frequency of BRAF mutations, survival rate of patients with BRAF mutant tumors in response to BRAF inhibitor therapy, and sex-based trends in prevalence and survival. Surveyed physician users expressed great interest in using such on-the-fly evidence systems in practice (mean response from relevant survey questions 4.54/5.0), and generally found the MRLU in particular to be both useful (mean score 4.2/5.0) and useable (4.42/5.0).
+            DISCUSSION: The MRLU is an RLS analytical engine and user interface for Melanoma treatment planning that presents design principles useful in building RLSs. Further research is necessary to evaluate when and how to best use this functionality within the EMR clinical workflow for guiding clinical decision making.
+            CONCLUSION: The MRLU is an important component in building a RLS for data driven precision medicine in Melanoma treatment that could be generalized to other clinical disorders.
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-<!-- Add this style to whatever the bottom row is-->
-  <div data-type="paper" paper-type="clinical_inf"  class="pubwrap"">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="./static/nihms756241f3-mrlu0.jpg" height=150px>
-            <img src="./static/nihms756241f3-mrlu1.jpg" height=150px>
-            <img src="./static/nihms756241f3-mrlu2.jpg" height=150px>
+      </li>
+      <li>
+        <img src="./static/sdata201432-f1.jpg" class="pub-image">
+        <div class="pub-info">
+          <h3>Building the Graph of Medicine from Millions of Clinical Narratives</h3>
+          <p>Samuel Finlayson, Paea LePendu, Nigam Shah<br>
+            <i>Scientific Data</i>, 2014 <br>
+            [<a class="showSingle", target="14">abstract</a>]
+            [<a href="https://www.nature.com/articles/sdata201432">Paper</a>]
+            [<a href="https://datadryad.org/resource/doi:10.5061/dryad.jp917">Data</a>]
+          </p>
+          <div id="div14" class="abstract">
+            Electronic health records (EHR) represent a rich and relatively untapped resource for characterizing the true nature of clinical practice and for quantifying the degree of inter-relatedness of medical entities such as drugs, diseases, procedures and devices. We provide a unique set of co-occurrence matrices, quantifying the pairwise mentions of 3 million terms mapped onto 1 million clinical concepts, calculated from the raw text of 20 million clinical notes spanning 19 years of data. Co-frequencies were computed by means of a parallelized annotation, hashing, and counting pipeline that was applied over clinical notes from Stanford Hospitals and Clinics. The co-occurrence matrix quantifies the relatedness among medical concepts which can serve as the basis for many statistical tests, and can be used to directly compute Bayesian conditional probabilities, association rules, as well as a range of test statistics such as relative risks and odds ratios. This dataset can be leveraged to quantitatively assess comorbidity, drug-drug, and drug-disease patterns for a range of clinical, epidemiological, and financial applications.
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Toward rapid learning in cancer treatment selection: An analytical engine for practice-based clinical data</div>
-            <div class="pubd"><em>Journal of Biomedical Informatics</em>. Abstract: Wide-scale adoption of electronic medical records (EMRs) has created an unprecedented opportunity for the implementation of Rapid Learning Systems (RLSs) that leverage primary clinical data for real-time decision support. In cancer, where large variations among patient features leave gaps in traditional forms of medical evidence, the potential impact of a RLS is particularly promising. We developed the Melanoma Rapid Learning Utility (MRLU), a component of the RLS, providing an analytical engine and user interface that enables physicians to gain clinical insights by rapidly identifying and analyzing cohorts of patients similar to their own....
-            <div class="puba">Samuel Finlayson, Mia Levy, Sunil Reddy, Daniel Rubin</div>
-            <div class="pubv"></div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://www.ncbi.nlm.nih.gov/pubmed/26836975">Paper</a></li>
-                <li><a href="https://github.com/sgfin/mrlu">GitHub</a></li>
-              </ul>
-            </div>
+      </li>
+      <li>
+        <img src="./static/tamang_unplanned.png" class="pub-image">
+        <div class="pub-info">
+          <h3>Detecting Unplanned Care From Clinician Notes in Electronic Health Records</h3>
+          <p>Suzanne Tamang, Manali Patel,... Samuel Finlayson, Yohan Vetteth, Nigam Shah<br>
+            <i>Journal of Oncology Practice</i>, 2015 <br>
+            [<a class="showSingle", target="12">abstract</a>]
+            [<a href="http://ascopubs.org/doi/pdfdirect/10.1200/JOP.2014.002741">Paper</a>]
+          </p>
+          <div id="div12" class="abstract">
+            Purpose: Reduction in unplanned episodes of care, such as emergency department visits and unplanned hospitalizations, are important quality outcome measures. However, many events are only documented in free-text clinician notes and are labor intensive to detect by manual medical record review.
+            Methods: We studied 308,096 free-text machine-readable documents linked to individual entries in our electronic health records, representing care for patients with breast, GI, or thoracic cancer, whose treatment was initiated at one academic medical center, Stanford Health Care (SHC). Using a clinical text-mining tool, we detected unplanned episodes documented in clinician notes (for non-SHC visits) or in coded encounter data for SHC-delivered care and the most frequent symptoms documented in emergency department (ED) notes.
+            Results: Combined reporting increased the identification of patients with one or more unplanned care visits by 32% (15% using coded data; 20% using all the data) among patients with 3 months of follow-up and by 21% (23% using coded data; 28% using all the data) among those with 1 year of follow-up. Based on the textual analysis of SHC ED notes, pain (75%), followed by nausea (54%), vomiting (47%), infection (36%), fever (28%), and anemia (27%), were the most frequent symptoms mentioned. Pain, nausea, and vomiting co-occur in 35% of all ED encounter notes.
+            Conclusion: The text-mining methods we describe can be applied to automatically review free-text clinician notes to detect unplanned episodes of care mentioned in these notes. These methods have broad application for quality improvement efforts in which events of interest occur outside of a network that allows for patient data sharing.
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div data-type="paper" paper-type="misc"  class="pubwrap" style="border-bottom: none; padding-bottom:0px; margin-bottom:30px;">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="./assets/microbiome/gurry_fig2.png" height=400px>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Predictability and persistence of prebiotic dietary supplementation in a healthy human cohort</div>
-            <div class="pubd"><em>Scientific Reports</em>. Abstract: Dietary interventions to manipulate the human gut microbiome for improved health have received increasing attention. However, their design has been limited by a lack of understanding of the quantitative impact of diet on a host’s microbiota. We present a highly controlled diet perturbation experiment in a healthy, human cohort in which individual micronutrients are spiked in against a standardized background. We identify strong and predictable responses of specific microbes across participants consuming ...
-            <div class="puba">Thomas Gurry, <em>HST Microbiome Consortium</em>, ... Eric Alm</div>
-            <div class="pubv"></div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://www.nature.com/articles/s41598-018-30783-1">Paper</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      </li>
 
 
-    <div class="showmore" id="showmorepubs">
-    show more
-    </div>
 
-    <div id="morepubs">
+    </ul> <!-- end publication list! -->
+    </div> <!-- end div#pub -->
 
-    <div class="pubwrap">
-      <div  data-type="paper" paper-type="showmore" class="row">
-        <div class="col-md-6">
-          <div class="pubimg">
-            <img src="./static/m_ofx27002-fig1.jpeg" height=200px>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="pub">
-            <div class="pubt">Potential Adverse Effects of Broad-Spectrum Antimicrobial Exposure in the Intensive Care Unit</div>
-            <div class="pubd"><em>Open Forum Infectious Diseases</em>. Abstract: The potential adverse effects of empiric broad-spectrum antimicrobial use among patients with suspected but subsequently excluded infection have not been fully characterized. We sought novel methods to quantify the risk of adverse effects of broad-spectrum antimicrobial exposure among patients admitted to an intensive care unit (ICU)...
-            <div class="puba">Jenna Wiens, Graham Snyder, Samuel Finlayson, Monica Majoney, Leo Celi</div>
-            <div class="pubv"></div>
-            <div class="publ">
-              <ul>
-                <li><a href="https://academic.oup.com/ofid/article/5/2/ofx270/4762255">Paper</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+    </div> <!-- publications storey row -->
 
-  <div class="pubwrap" style="border-bottom: none; padding-bottom:0px; margin-bottom:30px;">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="pubimg">
-              <img src="./static/tamang_unplanned.png" height=350px>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="pub">
-              <div class="pubt">Detecting Unplanned Care From Clinician Notes in Electronic Health Records</div>
-              <div class="pubd"><em>Journal of Oncology Practice</em>. Abstract: Purpose: Reduction in unplanned episodes of care, such as emergency department visits and unplanned hospitalizations, are important quality outcome measures. However, many events are only documented in free-text clinician notes and are labor intensive to detect by manual medical record review. Methods: We studied 308,096 free-text machine-readable documents linked to individual entries in our electronic health records,...
-              <div class="puba">Suzanne Tamang, Manali Patel,... Samuel Finlayson, Yohan Vetteth, Nigam Shah</div>
-              <div class="pubv"></div>
-              <div class="publ">
-                <ul>
-                  <li><a href="http://ascopubs.org/doi/pdfdirect/10.1200/JOP.2014.002741">Paper</a></li>
-                  <!-- <li><a href="https://github.com/greydanus/visualize_atari">GitHub</a></li> -->
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-</div>
+</div> <!-- #container -->
 
-</div></body>
+
+
+
+</body>
 
 
 
@@ -282,120 +235,10 @@
 
 <script src="./static/jquery-1.11.1.min.js"></script>
 <script src="./static/bootstrap.min.js"></script>
-<script>
-
-var more_projects_shown = false;
-function start() {
-  $("#showmoreprojects").click(function() {
-    if(!more_projects_shown) {
-      $("#moreprojects").slideDown('fast', function() {
-        $("#showmoreprojects").text('hide');
-      });
-      more_projects_shown = true;
-    } else {
-      $("#moreprojects").slideUp('fast', function() {
-        $("#showmoreprojects").text('show more');
-      });
-      more_projects_shown = false;
-    }
-  });
-
-  var more_pubs_shown = false;
-  $("#showmorepubs").click(function() {
-    if(!more_pubs_shown) {
-      $("#morepubs").slideDown('fast', function() {
-        $("#showmorepubs").text('hide');
-      });
-      more_pubs_shown = true;
-    } else {
-      $("#morepubs").slideUp('fast', function() {
-        $("#showmorepubs").text('show more');
-      });
-      more_pubs_shown = false;
-    }
-  });
-
-  var show_aisafety_papers = true;
-  $("#showaisafetypapers").click(function() {
-    if(!show_aisafety_papers) {
-      $('[data-type=paper]').each(function() {
-        $('[paper-type*=aisafety]').slideDown('fast', function() {
-          $("#showaisafetypapers").css('border', '2px solid #777');
-        })
-      });
-      show_aisafety_papers = true;
-    } else {
-      $('[data-type=paper]').each(function() {
-        $('[paper-type*=aisafety]').slideUp('fast', function() {
-          $("#showaisafetypapers").css('border', '2px solid #CCC');
-        })
-      });
-      show_aisafety_papers = false;
-    }
-  });
-
-   var show_nlp_papers = true;
-  $("#shownlppapers").click(function() {
-    if(!show_nlp_papers) {
-      $('[data-type=paper]').each(function() {
-        $('[paper-type*=nlp]').slideDown('fast', function() {
-          $("#shownlppapers").css('border', '2px solid #777');
-        })
-      });
-      show_nlp_papers = true;
-    } else {
-      $('[data-type=paper]').each(function() {
-        $('[paper-type*=nlp]').slideUp('fast', function() {
-          $("#shownlppapers").css('border', '2px solid #CCC');
-        })
-      });
-      show_nlp_papers = false;
-    }
-  });
-
-   var show_clinicalInf_papers = true;
-  $("#show_clinicalInf_papers").click(function() {
-    if(!show_clinicalInf_papers) {
-      $('[data-type=paper]').each(function() {
-        $('[paper-type*=clinical_inf]').slideDown('fast', function() {
-          $("#show_clinicalInf_papers").css('border', '2px solid #777');
-        })
-      });
-      show_clinicalInf_papers = true;
-    } else {
-      $('[data-type=paper]').each(function() {
-        $('[paper-type*=clinical_inf]').slideUp('fast', function() {
-          $("#show_clinicalInf_papers").css('border', '2px solid #CCC');
-        })
-      });
-      show_clinicalInf_papers = false;
-    }
-  });
-
-   var show_misc_papers = true;
-  $("#show_misc_papers").click(function() {
-    if(!show_misc_papers) {
-      $('[data-type=paper]').each(function() {
-        $('[paper-type*=misc]').slideDown('fast', function() {
-          $("#show_misc_papers").css('border', '2px solid #777');
-        })
-      });
-      show_misc_papers = true;
-    } else {
-      $('[data-type=paper]').each(function() {
-        $('[paper-type*=misc]').slideUp('fast', function() {
-          $("#show_misc_papers").css('border', '2px solid #CCC');
-        })
-      });
-      show_misc_papers = false;
-    }
-  });
-
-
-}
-</script>
 
 }
 
 </script>
+
+
 </body></html>
