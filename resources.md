@@ -63,6 +63,7 @@ I'm trying to limit to this list to things that are legally accessible online, f
 
 | File | Description   |
 | :-----------: |:-------------:|
+| Bishop's [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) | This is a classic ML text, and has now been finally released (legally) for free online. |
 |  [CS 229 Lecture Notes](/files/notes/CS229_Lecture_Notes.pdf)  |  Classic note set from Andrew Ng's amazing grad-level intro to ML: [CS229](http://cs229.stanford.edu/syllabus.html). |
 |  [ESL](https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf) and [ISL](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf) from Hastie et al |  Beginner (ISL) and Advanced (ESL) presentation to classic machine learning from world-class stats professors. Slides and video for a MOOC on ISL is available [here](https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/). |
 |  [CS 228 PGM Notes](https://ermongroup.github.io/cs228-notes/)  |  Really great course notes on Probabilistic Graphical Models from at Stanford. PDF export wasn't ideal so linking only to website.|
@@ -143,6 +144,7 @@ This section is fledgling at best, but was my real motivation in making this pag
 |[Distill Building Interpretability](https://distill.pub/2018/building-blocks/)| Coolest visualizations of NN internals I've ever seen|
 |[Distill Feature Visualization](https://distill.pub/2017/feature-visualization/)| Running theme: If it's only distill.pub, read it. |
 |[Chris Olah Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)| Chris Olah is a master of his craft, and here offers a fantastic overview of LSTMs and GRUs.|
+| [Intro to Federated Learning](https://github.com/OpenMined/PySyft/tree/master/examples/tutorials) | Intro to federated learning and PySyft from Andrew Trask and others using PyTorch.|
 
 
 ### Natural Language Processing
