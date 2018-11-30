@@ -53,6 +53,7 @@ I'm trying to limit to this list to things that are legally accessible online, f
 
 | File | Description   |
 | :-----------: |:-------------:|
+| [Seeing Theory](https://seeing-theory.brown.edu) | This is an online visual textbook that has a bunch of cool interactive displays for intro probability/stats ideas.  My favorite is the inference visualizations.  |
 | Russell Poldracks' [Statistical Thinking for the 21st Century](http://statsthinking21.org/index.html) | This appears to be a pretty fantastic (albeit rather elementary) textbook for a one-quarter intro to statistics class (stat 60 at stanford). Despite assuming little, it touches upon a lot of great topics. |
 |  [Doug Sparks' Stats 200](/files/notes/Stat200_2014_Merged_Sparks.pdf)  |  Nice course notes on Statistical Inference from Doug Sparks 2014 offering of [stats 200](http://stats200.stanford.edu/) |
 |  [Modern Statistics for Modern Biology](https://www-huber.embl.de/msmb/)  |  This online textbook is from Susan Holmes and Wolfgang Huber, and provides a nice and accessible intro to the parts of modern data science revelant to computational biologists.  It also happens to be a piece of typographic *art*, created with [bookdown](https://bookdown.org/yihui/bookdown/).  |
@@ -117,6 +118,7 @@ This section is fledgling at best, but was my real motivation in making this pag
 
 | File | Description   |
 | :-----------: |:-------------:|
+| [Seeing Theory Frequentist Inference](https://seeing-theory.brown.edu/frequentist-inference/index.html) | This is a really beautiful visual presentation of the basic ideas of frequentist inference, from the Seeing Theory textbook.  I love it.|
 |  [Hernan Selection Bias](/files/notes/structured_approach_selection_bias_Hernan.pdf)  |  Nice summary of selection bias via DAGs by Hernan et al. |
 
 
