@@ -180,6 +180,28 @@ jQuery(function(){
     <h2 id="publications">Selected Publications</h2>
     <div class="pub">
     <ul>
+      <li>
+        <img src="./assets/fracgan/fracgan.png" class="pub-image">
+        <div class="pub-info">
+          <h3>Towards generative adversarial networks as a new paradigm for radiology education</h3>
+          <p><u>Samuel Finlayson</u>, Hyunkwang Lee, Isaac Kohane, Luke Oakden-Rayner<br>
+            <i>Machine Learning for Health Workshop at NeurIPS 2018</i> <br>
+            [<a class="showSingle", target="21">Abstract</a>]
+            [<a href="https://arxiv.org/abs/1812.01547">Paper</a>]
+            [<a class="showSingle", target="20">Description/Backstory</a>]
+          </p>
+          <div id="div21" class="abstract">
+            Medical students and radiology trainees typically view thousands of images in order to ”train their eye” to detect the subtle visual patterns necessary for diagnosis. Nevertheless, infrastructural and legal constraints often make it difficult to access and quickly query an abundance of images with a user-specified feature set. In this paper, we use a conditional generative adversarial network (GAN) to synthesize 1024 × 1024 pixel pelvic radiographs that can be queried with conditioning on fracture status. We demonstrate that the conditional GAN learns features that distinguish fractures from non-fractures by training a convolutional neural network exclusively on images sampled from the GAN and achieving an AUC of > 0.95 on a held-out set of real images. We conduct additional analysis of the images sampled from the GAN and describe ongoing work to validate educational efficacy.
+          </div>
+          <div id="div20" class="abstract">
+            Generative adversarial networks (GANs) are a very cool technique that uses dualing neural networks to try to learn to approximate a data distribution. They have been used to create some beautiful images, but some researchers have current techniques don't appear to learn the full data distribution they're trying to approximate. As a researcher, this makes me nervous about using GAN-sampled images as an data substitutes in high-stakes clinical applications, but I'm still very interested in considering ways we could find productive uses for GANs while we're figuring out how to solve their limitations.
+            <br>
+            As a medical student on a radiology rotation, I spent many hours staring at websites like this <a href="http://www.chestx-ray.com/index.php/education/normal-cxr-module-train-your-eye#!1 ">this one</a>, trying to proverbially "train my eye." Note that the above tool--which I found indispensible--only shows 500 *normal* chest x-rays. This produced the mild epiphany that in radiology education, individual tools can be useful even if they just help students see many variants of a thin subset of the data distribution. What I wanted as a student was to pre-specify a combo of medical features, and then cook up an arbitrary number of slightly different images that had them all. In theory, a conditional GAN could do just this, with limited storage and no active link to hospital IT systems.
+            <br>
+            Back in grad school, I met Hyunkwang Lee during a class with Sasha Rush, and we decided to work on conditional image generation using GANs. We reached out to Luke Oakden-Rayner, who gave us access to an amazing dataset. We played around on this using the StackGAN framework during the class project, and have since extended it into this work using Progressive Growing of GANs.
+          </div>
+        </div>
+      </li>
        <li>
         <img src="./assets/microbiome/gurry_fig2.png" class="pub-image">
         <div class="pub-info">
