@@ -1,2 +1,4 @@
 # sgfin.github.io
-Academic blog, with design stolen from Sam Greydanus, who stole it from Andrej Karpathy...
+Sam Finlayson's academic blog.
+
+Leverages code from  Andrew Miller, Sam Greydanus, and Andrej Karpathy.
