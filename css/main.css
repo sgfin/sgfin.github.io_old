@@ -241,7 +241,8 @@ a:visited { color: #205caa; }
   margin: 30px 0;
 }
 
-.post-content ul,
+.post-content ul
+.post-content li {display:list-item; margin-bottom: 5px}
 .post-content ol { padding-left: 20px; }
 
 .post pre,
@@ -443,7 +444,7 @@ a:visited { color: #205caa; }
   .post-content h3 { font-size: 22px; }
   .post-content h4 { font-size: 18px; }
   .post-content blockquote { padding-left: 10px; }
-  .post-content ul {list-style-type: circle; margin-bottom:1em;}
+  .post-content ul {list-style-type: circle;;}
   .post-content ol { padding-left: 10px; }
 
   .site-footer .column {
