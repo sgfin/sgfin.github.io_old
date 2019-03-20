@@ -8,17 +8,16 @@ date:   2019-03-21
 mathjax: false
 ---
 
-### Table of Contents
 * TOC
 {:toc}
 
 ### Why this FAQ?
 
-Last Spring, some colleages (chiefly Andy Beam) and I released a [preprint](https://arxiv.org/pdf/1804.05296.pdf) on adversarial attacks on medical computer visions systems. This manuscript was targeted at a technical audience, and written with the goal of explaining why adversarial attacks researchers should consider healthcare applications and providing some proofs of concept.  I ended up getting a lot of great feedback/pushback via email and twitter, which I really appreciated and which informed an update of the preprint.
+Last Spring, some colleages (chiefly Andy Beam) and I released a [preprint](https://arxiv.org/pdf/1804.05296.pdf) on adversarial attacks on medical computer visions systems. This manuscript was targeted at a technical audience. It was written with the goal of explaining why adversarial attacks researchers should consider healthcare applications among their threat models, as well as to provide some proof of concept.  I ended up getting a lot of great feedback/pushback via email and twitter, which I really appreciated and which informed an update of the preprint.
 
 After the article was released, we were also put in touch with [Jonathan Zittrain](https://hls.harvard.edu/faculty/directory/10992/Zittrain) and John Bowers from Harvard Law School as well as [Joi Ito](https://www.media.mit.edu/people/joi/overview/) of the MIT Media Lab. These are incredibly thoughtful people with a lot of amazing experience. We decided to write a follow-up article targeted more at medical and policy folks, with the intention of examining precedence for adversarial attacks in the healthcare system as it exists today and initiating a conversation about what to do about them going forward. The result is being published today in Science, here. It's been an absolutely pleasure working with these guys.
 
-Given the nature of the topic, I've been fretting quite a bit that the paper will be misconstrued. At a minimum, I anticipate getting a lot of the same questions I got the first time around on the preprint, and figured it'd be easier to write up answers to these in one place.
+Given the nature of the topic, I've been fretting a bit that the paper will be misconstrued. At a minimum, I anticipate getting a lot of the same questions I got the first time around on the preprint, and figured it'd be easier to write up answers to these in one place.
 
 
 
@@ -26,7 +25,7 @@ Given the nature of the topic, I've been fretting quite a bit that the paper wil
 
 Adversarial attacks consitute just one small part of a large taxonomy of potential pitfalls of machine learning (both ML in general and medical ML in particular).
 
-When I think about points of failure of medical machine learning, I think first about things like dataset shift (cite Marzyeh), unknowingly fitting confounders (cite Luke) and healthcare dynamics (cite Griffin) instead of true signal, bias (cite Irene), and whether we're preparing for an onslaught of potential overdiagnosis and potentially job displacement.  Given recent issues generalizing (cite recent Topol) to new populations, there are also uncomfortable questions to ask about how confident what type of evidence we should trust before deploying ML in new patient populations.
+When I think about points of failure of medical machine learning, I think first about things like [dataset shift](https://arxiv.org/abs/1811.12583), unknowingly fitting [confounders](https://arxiv.org/abs/1811.03695) and healthcare [dynamics](https://www.bmj.com/content/361/bmj.k1479) instead of true signal, [discriminatory bias](http://papers.nips.cc/paper/7613-why-is-my-classifier-discriminatory.pdf), and whether we're preparing for an onslaught of potential [overdiagnosis](https://www.theatlantic.com/technology/archive/2018/09/the-new-apple-watchs-heart-monitoring-is-complicated/570115/) and potentially job displacement.  Given recent issues [generalizing](https://www.thelancet.com/action/showPdf?pii=S2589-5370%2819%2930037-9) to new populations, there are also uncomfortable questions to ask about how confident what type of evidence we should trust before deploying ML in new patient populations.
 
 While all of these issues have general policy concerns, the way I think about them most is in context of how they inform our evaluations of individual ML systems. Each of the above issues demands that specific questions be asked of the systems that we're evaluating.  Questions like:  what population was this model fit on, and how does it compare to the population the system will be used in?  How could the data I'm feeding this algorithm have changed in the time since the model was developed?  Have we thought carefully about the workflow so these algorithms are getting applied to patients with the right priors and the healthcare providers know how to properly act upon positive tests when the time comes?
 
@@ -38,13 +37,13 @@ In many application settings, the answer to the incentives question may simply b
 
 ### There seems to have been something of a pivot between the preprint and the policy forum discussion, with the latter focusing much less on images.  Was this intentional?
 
-Yes!  Our preprint was geared toward a technical audience, and was largely motivated by a desire to get people who work on ML security/robustness research to start thinking about healthcare when considering attacks and defenses, rather than just things more native to the CS world like self-driving cars.  At the time, the bulk of high-profile work -- both in adversarial attacks and in medical ML -- had been done in the computer vision space, so we decided to focus on this for our initial deep dive and in building our three proofs of concept.
+Yes!  Our [preprint](https://arxiv.org/pdf/1804.05296.pdf) was geared toward a technical audience, and was largely motivated by a desire to get people who work on ML security/robustness research to start thinking about healthcare when considering attacks and defenses, rather than just things more native to the CS world like self-driving cars.  At the time, the bulk of high-profile work -- both in adversarial attacks and in medical ML -- had been done in the computer vision space, so we decided to focus on this for our initial deep dive and in building our three proofs of concept.
 
 As we thought a lot more deeply about the problem, however, we realized that we should probably expand our scope.  The bulk of ML happening *today* in the healthcare industry isn't in the form of diagnostics algorithms, but is being used internally at insurance companies to process claims directly for first-pass approvals/denials. And the best examples for existing adversarial attack-like behavior takes place in context of providers manipulating these claims. These provide a jumping off point to understand a spectrum of emerging motivations for adversarial behavior across all aspects of the healthcare system and across many different forms of ML. (See the next section on this as well.)
 
 
 
-### In the paper, you frame existing examples like upcoding and claims craftsmanship as adversarial attacks, or at least their precursors.  Is that fair?
+### In the paper, you frame existing examples like upcoding and claims craftsmanship as adversarial attacks, or at least as their precursors.  Is that fair?
 
 I think so. The paper "adversarial classification" from KDD '04 even talks specifically about fraud detection along with spam and other applications of adversarial attacks.
 
@@ -62,6 +61,6 @@ While this is may be possible in certain circumstances in theory, I don't think 
 
 
 
-### Are you trying to stall the development of medical ML?
+### Are you hoping to stall the development of medical ML because of adversarial attacks?
 
 Nope!  Every author on this paper is very bullish on machine learning as a way to achieve positive impact in all aspects of the healthcare system.  We explicitly state this in the paper, as well as the fact that we don't think these concerns should slow things down, just be a part of an ongoing conversation.
