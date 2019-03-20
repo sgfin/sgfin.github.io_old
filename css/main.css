@@ -241,9 +241,10 @@ a:visited { color: #205caa; }
   margin: 30px 0;
 }
 
-.post-content ul
-.post-content li {display:list-item; margin-bottom: 5px}
+.post-content ul,
 .post-content ol { padding-left: 20px; }
+
+.post-content ul {display:list-item; list-style-type: circle; margin-bottom: 5px}
 
 .post pre,
 .post code {
