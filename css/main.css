@@ -244,7 +244,7 @@ a:visited { color: #205caa; }
 .post-content ul,
 .post-content ol { padding-left: 20px; }
 
-.post-content li {display:list-item; list-style-type: circle; margin-bottom: 5px}
+.post-content ul.li {display:list-item; list-style-type: circle; margin-bottom: 5px}
 
 .post pre,
 .post code {
