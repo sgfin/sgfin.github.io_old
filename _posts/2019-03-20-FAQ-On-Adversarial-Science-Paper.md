@@ -1,5 +1,6 @@
 ---
-layout: page
+layout: post
+exclude: true
 comments: false
 title:  "FAQ on Medical Adversarial Attacks Policy Piece"
 excerpt: ""

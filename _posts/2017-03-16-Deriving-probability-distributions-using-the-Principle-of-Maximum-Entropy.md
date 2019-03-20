@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+exclude: false
 title:  "Deriving probability distributions using the Principle of Maximum Entropy"
 excerpt: "Uniform, gaussian, exponential, and another distribution all from first principles."
 date:   2017-03-16 10:00:00

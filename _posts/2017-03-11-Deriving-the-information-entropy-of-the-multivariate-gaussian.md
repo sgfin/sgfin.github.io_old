@@ -1,6 +1,7 @@
 ---
 layout: post
 comments: true
+exclude: false
 title:  "Deriving the information entropy of the multivariate gaussian"
 excerpt: "Derivation of the gaussian's entropy, in part to explain a trace trick."
 date:   2017-03-11 10:00:00
