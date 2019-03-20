@@ -21,7 +21,7 @@ Given the nature of the topic, I've been fretting a bit that the paper will be m
 
 
 
-### Do you really think adversarial attacks are the biggest concern in using machine learning in healthcare? (A: No!) Then why write the paper?
+### Do you think adversarial attacks are the biggest concern in using machine learning in healthcare? (A: Nowhere close!) Then why write the paper?
 
 Adversarial attacks consitute just one small part of a large taxonomy of potential pitfalls of machine learning (both ML in general and medical ML in particular).
 
