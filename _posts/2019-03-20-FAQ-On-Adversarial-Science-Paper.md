@@ -8,13 +8,8 @@ date:   2019-03-21
 mathjax: false
 ---
 
-### Table of Contents
-- [Why this FAQ?](#why-this-faq-)
-- [Do you really think adversarial attacks are the biggest concern in using machine learning in healthcare? (A: No!) Then why write the paper?](#do-you-really-think-adversarial-attacks-are-the-biggest-concern-in-using-machine-learning-in-healthcare---a--no---then-why-write-the-paper-)
-- [There seems to have been something of a pivot between the preprint and the policy forum discussion, with the latter focusing much less on images.  Was this intentional?](#there-seems-to-have-been-something-of-a-pivot-between-the-preprint-and-the-policy-forum-discussion--with-the-latter-focusing-much-less-on-images--was-this-intentional-)
-- [In the paper, you frame existing examples like upcoding and claims craftsmanship as adversarial attacks, or at least their precursors.  Is that fair?](#in-the-paper--you-frame-existing-examples-like-upcoding-and-claims-craftsmanship-as-adversarial-attacks--or-at-least-their-precursors--is-that-fair-)
-- ["Adversarial attacks" sounds scary.  Do you think people will use these as tools to hurt people by hacking diagnostics, etc?](#-adversarial-attacks--sounds-scary--do-you-think-people-will-use-these-as-tools-to-hurt-people-by-hacking-diagnostics--etc-)
-- [Are you trying to stall the development of medical ML?](#are-you-trying-to-stall-the-development-of-medical-ml-)
+* TOC
+{:toc}
 
 ### Why this FAQ?
 
