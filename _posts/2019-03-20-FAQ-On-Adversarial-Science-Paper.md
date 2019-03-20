@@ -64,3 +64,10 @@ While this is may be possible in certain circumstances in theory, I don't think 
 ### Are you hoping to stall the development of medical ML because of adversarial attacks?
 
 Nope!  Every author on this paper is very bullish on machine learning as a way to achieve positive impact in all aspects of the healthcare system.  We explicitly state this in the paper, as well as the fact that we don't think these concerns should slow things down, just be a part of an ongoing conversation.
+
+
+
+### Small note on the figure
+
+As will be immediately recognized by anyone familiar with adversarial examples, the design for the top part of Figure 1 was inspired by Figure 1 in [Goodfellow et al](https://arxiv.org/abs/1412.6572) -- though the noise itself was generated using a different attack method (the PGD) and applied to different data. As it stands, the figure in our Science paper points to our preprint for details of how the attack was generated, and Goodfellow et al paper is cited in the preprint. However, the Science paper itself doesn't explicitly credit Goodfellow et al for the design idea. This wasn't intentional. I pointed this out to the Science team, which decided against updating with a citation since the paper is cited via the preprint and all the actual content in the figure are either original or CC0. But I still feel bad about this. Sorry!
+
