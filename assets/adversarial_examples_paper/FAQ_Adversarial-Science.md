@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 comments: false
 title:  "FAQ on Medical Adversarial Attacks Policy Piece"
 excerpt: ""
@@ -11,7 +11,7 @@ mathjax: false
 {:toc}
 
 
-## Why this FAQ?
+### Why this FAQ?
 
 Last Spring, some colleages (chiefly Andy Beam) and I released a [preprint](https://arxiv.org/pdf/1804.05296.pdf) on adversarial attacks on medical computer visions systems. This manuscript was targeted at a technical audience, and written with the goal of explaining why adversarial attacks researchers should consider healthcare applications and providing some proofs of concept.  I ended up getting a lot of great feedback/pushback via email and twitter, which I really appreciated and which informed an update of the preprint.
 
@@ -21,7 +21,7 @@ Given the nature of the topic, I've been fretting quite a bit that the paper wil
 
 
 
-## Do you really think adversarial attacks are the biggest concern in using machine learning in healthcare? (A: No!) Then why write the paper?
+### Do you really think adversarial attacks are the biggest concern in using machine learning in healthcare? (A: No!) Then why write the paper?
 
 Adversarial attacks consitute just one small part of a large taxonomy of potential pitfalls of machine learning (both ML in general and medical ML in particular).
 
@@ -35,7 +35,7 @@ In many application settings, the answer to the incentives question may simply b
 
 
 
-## There seems to have been something of a pivot between the preprint and the policy forum discussion, with the latter focusing much less on images.  Was this intentional?
+### There seems to have been something of a pivot between the preprint and the policy forum discussion, with the latter focusing much less on images.  Was this intentional?
 
 Yes!  Our preprint was geared toward a technical audience, and was largely motivated by a desire to get people who work on ML security/robustness research to start thinking about healthcare when considering attacks and defenses, rather than just things more native to the CS world like self-driving cars.  At the time, the bulk of high-profile work -- both in adversarial attacks and in medical ML -- had been done in the computer vision space, so we decided to focus on this for our initial deep dive and in building our three proofs of concept.
 
@@ -43,7 +43,7 @@ As we thought a lot more deeply about the problem, however, we realized that we 
 
 
 
-## In the paper, you frame existing examples like upcoding and claims craftsmanship as adversarial attacks, or at least their precursors.  Is that fair?
+### In the paper, you frame existing examples like upcoding and claims craftsmanship as adversarial attacks, or at least their precursors.  Is that fair?
 
 I think so. The paper "adversarial classification" from KDD '04 even talks specifically about fraud detection along with spam and other applications of adversarial attacks.
 
@@ -55,12 +55,12 @@ In any event, the real motivation for the claims examples we focus on in the pap
 
 
 
-## "Adversarial attacks" sounds scary.  Do you think people will use these as tools to hurt people by hacking diagnostics, etc?
+### "Adversarial attacks" sounds scary.  Do you think people will use these as tools to hurt people by hacking diagnostics, etc?
 
 While this is may be possible in certain circumstances in theory, I don't think it's particularly likely.  By analogy, [pacemaker hacks](https://www.wired.com/story/pacemaker-hack-malware-black-hat/) have been around for more than a decade, but I 
 
 
 
-## Are you trying to stall the development of medical ML?
+### Are you trying to stall the development of medical ML?
 
 Nope!  Every author on this paper is very bullish on machine learning as a way to achieve positive impact in all aspects of the healthcare system.  We explicitly state this in the paper, as well as the fact that we don't think these concerns should slow things down, just be a part of an ongoing conversation.
