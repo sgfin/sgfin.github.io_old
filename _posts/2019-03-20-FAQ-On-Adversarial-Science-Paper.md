@@ -11,13 +11,13 @@ mathjax: false
 * TOC
 {:toc}
 
-### Why this FAQ?
+### What's the paper and why this FAQ?
 
-Last Spring, some colleages (chiefly Andy Beam) and I released a [preprint](https://arxiv.org/pdf/1804.05296.pdf) on adversarial attacks on medical computer visions systems. This manuscript was targeted at a technical audience. It was written with the goal of explaining why adversarial attacks researchers should consider healthcare applications among their threat models, as well as to provide some proof of concept.  I ended up getting a lot of great feedback/pushback via email and twitter, which I really appreciated and which informed an update of the preprint.
+Last Spring, some colleages (chiefly Andy Beam) and I released a [preprint](https://arxiv.org/pdf/1804.05296.pdf) on adversarial attacks on medical computer visions systems. This manuscript was targeted at a technical audience. It was written with the goal of explaining why adversarial attacks researchers should consider healthcare applications among their threat models, as well as to provide some proof of concept. I ended up getting a lot of great feedback/pushback via email and twitter, which I really appreciated and which informed an update of the preprint on arxiv.
 
 After the article was released, we were also put in touch with [Jonathan Zittrain](https://hls.harvard.edu/faculty/directory/10992/Zittrain) and John Bowers from Harvard Law School as well as [Joi Ito](https://www.media.mit.edu/people/joi/overview/) of the MIT Media Lab. These are incredibly thoughtful people with a lot of amazing experience. We decided to write a follow-up article targeted more at medical and policy folks, with the intention of examining precedence for adversarial attacks in the healthcare system as it exists today and initiating a conversation about what to do about them going forward. The result is being published today in Science, here. It's been an absolutely pleasure working with these guys.
 
-Given the nature of the topic, I've been fretting a bit that the paper will be misconstrued. At a minimum, I anticipate getting a lot of the same questions I got the first time around on the preprint, and figured it'd be easier to write up answers to these in one place.
+We really tried hard to be thoughtful and measured. Given the nature of the topic, however, I've been fretting a bit that the paper will be misconstrued/taken out of context. At a minimum, I anticipate getting a lot of the same questions I got the first time around on the preprint, and figured it'd be easier to write up answers to these in one place. The paper is short and non-technical enough that it doesn't really need a blog post/explainer per se, so I opted to go with a "FAQ." Hope it's not too obnoxious.
 
 
 
@@ -55,6 +55,16 @@ In any event, the real motivation for the claims examples we focus on in the pap
 
 
 
+### Isn't this unrealistic?  I mean, would there ever be cases when someone *actually* uses adversarial examples?
+
+We got some really good and reasonable pushback on this point the first time around, and once again, I really appreciated it. (Partly) as a result, we've spent a lot more time the last few months thinking about the range of adversarial behavior in healthcare information exchange. We ended up shifting the focus a bit as a result. In any event, there's a whole spectrum of threat models at play here.
+
+Without rehashing the information about claims in the question just above this one too much, machine learning *is* being used pretty extensively *today* (and moreso every day, at increasing sophistication) to make first-pass approvals on claims. And while this seems like a purely financial/bureaucratic concern, this process does already have a major impact on healthcare -- at least in the U.S. -- *today*. [Here is an example](https://www.kevinmd.com/blog/2016/07/time-doctors-tell-insurance-companies-really-feel.html) of writing from a doctor that explains the level of frustration here, which is reflected of common experiences. What's more, there is something more subtle here; when I speak with clinicians, most of them feel like they get no formal feedback from what's happening under the hood at insurance so they don't have any real rhyme or reason for what combination of claims it is that's resulting in their denials.  To boot, there are often many possible codes that could apply to any given procedure or diagnosis, and it's a bit of a black box for which will be likely to receive pushback and which will get you the most reimbursement. Currently, most hospitals use extensive teams of human billers to manually try to do this process, but companies for automated billing exist, and I have personally spoken to physicians that are hoping to seek more sophisticated software solutions to more explicitly optimize their billing to avoid these "hurdles." And since many insurance companies are already starting to use NLP on notes, that will open up a whole new layer of complexity in the process. In light of all this, I actually feel that the dynamics we describe in this paper are not unrealistic at all.
+
+Where we do get (explicitly) hypothetical is when it comes to things like adversarial attacks on imaging systems. I don't think these are that realistic today, because I can't find examples of insurance companies or regulators using computer vision algorithms for approvals yet.  But in fairness, the first FDA approval for a CV algorithm just happened in 2018 and many more are on the way. Once CV is established as "legit" I think it's likely that we'll see them get more integrated into such decisions.  But we aren't there yet. Of course, even when we do get there, the adversarial imaging threat model also requires users to feel comfortable sending in adversarial attacks but not just straight up lying and sending in fake images from other patients. But I think that there are technical and -- much more so -- legal and moral reasons why physicians/companies would hesitate to send in overtly fake images to a diagnostic algorithm at an insurance/regulatory body. In contrast, I think that many would be comfortable doing more subtle things like rotations/scalings or even just cherry-picking images that give them the best shot from the many images that are often acquired per patient.  According to the recently published [Rules of the Game](https://arxiv.org/pdf/1807.06732.pdf), this type of behavior "counts" as adversarial attacks, and what's more doing it effectively could entail advanced software even if the modifications themselves are simple.  In other words, I continue to think that robustness/adversarial attacks researchers should take healthcare seriously as an area of application.
+
+
+
 ### "Adversarial attacks" sounds scary.  Do you think people will use these as tools to hurt people by hacking diagnostics, etc?
 
 While this is may be possible in certain circumstances in theory, I don't think it's particularly likely.  By analogy, [pacemaker hacks](https://www.wired.com/story/pacemaker-hack-malware-black-hat/) have been around for more than a decade, but I don't see many people feeling motivated to execute them.
@@ -67,7 +77,7 @@ Nope!  Every author on this paper is very bullish on machine learning as a way t
 
 
 
-### Small note on the figure
+### Small note on the figure 
 
 As will be immediately recognized by anyone familiar with adversarial examples, the design for the top part of Figure 1 was inspired by Figure 1 in [Goodfellow et al](https://arxiv.org/abs/1412.6572) -- though the noise itself was generated using a different attack method (the PGD) and applied to different data. As it stands, the figure in our Science paper points to our preprint for details of how the attack was generated, and Goodfellow et al paper is cited in the preprint. However, the Science paper itself doesn't explicitly credit Goodfellow et al for the design idea. This wasn't intentional. I pointed this out to the Science team, which decided against updating with a citation since the paper is cited via the preprint and all the actual content in the figure are either original or CC0. But I still feel bad about this. Sorry!
 
