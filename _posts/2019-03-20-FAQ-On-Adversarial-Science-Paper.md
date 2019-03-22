@@ -1,6 +1,6 @@
 ---
 layout: post
-include: false
+include: true
 comments: false
 title:  "FAQ on Medical Adversarial Attacks Policy Paper"
 excerpt: ""
