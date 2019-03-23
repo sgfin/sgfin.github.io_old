@@ -24,11 +24,8 @@ $$H(x) = \int p(x)\ln p(x)dx $$
 .  	
 In statistics/information theory, the [maximum entropy probability distribution](https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution) is (you guessed it!) the distribution that, given any constraints, has maximum entropy.  Given a choice of distributions, the "Principle of Maximum Entropy" tells us that the maximum entropy distribution is the best.  Here's a snippet of the idea from the [wikipedia page](https://en.wikipedia.org/wiki/Principle_of_maximum_entropy):
 >The principle of maximum entropy states that, subject to precisely stated prior data (such as a proposition that expresses testable information), the probability distribution which best represents the current state of knowledge is the one with largest entropy.
-
 > Another way of stating this: Take precisely stated prior data or testable information about a probability distribution function. Consider the set of all trial probability distributions that would encode the prior data. According to this principle, the distribution with maximal information entropy is the proper one.
-
 >...
-
 >In ordinary language, the principle of maximum entropy can be said to express a claim of epistemic modesty, or of maximum ignorance. The selected distribution is the one that makes the least claim to being informed beyond the stated prior data, that is to say the one that admits the most ignorance beyond the stated prior data.
 
 ### Lagrange Multipliers
