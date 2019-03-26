@@ -81,6 +81,7 @@ I'm trying to limit to this list to things that are legally accessible online, f
 |  [CS231N DL for Vision](http://cs231n.github.io/)  |  Amazing notes from Andrej Karapthy, with lectures on Youtube as well. |
 |  [CS224 Deep Learning for NLP 2017](/files/notes/cs224n-2017-merged.pdf)  |  Fantastic course notes on Deep Learning for NLP from Stanford's [CS224](http://web.stanford.edu/class/cs224n/). Github repo [here](https://github.com/stanfordnlp/cs224n-winter17-notes/blob/master/notes1.pdf) |
 |  [CMU CS 11-747](http://www.phontron.com/class/nn4nlp2018/schedule.html)  |  Fantastic course  on Deep Learning for NLP from CMU's Graham Neubig. Really great lecture videos on Youtube [here](https://www.youtube.com/playlist?list=PLbdKUKMAnh9Qqs5uwEBDfRb_L3YaLbRKq) |
+| [CS294-158 Deep Unsupervised Learning](https://sites.google.com/view/berkeley-cs294-158-sp19/home) | Open course on deep unsupervised learning from Berkeley.  Looks fantastic.|
 | [Deep Learning Book](https://www.deeplearningbook.org) | This textbook by Ian Goodfellow, Yoshua Bengio, and Aaron Courville is probably the closest we have to a de facto standard textbook for DL. |
 
 
