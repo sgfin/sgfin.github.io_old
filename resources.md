@@ -119,6 +119,7 @@ This section is fledgling at best, but was my real motivation in making this pag
 
 | File | Description   |
 | :-----------: |:-------------:|
+| [Common statistical tests are linear models (or: how to teach stats)](https://lindeloev.github.io/tests-as-linear/) | This little blog post does an incredible job explaining how a whole bunch of common statistical tests can be intuitively unified under a single framework (linear models)|
 | [Seeing Theory Frequentist Inference](https://seeing-theory.brown.edu/frequentist-inference/index.html) | This is a really beautiful visual presentation of the basic ideas of frequentist inference, from the Seeing Theory textbook.  I love it.|
 |  [Hernan Selection Bias](/files/notes/structured_approach_selection_bias_Hernan.pdf)  |  Nice summary of selection bias via DAGs by Hernan et al. |
 
@@ -196,6 +197,7 @@ This section is fledgling at best, but was my real motivation in making this pag
 | File | Description   |
 | :-----------: |:-------------:|
 |  [Probability Cheatsheet](/files/cheatsheets/probability_cheatsheet_blackwhite.pdf) |  Probability cheat sheet, from William Chen's [github](https://github.com/wzchen/probability_cheatsheet)|
+|  [Probability Cheatsheet](/files/cheatsheets/linear_tests_cheat_sheet.pdf) |  Cheat sheet for unifying statistical tests under the linear models framework.  From Jonas Kristoffer Lindeløv's [github](https://lindeloev.github.io/tests-as-linear/)|
 |  [CS 229 TA Cheatsheet 2018](/files/cheatsheets/cs229_2018_cheatsheet.pdf)  |  TA cheatsheet from the 2018 offering of Stanford's Machine Learning [Course](http://cs229.stanford.edu/materials.html), Github repo [here](https://github.com/afshinea/stanford-cs-229-machine-learning). |
 |  [CS Theory Cheatsheet](/files/cheatsheets/CS_theory_cheat_sheet.pdf)  |  CS theory cheat sheet, originally accessed [here](https://www.tug.org/texshowcase/cheat.pdf)|
 
