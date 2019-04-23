@@ -231,6 +231,7 @@ This section is fledgling at best, but was my real motivation in making this pag
 | [Off the Convex Path](https://www.offconvex.org/) | Nice blog on machine learning and optimization. | 
 | [Ferenc Huszár's blog](https://www.inference.vc/) | Pretty popular blog that has a lot of explorations/musings on ML from an author with a rigorous mathematical perspective | 
 |  [Thibaut Lienart's Blog](https://tlienart.github.io/pub/csml.html)  |  This website has some notes on math and optimization that seem interesting.  |
+| [Causal Inference Papers](https://github.com/logangraham/arXausality) | Nice Github repo that compiles a bunch of Arxiv papers on Causal Machine Learning |
 
 
 
