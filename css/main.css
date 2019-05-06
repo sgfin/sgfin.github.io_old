@@ -9,7 +9,7 @@
 html, body { height: 100%; }
 
 body {
-  font-family: "Merriweather","PT Serif",Georgia,"Times New Roman",serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   font-weight: 300;
@@ -19,7 +19,7 @@ body {
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400}
 
 table {
-    font-family: "Merriweather","PT Serif",Georgia,"Times New Roman",serif;
+    font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
