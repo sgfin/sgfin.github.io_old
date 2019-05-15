@@ -20,7 +20,7 @@ I actually think it's pretty magical that these common distributions just pop ou
 ### Maximum Entropy Principle
 
 Recall that [information entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory)) is a mathematical framework for quantifying "uncertainty."  The formula for the information entropy of a random variable is
-$$H(x) = \int p(x)\ln p(x)dx $$
+$$H(x) = - \int p(x)\ln p(x)dx $$
 .  	
 In statistics/information theory, the [maximum entropy probability distribution](https://en.wikipedia.org/wiki/Maximum_entropy_probability_distribution) is (you guessed it!) the distribution that, given any constraints, has maximum entropy.  Given a choice of distributions, the "Principle of Maximum Entropy" tells us that the maximum entropy distribution is the best.  Here's a snippet of the idea from the [wikipedia page](https://en.wikipedia.org/wiki/Principle_of_maximum_entropy):
 >The principle of maximum entropy states that, subject to precisely stated prior data (such as a proposition that expresses testable information), the probability distribution which best represents the current state of knowledge is the one with largest entropy.
