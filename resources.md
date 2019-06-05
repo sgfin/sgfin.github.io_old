@@ -26,15 +26,13 @@ Some of my favorite resources for data science, statistics, and machine learning
 
 - [_Optimization_](#opt)
 
-- [_Probability and Statistics_](#prob)
-
 - [_Information Theory_](#info)
 
 - [_Classic Machine Learning_](#ml)
 
 - [_Bayesian Machine Learning_](#bayesML)
 
-- [_Deep Learning_](#ml)
+- [_Deep Learning_](#DL)
 
 - [_Natural Language Processing_](#NLP)
 
