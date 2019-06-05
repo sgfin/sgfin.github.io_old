@@ -65,6 +65,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 |  [Python scikit-learn cheatsheet](/files/cheatsheets/Python_cheatsheet_scikit.pdf)  |  Cheatsheet for python's ML package, scikit-learn. Downloaded from [Datacamp](https://www.datacamp.com).|
 |  [Python seaborn tutorial](https://seaborn.pydata.org/tutorial.html)  |  Tutorial for python's plotting system, seaborn. Haven't found a great one yet for matplotlib. |
 |  [Graphic Design cheatsheet](/files/cheatsheets/graphic_design.pdf)  |  Cute little graphic design cheatsheet downloaded from [here](https://www.psiweb.org/docs/default-source/2018-psi-conference-posters/48-julie-jones.pdf) |
+| Pytorch [cheat sheet](https://pytorch.org/tutorials/beginner/ptcheat.html) and [tutorials](https://pytorch.org/tutorials/) and [docs](https://pytorch.org/docs/stable/index.html)| The pytorch team has some world class docs and tutorials.|
 
 
 ### <a name="LA"></a> Linear Algebra
