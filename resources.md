@@ -171,8 +171,18 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | [Roger Grosse's CSC321 Notes](/files/notes/CS321_Grosse_Lecture_Notes.pdf)  |  Notes from Roger Grosse's CSC 321 [full website here](http://www.cs.toronto.edu/~rgrosse/courses/csc321_2018/). Probably the single best intro to DL course I've found from any university. Notes and slides are gorgeous.|
 |  [Fast.Ai](https://www.fast.ai/)  |  Wonderful set of intro lectures + notebooks from Jeremy Howard and Rachel Thomas. In addition, Hiromi Suenaga has released excellent and self-contained notes of the whole series with timestamp links back to videos: [FastAI DL Part 1](https://www.kdnuggets.com/2018/07/fast-ai-deep-learning-part-1-notes.html), [FastAI DL Part 2](https://www.kdnuggets.com/2018/07/fast-ai-deep-learning-part-2-notes.html), and [FastAI ML](https://www.kdnuggets.com/2018/07/suenaga-fast-ai-machine-learning-notes.html). |
 |  [CS231N DL for Vision](http://cs231n.github.io/)  |  Amazing notes from Andrej Karapthy, with lectures on Youtube as well. |
-| [CS294-158 Deep Unsupervised Learning](https://sites.google.com/view/berkeley-cs294-158-sp19/home) | Open course on deep unsupervised learning from Berkeley.  Looks fantastic.|
 | [Deep Learning Book](https://www.deeplearningbook.org) | This textbook by Ian Goodfellow, Yoshua Bengio, and Aaron Courville is probably the closest we have to a de facto standard textbook for DL. |
+| [CS294-158 Deep Unsupervised Learning](https://sites.google.com/view/berkeley-cs294-158-sp19/home) | Open course on deep unsupervised learning from Berkeley.  Looks fantastic.|
+
+
+#### Instructive Code Bases
+
+| File | Description   |
+| :-----------: |:-------------:|
+| Sebastian Raschka's [Deep Learning Models Github](https://github.com/rasbt/deeplearning-models)| An impressively comprehensive set of TensorFlow and Pytorch models, annotated and perusable in 80+ Jupyter Notebooks. |
+|[Pytorch Tutorials](https://pytorch.org/tutorials/) | The tutorials put out by the pytorch developers are really fantastic. Easy to see why the community is growing so fast. |
+| Wiseodd's [Website](https://wiseodd.github.io/) and [Deep Generative Models Github](https://github.com/wiseodd/generative-models) and | An amazing collection of deep learning implementations. | 
+
 
 #### Special Topics and Blog Posts
 
@@ -231,7 +241,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | :-----------: |:-------------:|
 | [Chris Olah's Blog](http://colah.github.io/) | Essentially everything on here is gold. I am so grateful for the hours he must put into these posts.|
 |[distill.pub](https://distill.pub)| Distill navigates a really interesting gap between super-blog and research journal. I wish that we had more publications like this. |
-|[Pytorch Tutorials](https://pytorch.org/tutorials/) | The tutorials put out by the pytorch developers are really fantastic. Easy to see why the community is growing so fast. |
 | [Sebastian Ruder's blog](http://ruder.io/) | Sebastian has produced a lot of really great explanations, like the one on gradient descent methods I linked to above. He also maintains a [website tracking progress on NLP benchmarks](https://nlpprogress.com/)| 
 | [Lillian Weng's Blog](https://lilianweng.github.io/lil-log/)| Great blog on RL, meta-learning, and other topics |
 | [ShortScience](http://www.shortscience.org/) | This website contains public summaries/discussions of machine learning, CS, and biology papers. |
