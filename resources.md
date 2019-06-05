@@ -86,7 +86,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | File | Description   |
 | :-----------: |:-------------:|
 |  [Probability Cheatsheet](/files/cheatsheets/probability_cheatsheet_blackwhite.pdf) |  Probability cheat sheet, from William Chen's [github](https://github.com/wzchen/probability_cheatsheet)|
-|  [Probability Cheatsheet](/files/cheatsheets/linear_tests_cheat_sheet.pdf) |  Cheat sheet for unifying statistical tests under the linear models framework.  From Jonas Kristoffer Lindeløv's [github](https://lindeloev.github.io/tests-as-linear/)|
+|  [Statistical Test Cheatsheet](/files/cheatsheets/linear_tests_cheat_sheet.pdf) |  Cheat sheet for unifying statistical tests under the linear models framework.  From Jonas Kristoffer Lindeløv's [github](https://lindeloev.github.io/tests-as-linear/)|
 
 #### Textbooks, Lectures, and Course Notes
 
