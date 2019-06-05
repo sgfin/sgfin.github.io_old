@@ -159,6 +159,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 |  [Blei Foundations of Graphical Models Course](http://www.cs.columbia.edu/~blei/fogm/2016F/index.html)  |  2016 course notes on Foundations of Graphical Models from David Blei 2016 website|
 [Blei Exponential Familes/Variational Inference](/files/notes/blei_exponFam_varInf.pdf)| A couple of the course notes I particularly like from Blei's [2011 Probabilistic Modeling Course](https://www.cs.princeton.edu/courses/archive/fall11/cos597C/) )
 |  [Blei Variational Inference Review](/files/notes/blei_variational_review.pdf) |  Overview on Variational Inference from David Blei available on [arxiv](https://arxiv.org/abs/1601.00670)|
+| [Visual Exploration of Gaussian Processes](https://www.google.com/search?q=distill+gaussian+processes&rlz=1C5CHFA_enUS735US735&oq=distill+gaussian+processes&aqs=chrome..69i57j69i60l2j69i61j69i60l2.3173j0j1&sourceid=chrome&ie=UTF-8) | Masterclass exposition on Gaussian Processes from the always-amazing Distill. |
 
 
 ### <a name="DL"></a>  Deep Learning 
