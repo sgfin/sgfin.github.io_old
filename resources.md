@@ -191,10 +191,12 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 |Karpathy's [Recipe for Training NNs](https://karpathy.github.io/2019/04/25/recipe/) | A great blog post that contains a bunch of little tricks for training deep neural networks |
 |Adversarial Examples/Robust ML [Part 1](http://people.csail.mit.edu/madry/lab/blog/adversarial/2018/07/06/adversarial_intro/), [Part 2](http://people.csail.mit.edu/madry/lab/blog/adversarial/2018/07/11/robust_optimization_part1/), and [Part 3](http://people.csail.mit.edu/madry/lab/blog/adversarial/2018/08/10/robust_optimization_part2/) | The [Madry lab](https://people.csail.mit.edu/madry/lab/) is one of the top research groups in robust deep learning research. They put together a fantastic intro to these topics on their blog. I hope they keep making posts... |
 |[Distill Attention](https://distill.pub/2016/augmented-rnns/)| Amazingly clear presentation of the attention mechanism and its (early) variants |
+| [Lilian Weng Attention post](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html) | Nice blog post on attention, self-attention, trasnformers, etc |
 |[Distill Building Interpretability](https://distill.pub/2018/building-blocks/)| Coolest visualizations of NN internals I've ever seen|
 |[Distill Feature Visualization](https://distill.pub/2017/feature-visualization/)| Running theme: If it's only distill.pub, read it. |
 |[Chris Olah Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)| Chris Olah is a master of his craft, and here offers a fantastic overview of LSTMs and GRUs.|
 | [Intro to Federated Learning](https://github.com/OpenMined/PySyft/tree/master/examples/tutorials) | Intro to federated learning and PySyft from Andrew Trask and others using PyTorch.|
+| [Triplet Loss and Online triplet mining blog post](https://omoindrot.github.io/triplet-loss) | Nice exposition on Olivier Moindrot's blog |
 
 
 ### <a name="NLP"></a>  Natural Language Processing
