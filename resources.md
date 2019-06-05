@@ -24,6 +24,8 @@ Some of my favorite resources for data science, statistics, and machine learning
 
 - [_Probability and Statistics_](#prob)
 
+- [_Causal Inference_](#causal)
+
 - [_Optimization_](#opt)
 
 - [_Information Theory_](#info)
@@ -97,7 +99,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 |  [Doug Sparks' Stats 200](/files/notes/Stat200_2014_Merged_Sparks.pdf)  |  Nice course notes on Statistical Inference from Doug Sparks 2014 offering of [stats 200](http://stats200.stanford.edu/) |
 |  [Modern Statistics for Modern Biology](https://www-huber.embl.de/msmb/)  |  This online textbook is from Susan Holmes and Wolfgang Huber, and provides a nice and accessible intro to the parts of modern data science revelant to computational biologists.  It also happens to be a piece of typographic *art*, created with [bookdown](https://bookdown.org/yihui/bookdown/).  |
 |  [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/)  |  Lecture Videos on [youtube](https://www.youtube.com/playlist?list=PLDcUM9US4XdM9_N6XUUFrhghGJ4K25bFc) accompany this fantastic introductory textbook. |
-|  [Hernan and Robbins Causal Inference Book](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)  |  Long-upcoming textbook on causal inference (from the epidemiology perspective), with drafts fairly frequently updated on the web page. |
+
 
 #### Special Topics and Blog Posts
 
@@ -106,6 +108,15 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | [Common statistical tests are linear models (or: how to teach stats)](https://lindeloev.github.io/tests-as-linear/) | This little blog post does an incredible job explaining how a whole bunch of common statistical tests can be intuitively unified under a single framework (linear models)|
 | [Seeing Theory Frequentist Inference](https://seeing-theory.brown.edu/frequentist-inference/index.html) | This is a really beautiful visual presentation of the basic ideas of frequentist inference, from the Seeing Theory textbook.  I love it.|
 |  [Hernan Selection Bias](/files/notes/structured_approach_selection_bias_Hernan.pdf)  |  Nice summary of selection bias via DAGs by Hernan et al. |
+
+
+### <a name="causal"></a> Causal Inference
+
+| File | Description   |
+| :-----------: |:-------------:|
+|  [Hernan and Robbins Causal Inference Book](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)  |  Long-upcoming textbook on causal inference (from the epidemiology perspective), with drafts fairly frequently updated on the web page. |
+|  [Robert Osazuwa Causal Modeling in ML Book](https://github.com/robertness/causalML)  |  Looks to be a nice course in development on causal and generative modeling. Lecture notes are being produced in a bookdown [here](https://bookdown.org/connect/#/apps/2584/access) |
+| [Causal Inference Papers](https://github.com/logangraham/arXausality) | Nice Github repo that compiles a bunch of Arxiv papers on Causal Machine Learning |
 
 
 ### <a name="opt"></a>  Optimization
@@ -250,7 +261,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | [Off the Convex Path](https://www.offconvex.org/) | Nice blog on machine learning and optimization. | 
 | [Ferenc Huszár's blog](https://www.inference.vc/) | Pretty popular blog that has a lot of explorations/musings on ML from an author with a rigorous mathematical perspective | 
 |  [Thibaut Lienart's Blog](https://tlienart.github.io/pub/csml.html)  |  This website has some notes on math and optimization that seem interesting.  |
-| [Causal Inference Papers](https://github.com/logangraham/arXausality) | Nice Github repo that compiles a bunch of Arxiv papers on Causal Machine Learning |
 
 
 
