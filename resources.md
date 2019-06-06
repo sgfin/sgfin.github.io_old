@@ -80,7 +80,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | [Fast.ai Computational Linear Algebra](https://github.com/fastai/numerical-linear-algebra/blob/master/README.md) | Rachel Thomas has put together this great online textbook for computational linear algebra with accompanying [youtube videos](https://www.youtube.com/playlist?list=PLtmWHNX-gukIc92m1K0P6bIOnZb-mg0hY). |
 |  [CS 229 Linear Algebra Notes](/files/notes/CS229_Linear_Algebra.pdf)  |  Linear algebra reference from Stanford's Machine Learning [Course](http://cs229.stanford.edu/materials.html). |
 |  [Matrix Calc for DL](https://explained.ai/matrix-calculus/index.html) [(pdf here)](/files/notes/Matrix_Calc_for_DL.pdf)  |  Really nice overview of matrix calculus for deep learning from Parr/Howard.  Citable on on [arxiv](https://arxiv.org/abs/1802.01528). |
-
+| [Strang: Matrix methods for Data, Signals, and ML](https://ocw.mit.edu/courses/mathematics/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/) | Gil Strang's newer linear algebra course, focusing on the linear algebra relevant to data and ML.  Youtube videos [here](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k). |
 
 ### <a name="prob"></a>  Probability and Statistics
 [Link back to top](#top)
