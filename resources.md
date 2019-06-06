@@ -46,7 +46,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="CS"></a> Computer Science
-Go to [top](#top)
+[Go to [top](#top)]
 
 #### Theory
 
@@ -72,7 +72,7 @@ Go to [top](#top)
 
 
 ### <a name="LA"></a> Linear Algebra
-Go to [top](#top)
+[Go to [top](#top)]
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -83,7 +83,7 @@ Go to [top](#top)
 
 
 ### <a name="prob"></a>  Probability and Statistics
-Go to [top](#top)
+[Go to [top](#top)]
 
 #### Cheat Sheets
 
@@ -115,7 +115,7 @@ Go to [top](#top)
 
 
 ### <a name="causal"></a> Causal Inference
-Go to [top](#top)
+[Go to [top](#top)]
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -125,6 +125,8 @@ Go to [top](#top)
 
 
 ### <a name="opt"></a>  Optimization
+[Go to [top](#top)]
+
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -135,7 +137,7 @@ Go to [top](#top)
 
 
 ### <a name="info"></a>  Information Theory
-Go to [top](#top)
+[Go to [top](#top)]
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -147,7 +149,7 @@ Go to [top](#top)
 
 
 ### <a name="ml"></a>  Classic Machine Learning
-Go to [top](#top)
+[Go to [top](#top)]
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -170,7 +172,7 @@ Go to [top](#top)
 
 
 ### <a name="bayesML"></a>  Bayesian Machine Learning
-Go to [top](#top)
+[Go to [top](#top)]
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -182,7 +184,7 @@ Go to [top](#top)
 
 
 ### <a name="DL"></a>  Deep Learning 
-Go to [top](#top)
+[Go to [top](#top)]
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -220,7 +222,7 @@ Go to [top](#top)
 
 
 ### <a name="NLP"></a>  Natural Language Processing
-Go to [top](#top)
+[Go to [top](#top)]
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -241,7 +243,7 @@ Go to [top](#top)
 
 
 ### <a name="RL"></a> Reinforcement Learning 
-Go to [top](#top)
+[Go to [top](#top)]
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -260,7 +262,7 @@ Go to [top](#top)
 
 
 ### <a name="misc"></a> Miscellaneous websites
-Go to [top](#top)
+[Go to [top](#top)]
 
 | File | Description   |
 | :-----------: |:-------------:|
