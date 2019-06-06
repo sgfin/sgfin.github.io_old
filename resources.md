@@ -155,12 +155,14 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | File | Description   |
 | :-----------: |:-------------:|
 |  [Math for ML Book](/files/notes/mml-book.pdf)  |  Math-first but highly accessible intro textbook for machine learning by Faisal and Ong, available on [github](https://mml-book.github.io/). |
+| [Learning from Data by Abu Mostafa](https://work.caltech.edu/telecourse.html) | "A short course. Not a hurried course." on machine learning. A nice first treatment that is concise but fairly rigorous. |
 | Bishop's [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) | This is a classic ML text, and has now been finally released (legally) for free online. |
 |  [CS 229 Lecture Notes](/files/notes/CS229_Lecture_Notes.pdf)  |  Classic note set from Andrew Ng's amazing grad-level intro to ML: [CS229](http://cs229.stanford.edu/syllabus.html). |
 |  [CS 229 TA Cheatsheet 2018](/files/cheatsheets/cs229_2018_cheatsheet.pdf)  |  TA cheatsheet from the 2018 offering of Stanford's Machine Learning [Course](http://cs229.stanford.edu/materials.html), Github repo [here](https://github.com/afshinea/stanford-cs-229-machine-learning). |
 |  [ESL](https://web.stanford.edu/~hastie/ElemStatLearn/printings/ESLII_print12.pdf) and [ISL](http://www-bcf.usc.edu/~gareth/ISL/ISLR%20Seventh%20Printing.pdf) from Hastie et al |  Beginner (ISL) and Advanced (ESL) presentation to classic machine learning from world-class stats professors. Slides and video for a MOOC on ISL is available [here](https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/). |
 | Foundations of Data Science [textbook](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/11/book-June-14-2017pdf.pdf) and [videos](https://www.youtube.com/playlist?list=PLD7HFcN7LXRcvobbHq_8zMyWq_tKwtebc) | This mini-course appears to have developed out of CMU's "CS Theory for the Information Age" [2012 site](https://www.cs.cmu.edu/~venkatg/teaching/CStheory-infoage/), which I think is a better name for this.  It's a strong upper-undergrad or intro-grad student math class covering foundations for high-dimensional data algorithms. Another class using the textbook is [here](http://grigory.us/data-science-class.html). High-dimensional probability section is cool. |
 |Tim Roughgarden's [Modern Algorithmic Toolbox](https://theory.stanford.edu/~tim/notes.html) | CS 168: Modern Algorithmic Toolbox has fantastic coverage of PCA, SVD, Compressive Sensing, Tensors, and other core ML tools.|
+
 
 #### Special Topics and Blog Posts
 
