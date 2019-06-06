@@ -155,7 +155,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | File | Description   |
 | :-----------: |:-------------:|
 |  [Math for ML Book](/files/notes/mml-book.pdf)  |  Math-first but highly accessible intro textbook for machine learning by Faisal and Ong, available on [github](https://mml-book.github.io/). |
-| [Learning from Data by Abu Mostafa](https://work.caltech.edu/telecourse.html) | "A short course. Not a hurried course." on machine learning. A nice first treatment that is concise but fairly rigorous. |
+| [Learning from Data by Abu Mostafa](https://work.caltech.edu/telecourse.html) | "A short course. Not a hurried course." on machine learning. A nice first treatment that is concise but fairly rigorous.  Also has [videos organized by topic](https://work.caltech.edu/library/). |
 | Bishop's [Pattern Recognition and Machine Learning](https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf) | This is a classic ML text, and has now been finally released (legally) for free online. |
 |  [CS 229 Lecture Notes](/files/notes/CS229_Lecture_Notes.pdf)  |  Classic note set from Andrew Ng's amazing grad-level intro to ML: [CS229](http://cs229.stanford.edu/syllabus.html). |
 |  [CS 229 TA Cheatsheet 2018](/files/cheatsheets/cs229_2018_cheatsheet.pdf)  |  TA cheatsheet from the 2018 offering of Stanford's Machine Learning [Course](http://cs229.stanford.edu/materials.html), Github repo [here](https://github.com/afshinea/stanford-cs-229-machine-learning). |
