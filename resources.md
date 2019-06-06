@@ -16,7 +16,7 @@ table a:link, table a:visited, table a:active{
 }
 </style>
 
-Some of my favorite resources for data science, statistics, and machine learning:
+<a name="top"></a> Some of my favorite resources for data science, statistics, and machine learning:
 
 - [_Computer Science_](#CS)
 
@@ -46,6 +46,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="CS"></a> Computer Science
+Go to [top](#top)
 
 #### Theory
 
@@ -71,6 +72,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="LA"></a> Linear Algebra
+Go to [top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -79,7 +81,9 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 |  [CS 229 Linear Algebra Notes](/files/notes/CS229_Linear_Algebra.pdf)  |  Linear algebra reference from Stanford's Machine Learning [Course](http://cs229.stanford.edu/materials.html). |
 |  [Matrix Calc for DL](https://explained.ai/matrix-calculus/index.html) [(pdf here)](/files/notes/Matrix_Calc_for_DL.pdf)  |  Really nice overview of matrix calculus for deep learning from Parr/Howard.  Citable on on [arxiv](https://arxiv.org/abs/1802.01528). |
 
+
 ### <a name="prob"></a>  Probability and Statistics
+Go to [top](#top)
 
 #### Cheat Sheets
 
@@ -111,6 +115,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="causal"></a> Causal Inference
+Go to [top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -130,6 +135,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="info"></a>  Information Theory
+Go to [top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -141,6 +147,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="ml"></a>  Classic Machine Learning
+Go to [top](#top)
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -163,6 +170,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="bayesML"></a>  Bayesian Machine Learning
+Go to [top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -174,6 +182,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="DL"></a>  Deep Learning 
+Go to [top](#top)
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -211,6 +220,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="NLP"></a>  Natural Language Processing
+Go to [top](#top)
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -231,6 +241,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="RL"></a> Reinforcement Learning 
+Go to [top](#top)
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -249,6 +260,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="misc"></a> Miscellaneous websites
+Go to [top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
