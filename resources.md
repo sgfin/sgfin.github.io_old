@@ -46,7 +46,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="CS"></a> Computer Science
-[Go to [top](#top)]
+[Link back to top](#top)
 
 #### Theory
 
@@ -72,7 +72,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="LA"></a> Linear Algebra
-[Go to [top](#top)]
+[Link back to top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -83,7 +83,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="prob"></a>  Probability and Statistics
-[Go to [top](#top)]
+[Link back to top](#top)
 
 #### Cheat Sheets
 
@@ -115,7 +115,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="causal"></a> Causal Inference
-[Go to [top](#top)]
+[Link back to top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -125,8 +125,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="opt"></a>  Optimization
-[Go to [top](#top)]
-
+[Link back to top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -137,7 +136,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="info"></a>  Information Theory
-[Go to [top](#top)]
+[Link back to top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -149,7 +148,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="ml"></a>  Classic Machine Learning
-[Go to [top](#top)]
+[Link back to top](#top)
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -172,7 +171,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="bayesML"></a>  Bayesian Machine Learning
-[Go to [top](#top)]
+[Link back to top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -184,7 +183,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="DL"></a>  Deep Learning 
-[Go to [top](#top)]
+[Link back to top](#top)
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -222,7 +221,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="NLP"></a>  Natural Language Processing
-[Go to [top](#top)]
+[Link back to top](#top)
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -243,7 +242,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="RL"></a> Reinforcement Learning 
-[Go to [top](#top)]
+[Link back to top](#top)
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -262,7 +261,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="misc"></a> Miscellaneous websites
-[Go to [top](#top)]
+[Link back to top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
