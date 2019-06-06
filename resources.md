@@ -221,7 +221,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 |[Chris Olah Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)| Chris Olah is a master of his craft, and here offers a fantastic overview of LSTMs and GRUs.|
 | [Intro to Federated Learning](https://github.com/OpenMined/PySyft/tree/master/examples/tutorials) | Intro to federated learning and PySyft from Andrew Trask and others using PyTorch.|
 | [Triplet Loss and Online triplet mining blog post](https://omoindrot.github.io/triplet-loss) | Nice exposition on Olivier Moindrot's blog |
-
+| [Graph Convolutional Neural Networks](https://tkipf.github.io/graph-convolutional-networks/) | Blog post on GCNNs by Thomas Kipf | 
 
 ### <a name="NLP"></a>  Natural Language Processing
 [Link back to top](#top)
