@@ -46,7 +46,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="CS"></a> Computer Science
-[Link back to top](#top)
 
 #### Theory
 
@@ -72,7 +71,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="LA"></a> Linear Algebra
-[Link back to top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -84,7 +82,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | [Linear Algebra Done Right, Abridged](http://linear.axler.net/LinearAbridged.pdf) | This is a free version of Sheldon Axler's texbook Linear Algebra Done Right, which is a nice intro treatment of the subject that is accessible but more pure-mathy in flavor than the above. |
 
 ### <a name="prob"></a>  Probability and Statistics
-[Link back to top](#top)
 
 #### Cheat Sheets
 
@@ -116,7 +113,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="causal"></a> Causal Inference
-[Link back to top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -126,7 +122,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="opt"></a>  Optimization
-[Link back to top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -137,7 +132,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="info"></a>  Information Theory
-[Link back to top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -149,7 +143,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="ml"></a>  Classic Machine Learning
-[Link back to top](#top)
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -174,7 +167,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="bayesML"></a>  Bayesian Machine Learning
-[Link back to top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
@@ -186,7 +178,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="DL"></a>  Deep Learning 
-[Link back to top](#top)
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -224,7 +215,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | [Graph Convolutional Neural Networks](https://tkipf.github.io/graph-convolutional-networks/) | Blog post on GCNNs by Thomas Kipf | 
 
 ### <a name="NLP"></a>  Natural Language Processing
-[Link back to top](#top)
 
 #### Textbooks, Lectures, and Course Notes
 
@@ -245,14 +235,13 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="RL"></a> Reinforcement Learning 
-[Link back to top](#top)
 
 #### Textbooks, Lectures, and Course Notes
 
 | File | Description   |
 | :-----------: |:-------------:|
 |[Sutton and Barto Open RL Book](http://incompleteideas.net/book/the-book-2nd.html)| De-facto standard intro to RL, even though the textbook is only now about to be published!|
-|[Berkeley Deep Reinforcement Learning](http://rll.berkeley.edu/deeprlcourse/)| RL class from Berkely taught by top dogs in the field, lectures posted to Youtube.|
+|[Berkeley Deep Reinforcement Learning](http://rll.berkeley.edu/deeprlcourse/)| RL class from Berkeley taught by top dogs in the field, lectures posted to Youtube.|
 
 #### Special Topics and Blog Posts
 
@@ -264,7 +253,6 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 
 ### <a name="misc"></a> Miscellaneous websites
-[Link back to top](#top)
 
 | File | Description   |
 | :-----------: |:-------------:|
