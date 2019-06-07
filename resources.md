@@ -22,7 +22,11 @@ table a:link, table a:visited, table a:active{
 
 - [_Linear Algebra_](#LA)
 
-- [_Probability and Statistics_](#prob)
+- [_Real Analysis_](#realA)
+
+- [_Probability_](#prob)
+
+- [_Statistics_](#stat)
 
 - [_Causal Inference_](#causal)
 
@@ -71,6 +75,10 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 |  [Graphic Design cheatsheet](/files/cheatsheets/graphic_design.pdf)  |  Cute little graphic design cheatsheet downloaded from [here](https://www.psiweb.org/docs/default-source/2018-psi-conference-posters/48-julie-jones.pdf) |
 | Pytorch [cheat sheet](https://pytorch.org/tutorials/beginner/ptcheat.html) and [tutorials](https://pytorch.org/tutorials/) and [docs](https://pytorch.org/docs/stable/index.html)| The pytorch team has some world class docs and tutorials.|
 
+### <a name="realA"></a> Core Math
+| File | Description   |
+| :-----------: |:-------------:|
+|  [Measure, Integration, and Real Analysis](http://measure.axler.net/MIRA.pdf)  |  Sheldon Axler's textbook-under-development on measure theory and real analysis. ([Website](http://measure.axler.net)). |
 
 ### <a name="LA"></a> Linear Algebra
 
@@ -83,35 +91,27 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | [Strang: Matrix methods for Data, Signals, and ML](https://ocw.mit.edu/courses/mathematics/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/) | Gil Strang's newer linear algebra course, focusing on the linear algebra relevant to data and ML.  Youtube videos [here](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k). |
 | [Linear Algebra Done Right, Abridged](http://linear.axler.net/LinearAbridged.pdf) | This is a free version of Sheldon Axler's texbook Linear Algebra Done Right, which is a nice intro treatment of the subject that is accessible but more pure-mathy in flavor than the above. |
 
-### <a name="prob"></a>  Probability and Statistics
 
-#### Cheat Sheets
+### <a name="prob"></a>  Probability
 
 | File | Description   |
 | :-----------: |:-------------:|
 |  [Probability Cheatsheet](/files/cheatsheets/probability_cheatsheet_blackwhite.pdf) |  Probability cheat sheet, from William Chen's [github](https://github.com/wzchen/probability_cheatsheet)|
-|  [Statistical Test Cheatsheet](/files/cheatsheets/linear_tests_cheat_sheet.pdf) |  Cheat sheet for unifying statistical tests under the linear models framework.  From Jonas Kristoffer Lindeløv's [github](https://lindeloev.github.io/tests-as-linear/)|
-
-#### Textbooks, Lectures, and Course Notes
-
-| File | Description   |
-| :-----------: |:-------------:|
 | [MIT 6.041 Intro Probability](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/) | John Tsitsiklis et al have put together some great resources. Their classic MIT intro to probability has been archived on [OCW](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/) and also offered on Edx ([Part 1](https://www.edx.org/course/introduction-probability-part-1-mitx-6-041-1x), [Part 2](https://www.edx.org/course/introduction-to-probability-part-2-inference-processes)). The [textbook](https://www.amazon.com/Introduction-Probability-2nd-Dimitri-Bertsekas/dp/188652923X) is also excellent. |
 | [Joe Blitzstein's Stat110](https://projects.iq.harvard.edu/stat110/about) | Joe Blitzstein's undergrad probability course has a high overlap in content with 6.041. Like 6.041, it also has a great [textbook](https://drive.google.com/file/d/1VmkAAGOYCTORq1wxSQqy255qLJjTNvBI/view), [youtube](https://projects.iq.harvard.edu/stat110/youtube) videos, and an [edx](https://www.edx.org/course/introduction-to-probability-0) offering. It's a bit more playful, as well.|
 |[MathematicalMonk](https://www.youtube.com/user/mathematicalmonk)| This guy is amazing. Some 250 youtube tutorials on ML, Probability, and Information Theory.  What's great about these playlists is any individual video could go into section 2!|
+
+
+### <a name="stat"></a>  Statistics
+
+| File | Description   |
+| :-----------: |:-------------:|
+| [Common statistical tests are linear models (or: how to teach stats)](https://lindeloev.github.io/tests-as-linear/) and [Statistical Test Cheatsheet](/files/cheatsheets/linear_tests_cheat_sheet.pdf)| This little blog post does an incredible job explaining how a whole bunch of common statistical tests can be intuitively unified under a single framework (linear models)|\
 | Russell Poldracks' [Statistical Thinking for the 21st Century](http://statsthinking21.org/index.html) | This appears to be a pretty fantastic (albeit rather elementary) textbook for a one-quarter intro to statistics class (stat 60 at stanford). Despite assuming little, it touches upon a lot of great topics. |
 |  [Doug Sparks' Stats 200](/files/notes/Stat200_2014_Merged_Sparks.pdf)  |  Nice course notes on Statistical Inference from Doug Sparks 2014 offering of [stats 200](http://stats200.stanford.edu/) |
 |  [Modern Statistics for Modern Biology](https://www-huber.embl.de/msmb/)  |  This online textbook is from Susan Holmes and Wolfgang Huber, and provides a nice and accessible intro to the parts of modern data science revelant to computational biologists.  It also happens to be a piece of typographic *art*, created with [bookdown](https://bookdown.org/yihui/bookdown/).  |
 |  [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/)  |  Lecture Videos on [youtube](https://www.youtube.com/playlist?list=PLDcUM9US4XdM9_N6XUUFrhghGJ4K25bFc) accompany this fantastic introductory textbook. |
-
-
-#### Special Topics and Blog Posts
-
-| File | Description   |
-| :-----------: |:-------------:|
-| [Common statistical tests are linear models (or: how to teach stats)](https://lindeloev.github.io/tests-as-linear/) | This little blog post does an incredible job explaining how a whole bunch of common statistical tests can be intuitively unified under a single framework (linear models)|
 | [Seeing Theory Frequentist Inference](https://seeing-theory.brown.edu/frequentist-inference/index.html) | This is a really beautiful visual presentation of the basic ideas of frequentist inference, from the Seeing Theory textbook.  I love it.|
-|  [Hernan Selection Bias](/files/notes/structured_approach_selection_bias_Hernan.pdf)  |  Nice summary of selection bias via DAGs by Hernan et al. |
 
 
 ### <a name="causal"></a> Causal Inference
@@ -121,6 +121,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 |  [Hernan and Robbins Causal Inference Book](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)  |  Long-upcoming textbook on causal inference (from the epidemiology perspective), with drafts fairly frequently updated on the web page. |
 |  [Robert Osazuwa Causal Modeling in ML Book](https://github.com/robertness/causalML)  |  Looks to be a nice course in development on causal and generative modeling. Lecture notes are being produced in a bookdown [here](https://bookdown.org/connect/#/apps/2584/access) |
 | [Causal Inference Papers](https://github.com/logangraham/arXausality) | Nice Github repo that compiles a bunch of Arxiv papers on Causal Machine Learning |
+|  [Hernan Selection Bias](/files/notes/structured_approach_selection_bias_Hernan.pdf)  |  Nice summary of selection bias via DAGs by Hernan et al. |
 
 
 ### <a name="opt"></a>  Optimization
