@@ -20,9 +20,9 @@ table a:link, table a:visited, table a:active{
 
 - [_Computer Science_](#CS)
 
-- [_Linear Algebra_](#LA)
-
 - [_Real Analysis_](#realA)
+
+- [_Linear Algebra_](#LA)
 
 - [_Probability_](#prob)
 
