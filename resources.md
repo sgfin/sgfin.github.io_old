@@ -76,6 +76,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | Pytorch [cheat sheet](https://pytorch.org/tutorials/beginner/ptcheat.html) and [tutorials](https://pytorch.org/tutorials/) and [docs](https://pytorch.org/docs/stable/index.html)| The pytorch team has some world class docs and tutorials.|
 
 ### <a name="realA"></a> Real Analysis
+
 | File | Description   |
 | :-----------: |:-------------:|
 |  [Measure, Integration, and Real Analysis](http://measure.axler.net/MIRA.pdf)  |  Sheldon Axler's textbook-under-development on measure theory and real analysis. ([Website](http://measure.axler.net)). |
