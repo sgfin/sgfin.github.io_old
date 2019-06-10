@@ -16,7 +16,7 @@ table a:link, table a:visited, table a:active{
 }
 </style>
 
-<a name="top"></a> Some of my favorite resources for data science, statistics, and machine learning:
+<a name="top"></a> Some of my favorite resources for learning statistics and machine learning:
 
 - [_Computer Science_](#CS)
 
