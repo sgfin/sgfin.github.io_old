@@ -254,7 +254,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 |[Weng's A (Long) Peek into RL](https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html)| A nice blog post covering the foundations of reinforcement learning|
 |[OpenAI's Intro to RL](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html)| The introductory tutorial for OpenAIs new ["Spinning Up in Deep RL" website](https://blog.openai.com/spinning-up-in-deep-rl/) |
 
-### <a name="Bio"></a> Machine Learning for Biology and Medicine
+### <a name="bio"></a> Machine Learning for Biology and Medicine
 
 | File | Description   |
 | :-----------: |:-------------:|
