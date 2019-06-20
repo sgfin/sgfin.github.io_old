@@ -21,7 +21,7 @@ Two variables on a DAG are __d-separated__ if all paths between them are blocked
 
 | Rule  | Example  |
 | :-----------: |:-------------:|
-| 1. If there are no variables being conditioned on, a path is blocked if and only if two arrowheads on the path collide at some variable on the path. |  <img src="/assets/hernan_dags/6_1.png" width="=15c <br/><br/> $L \rightarrow A \rightarrow Y$ is open. <br/><br/> $A \rightarrow Y \leftarrow L$ is blocked at $Y$ | 
+| 1. If there are no variables being conditioned on, a path is blocked if and only if two arrowheads on the path collide at some variable on the path. |  <img src="/assets/hernan_dags/6_1.png" width="=150x"> <br/><br/> $L \rightarrow A \rightarrow Y$ is open. <br/><br/> $A \rightarrow Y \leftarrow L$ is blocked at $Y$ | 
 | 2. Any path that contains a noncollider that has been conditioned on is blocked. |  <img src="/assets/hernan_dags/6_5.png" width="=150x"> <br/><br/> Conditioning on $B$ blocks the path from $A$ to $Y$.| 
 | 3. A collider that has been conditioned on does not block a path |  <img src="/assets/hernan_dags/6_7.png" width="=150x"> <br/><br/> The path between $A$ and $Y$ is open after conditioning on $L$.| 
 | 4. A collider that has a descendant that has been conditioned on does not block a path. |  <img src="/assets/hernan_dags/6_8.png" width="=150x"> <br/><br/> The path between $A$ and $Y$ is open after conditioning on $C$, a descendant of collider $L$.| 
