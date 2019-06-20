@@ -225,8 +225,9 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 | File | Description   |
 | :-----------: |:-------------:|
-|  [CS224 Deep Learning for NLP 2017](/files/notes/cs224n-2017-merged.pdf)  |  Fantastic course notes on Deep Learning for NLP from Stanford's [CS224](http://web.stanford.edu/class/cs224n/). Github repo [here](https://github.com/stanfordnlp/cs224n-winter17-notes/blob/master/notes1.pdf) |
+|  [CS224W Deep Learning for NLP 2017](/files/notes/cs224n-2017-merged.pdf)  |  Fantastic course notes on Deep Learning for NLP from Stanford's [CS224](http://web.stanford.edu/class/cs224n/). Github repo [here](https://github.com/stanfordnlp/cs224n-winter17-notes/blob/master/notes1.pdf) |
 |  [CMU CS 11-747](http://www.phontron.com/class/nn4nlp2018/schedule.html)  |  Fantastic course on Deep Learning for NLP from CMU's Graham Neubig. Really great lecture videos on Youtube [here](https://www.youtube.com/playlist?list=PLbdKUKMAnh9Qqs5uwEBDfRb_L3YaLbRKq) |
+|  [CS224U Natural Language Understanding 2019](/http://web.stanford.edu/class/cs224u/)  |  Another DL+NLP course at Stanford.  Also has accompanying [Youtube videos](https://www.youtube.com/watch?v=tZ_Jrc_nRJY&list=PLoROMvodv4rObpMCir6rNNUlFAn56Js20) and a [Github repo](https://github.com/cgpotts/cs224u/) |
 
 #### Special Topics and Blog Posts
 
