@@ -247,6 +247,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | File | Description   |
 | :-----------: |:-------------:|
 |[Sutton and Barto Open RL Book](http://incompleteideas.net/book/the-book-2nd.html)| De-facto standard intro to RL, even though the textbook is only now about to be published!|
+|[Stanford Reinforcement Learning Course ](http://web.stanford.edu/class/cs234/index.html) by Emma Brunskill| A really great RL class from Stanford. The website has a really nice note set. Also, lecture videos are on [Youtube](https://www.youtube.com/watch?v=FgzM3zpZ55o&list=PLoROMvodv4rOSOPzutgyCTapiGlY2Nd8u).|
 |[Berkeley Deep Reinforcement Learning](http://rll.berkeley.edu/deeprlcourse/)| RL class from Berkeley taught by top dogs in the field, lectures posted to Youtube.|
 
 #### Special Topics and Blog Posts
