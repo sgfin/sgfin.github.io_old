@@ -41,9 +41,7 @@ And now we can finally:
 <img src="/assets/hernan_dags/all_the_dags.jpg" width="400">
 </p>
 
-### Chapter 6:  Causal Diagrams
-
-#### 6.1--6.5
+### Basics of Causal Diagrams (6.1-6.5)
 
 | DAG   | Example  |  Notes | Page | 
 | :-----------: |:-------------:|
@@ -58,7 +56,7 @@ And now we can finally:
 | _Before matching_: <br/> <img src="/assets/hernan_dags/6_1.png" width="175"><br/><br/> _After matching_:<br/> <img src="/assets/hernan_dags/6_9.png" width="175"> | _Matched analysis_ <br/><br/> __L__: Critical Condition  <br/><br/>  __A__: Heart Transplant  <br/><br/> __Y__: Death <br/><br/> __S__: Selection for inclusion via matching criteria  | In this study design, the average causal effect of $$A$$ on $$Y$$ is computed after matching on $$L$$. <br/><br/> Before matching, $$L$$ and $$A$$ are associated via the path $$L \rightarrow A$$ . <br/><br/> Matching is represented in the DAG through the addition of $$S$$, the selection criteria. The study is obviously restricted to patients that are selected ($$S$$=1), hence we condition on $$S$$. <br/><br/> d-separation rules say that there are now two open paths between $$A$$ and $$L$$ after conditioning on $$S$$:  $$L \rightarrow A$$ and $$L \rightarrow S \leftarrow A$$. This seems to indicate an association between $$L$$ and $$A$$.  However, the point of matching is supposed to be to make sure that $$L$$ and $$A$$ not associated! <br/><br/>  The resolution comes from the observation that $$S$$ has been constructed specifically to induce the distribution of $$L$$ to be the same in the treated ($$A$$=1) and untreated ($$A$$=0) population. This means that the association in $$L \rightarrow S \leftarrow A$$ is of equal magnitude but opposite direction of $$L \rightarrow A$$. Thus there is no net association between $$A$$ and $$L$$. <br/><br/>  This disconnect between the associations visible in the DAG and the associations actually present is an example of __unfaithfulness__, but here it has been introduced by design.  |  I.49 and I.79  |
 |  <img src="/assets/hernan_dags/6_10.png" width="175"> |   __R__: Compound treatment (see right) <br/><br/> __A__: Vector of treatment versions $$A( r )$$ (see right) <br/><br/> __Y__: Outcome <br/><br/>  __L__ and __W__: unnamed causes  <br/><br/> __U__: unnmeasured variables  | This is the example the book uses of how to encode compound treatments. <br/><br/> The example compound treatment is as follows: <br/><br/> R=0 corresponds to "exercising _less_ than 30 minutes daily". <br/> R=1 corresponds to "exercising _more_ than 30 minutes daily." <br/><br/> $$A$$ is a vector corresponding to different _versions_ of the treatment, where $$A(r=0)$$ can take on values $$0,1,2,\dots, 29$$ and $$A(r=1)$$ can take on values $$30,31\dots, max$$  <br/><br/> Taken together, we can have a mapping from multiple values $$A( r )$$ onto a single value $$R=r$$. |  I.78  |
 
-####  Section 6.6:  Effect modification
+###  Effect Modification (6.6)
 
 | DAG  | Example  |  Notes | Page | 
 | :-----------: |:-------------:|
@@ -69,9 +67,7 @@ And now we can finally:
 | <img src="/assets/hernan_dags/6_15.png" width="175"> |  __A__: Heart Transplant <br/><br/> __Y__: Outcome <br/><br/> __M__: Quality of Care. High ($$M=1$$) vs Low ($$M=0$$)  <br/><br/>  __S__: Cost of Care <br/><br/>  __W__: Use of mineral water vs tap |  Example where the surrogate effect modifier (cost) is influenced by _both_ the causal effect modifier (quality) and something spurious. <br/><br/>  If the study were restricted to low-cost hospitals by conditioning on $$S=0$$, then use of mineral water would become associated with medical care $$M$$ and would behave as a surrogate effect modifier. <br/><br/> Addendum: How?  One example might be that conditioned on a low cost, a zero sum situation may arise in which spending more on fancy water means less is being spent on quality care, which could yield an inverse correlation between mineral water and medical quality.  |  I.81  |
 
 
-### Chapter 7:  Confounding
-
-#### Core DAGs
+### Confounding (Chapter 7)
 
 | DAG  | Example  |  Notes | Page | 
 | :-----------: |:-------------:|
@@ -87,8 +83,7 @@ And now we can finally:
 | <img src="/assets/hernan_dags/7_11.png" width="175"> | __A__: Aspirin  <br/><br/> __Y__: Blood Pressure   <br/><br/>  __U__: History of heart disease (unmeasured) <br/><br/> __C__: Blood pressure right before treatment ("placebo test" aka "negative outcome control")  |  This example was used to show __difference-in-difference__ and __negative outcome controls__. <br/><br/> The idea: We cannot compute the effect of $$A$$ on $$Y$$ via standardization or IP weighting because there is unmeasured confounding. Instead, we first measure the ("negative") outcome $$C$$ right before treatment. Obviously $$A$$ has no effect on $$C$$, but we can assume that $$U$$ will have the same confounding effect on $$C$$ that it has on $$Y$$. <br/><br/> As such, we take the effect in the treated to be the effect of $$A$$ on $$Y$$ (treatment effect + confounding effect) _minus_ the effect of $$A$$ on $$C$$ (confounding effect). This is the difference-in-differences. <br/><br/> Negative outcome controls are sometimes used to try to _detect_ confounding. |  I.95  |
 | <img src="/assets/hernan_dags/7_12.png" width="175"> | (No example labels in text) <br/><br/> __A__: Aspirin  <br/><br/> __M__: Platelet Aggregation <br/><br/> __Y__: Heart Attack <br/><br/> __U__: High Cardiovascular Risk | This example is to demonstrate the __frontdoor criterion__ (see notes or page I.96 for more details). <br/><br/> Given this DAG, it is impossible to directly use standardization or IP weighting, because the unmeasured variable $$U$$ is necessary to block the backdoor path between $$A$$ and $$Y$$. <br/><br/> However, the frontdoor adjustment can be used because: <br/> (i) the effect of $$A$$ on $$<$$ can be computed without confounding, and <br/> (ii) the effect of $$M$$ on $$Y$$ can be computed because $$A$$ blocks only the backdoor path. <br/><br/> Hence, __frontdoor adjustment__ can be used. |  I.95  |
 
-
-#### Additional Examples
+__Some additional (but structurally redundant) examples of confounding from chapter 7__:
 
 | DAG  | Example  |  Notes | Page | 
 | :-----------: |:-------------:|
@@ -97,7 +92,7 @@ And now we can finally:
 | <img src="/assets/hernan_dags/7_3.png" width="175"> |  __A__: Airborne particulate matter <br/><br/> __Y__: Coronary artery disease <br/><br/> __L__: Other pollutants  <br/><br/> __U__: Weather conditions  | _Environmental exposures_ often co-vary with the weather conditions.  As such, certain pollutants $$A$$ may be spuriously associated with outcome $$Y$$ simply because the weather drives them to co-occur with $$L$$.  |  I.84  |
 
 
-### Chapter 8:  Selection Bias
+### Selection Bias (Chapter 8)
 
 __Note__:  While randomization eliminates _confounding_, it does not eliminate _selection bias_.  All of the issues in this section apply just as much to prospective and/or randomized trials as they do to observational studies.
 
@@ -114,7 +109,7 @@ __Note__:  While randomization eliminates _confounding_, it does not eliminate _
 | <img src="/assets/hernan_dags/8_14.png" width="175"> <br/><br/><br/> <img src="/assets/hernan_dags/8_15.png" width="175"> <br/><br/><br/> <img src="/assets/hernan_dags/8_16.png" width="175"> | __A__: Surgery  <br/><br/> __Y__: Death <br/><br/> __E__: Genetic hapltype <br/><br/>  ------------ <br/><br/> _Death subsplit by causes_: (not recorded) <br/><br/> __Y_A__: Death from tumor <br/><br/>  __Y_E__: Death from heart attack <br/><br/> __Y_A__: Death from other causes |  Same setup as in the examples of Figure 8.12 and 8.13.  However, in all of these DAGs, $$A$$ and $$E$$ affect survival thrugh a common mechanism, either directly or indirectly.  In such cases, $$A$$ and $$E$$ are dependent in _both_ strata of $$Y$$. <br/><br/> Taken together with the example above, the point is that __conditioning on a collider _always_ induces an association between its causes, but that this association _may_ or _may not_ be restricted to certain levels of the common effect__.   | I.105 |
 
 
-#### Additional Examples  from chapter 8
+__Some additional (but structurally redundant) examples of selection bias from chapter 8__:
 
 | DAG  | Example  |  Notes | Page | 
 | :-----------: |:-------------:|
@@ -123,8 +118,7 @@ __Note__:  While randomization eliminates _confounding_, it does not eliminate _
 |  <img src="/assets/hernan_dags/8_3.png" width="175"> <br/><br/><br/> <img src="/assets/hernan_dags/8_5.png" width="175">  | (_Note: Missing arrow: $$A \rightarrow Y$$_ ) <br/><br/> __A__: Smoking status  <br/><br/> __Y__: Coronary heart disease <br/><br/> __C__: Consent to participate <br/><br/> __U__: Family history <br/><br/>  __L__: Heart disease awareness ------------ <br/><br/> __W__: Lifestyle | (_Note_: DAGS 8.4/8.6 work just as well, here.) <br/><br/> __Selection affected by treatment received before study entry__: <br/> Generalization of self-selection bias. Under any of the above structures, if the treatment takes place before the study selection or includes a pre-study component, a selection bias can arise. <br/><br/> Particularly high-risk in studies that look at lifetime exposure to something in middle-aged volunteers.  <br/><br/> Similar issues often arise with confounding if confounders are only measured during the study.  | I.100 |
 
 
-### Chapter 9:  Measurement Bias
-
+### Measurement Bias (Chapter 9)
 
 | DAG  | Example  |  Notes | Page | 
 | :-----------: |:-------------:|
@@ -142,7 +136,7 @@ __Note__:  While randomization eliminates _confounding_, it does not eliminate _
 | <img src="/assets/hernan_dags/9_14.png" width="175">   | __Z__: Assigned treatment  <br/><br/> __A__: Heart Transplant  <br/><br/> __Y__: 5-year Mortality <br/><br/> __U__: Illness Severity (unmeasured) <br/><br/> __L__: Measured factors that mediate U <br/><br/> __S__: Selection filter (A=Z) | This example is of a __conventional per-protocol analysis__, a second method to measure per-protocol effect.  <br/><br/>  Conventional per-protocol analyses limit the population to those who adhered to the study protocol, subsetting to those for whom $$A=Z$$. <br/><br/>  This method induces a _selection bias_ on $$A=Z$$, and thus still requires adjustment on $$L$$.  | I.118 |
 
 
-#### Additional Examples from chapter 9
+__Some additional (but structurally redundant) examples of measurement bias from chapter 9:__
 
 | DAG  | Example  |  Notes | Page | 
 | :-----------: |:-------------:|
