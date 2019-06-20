@@ -100,11 +100,11 @@ __Table of Contents__:
 
 
 ### Chapter 7:  Confounding
+
 | Concept | Definition or Notes| Page | 
 | :-----------: |:-------------:|
 | __Backdoor Path__ | A noncausal path between treatment and outcome that remains even if all arrows pointing from treatment to other variables (the descendants of treatment) are removed. That is, the path has an arrow pointing into treatment.  | I.83 |
 | __Confounding by indication__ (or __Channeling__) | A drug is more likely to be prescribed to individuals with a certain condition that is both an indication for treatment and a risk factor for the disease.  |  I.84  |
-
 | __Channeling__ | Confounding by indication in which patient-specific risk factors $$L$$ encourage doctors to use certain drug $$A$$ within a class of drugs.  |  I.84  |
 | __Backdoor Criterion__ | Assuming consistency and positivity, the _backdoor criterion_ sets the circumstances under which (a) confounding can be eliminated from the analysis, and (b) a causal effect of treatment on outcome can be identified.  <br/><br/>  Criterion is that identifiability exists if all backdoor paths can be blocked by conditioning on variables that are not affected by the treatment.  <br/><br/> The two settings in which this is possible are: <br/><br/>  1. No common causes of treatment and outcome. <br/><br/> 2. Common causes but enough measured variables to block all colliders.   | I.85 |
 | __Single-world intervention graphs (SWIG)__ | A causal diagram that unifies counterfactual and graphical approaches by explicitly including the counterfactual variables on the graph. <br/><br/>  Depicts variables and causal relations that would be observed in a hypothetical world in which all individuals received treatment level $$a$$. In other words, is a _graph_ that represents the counterfactual _world_ created by a _single intervention_, unlike normal DAGs that represent variables and causal relations from the actual world. | I.91 |
@@ -124,6 +124,7 @@ __Note__:  I have almost no notes in here, because the DAG section contains pret
 | __Self-selection bias__ | Example of selection bias where people volunteer for enrollment.  | I.100 |
  
 ### Chapter 9:  Measurement Bias
+
 | Concept | Definition or Notes| Page | 
 | :-----------: |:-------------:|
 | __Measurement bias__ or __Information bias__ | Systematic difference in associational risk and causal risk that arises due to measurement error. Eliminates causal inference even under identifiability conditions of exchangeability, positivity, and consistency.  | I.112 |
