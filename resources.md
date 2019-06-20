@@ -195,7 +195,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | [CS294-158 Deep Unsupervised Learning](https://sites.google.com/view/berkeley-cs294-158-sp19/home) | Open course on deep unsupervised learning from Berkeley.  Looks fantastic.|
 
 
-#### Instructive Code Bases
+#### Instructive Codebases
 
 | File | Description   |
 | :-----------: |:-------------:|
