@@ -44,7 +44,7 @@ Assuming positivity and consistency, confounding can be eliminated and causal ef
 
 | Rule  | Example  |
 | :-----------: |:-------------:|
-| 1. No common causes of treatment and outcome. | <img src="/assets/hernan_dags/6_2.png" width="175"> <br/><br/> There are no common causes of treatment and outcome. Hence no backdoor paths need to be blocked. <br/><br/> No confounding; equivalent to a marginally randomized trial.   |
+| 1. No common causes of treatment and outcome. | <img src="/assets/hernan_dags/6_2.png" width="150"> <br/><br/> There are no common causes of treatment and outcome. Hence no backdoor paths need to be blocked. <br/><br/> No confounding; equivalent to a marginally randomized trial.   |
 | 2. Common causes are present, but there are enough measured variables to block all colliders. (i.e. No unmeasured confounding.) | <img src="/assets/hernan_dags/6_1.png" width="175"> <br/><br/> Backdoor path through the common cause $$L$$ can be blocked by conditioning on measured covariates (in this case, $$L$$ itself) that are non-descendants of treatment. <br/><br/> There will be no residual confounding after controlling for $$L$$; equivalent to a conditionally randomized trial. |
 
 And now we can finally:
