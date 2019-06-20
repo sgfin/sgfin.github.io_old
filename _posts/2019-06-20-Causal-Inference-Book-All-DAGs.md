@@ -37,7 +37,7 @@ Assuming positivity and consistency, confounding can be eliminated and causal ef
 
 And now we can finally:
 
-<img src="/assets/hernan_dags/all_the_dags.jpg =250">
+<img src="/assets/hernan_dags/all_the_dags.jpg" width="250">
 
 ### Chapter 6:  Causal Diagrams
 
