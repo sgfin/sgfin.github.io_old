@@ -8,6 +8,12 @@ date:   2019-06-19 11:50:00
 mathjax: true
 ---
 
+This page contains some notes from Miguel Hernan and Jamie Robin's [Causal Inference Book](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/).  So far, I've only done Part I.
+
+This page only has key terms and concepts. On [this page](https://sgfin.github.io/2019/06/19/Causal-Inference-Book-All-DAGs/), I've tried to systematically present all the DAGs in the same book.  I imagine that one will be more useful going forward, at least for me.
+
+
+__Table of Contents__:
 * TOC
 {:toc}
 
@@ -23,14 +29,14 @@ mathjax: true
 | _U_ | Patient variable (often unmeasured or background variable)  |
 | _M_ | Patient variable (often effect modifier) |
 
-### Chapter 1
+### Chapter 1: Definition of Causal Effect
 
 | Term | Notation or Formula | Notes | Page | 
 | :-----------: |:-------------:|
 |  __Association__ |  Pr[Y=1\|A=1] $$\neq$$ Pr[Y=1\|A=0] | _Example definitions of independence (lack of association)_: <br/> Y $$\unicode{x2AEB}$$ A <br/> or <br/> Pr[Y=1\|A=1] - Pr[Y=1\|A=0] = 0 <br> or <br> $$\frac{Pr[Y=1\|A=1]}{Pr[Y=1\|A=0]}$$ = 1 <br/> or <br/> $$\frac{Pr[Y=1\|A=1]/Pr[Y=0\|A=1]}{Pr[Y=1\|A=0]/Pr[Y=0\|A=0]}$$ = 1  | I.10 |
 | __Causation and Causal Effects__ | _Causation_:<br/>Pr[Y^(a=1)=1] $$\neq$$ Pr[Y^(a=0)=1] <br/><br/> _Individual Causal Effects_:<br/>  Y^(a=1) - Y^(a=0) <br/><br/> _Population Average Causal Effects_:<br/> E[Y^(a=1)] - E[Y^(a=0)] <br/><br/> _where_ <br/>Y^(a=1) = Outcome for treatment w/ $$a=1$$ <br/> Y^(a=0) = Outcome for treatment w/ $$a=0$$ | _Sharp causal null hypothesis_: <br/>Y^(a=1) = Y^(a=0) for all individuals in the population. <br/><br/> _Null hypothesis of no average causal effect_: <br/> E[Y^(a=1)] = E[Y^(a=0)] <br/><br/> _Mathematical representations of causal null_: <br/> Pr[Y^(a=1)=1] - Pr[Y^(a=0)=1] = 0 <br> or <br> $$\frac{Pr[Y^{a=1}=1]}{Pr[Y^{a=0}=1]} = 1$$ <br/> or <br/> $$\frac{Pr[Y^{a=1}=1]/Pr[Y^{a=1}=0]}{Pr[Y^{a=0}=1]/Pr[Y^{a=1}=0]} = 1$$  | I.7 |
 
-### Chapter 2
+### Chapter 2: Randomized Experiments
 
 | Term |  Notes | Page | 
 | :-----------: |:-------------:|
@@ -39,7 +45,7 @@ mathjax: true
 | __Standardization__ | Calculate the _marginal_ counterfactual risk from a _conditionally randomized experiment_ by taking a weighted average over the stratum-specific risks.  <br/><br/>  Standardized mean:  <br/><br/>  $$\sum_l E[Y\|L=l,A=a] \times Pr[L=l]$$ <br/><br/>  Causal risk ratio can be computed via standardization as follows:  <br/><br/>  $$\frac{Pr[Y^{a=1}=1]}{Pr[Y^{a=0}=1]} = \frac{\sum_l E[Y=1\|L=l,A=1]\times Pr[L=l]}{\sum_l E[Y=1\|L=l,A=1]\times Pr[L=l]}$$ | I.19 |
 | __Inverse probability weighting__ | Given a conditionally randomized study population: <br/><img src="/assets/hernan_dags/2_1.png" width="300"> <br/> We can invoke an assumption of conditional exchangeability given $$L$$ to simulate the counterfactual in which everyone had received (or not received) the treatment:  <br/> <img src="/assets/hernan_dags/2_2.png" width="300"> <br/>. The causal effect ratio can then be directly calculated by comparing <br/> $$Pr[Y^{a=1}=1]/Pr[Y^{a=0}=1]$$ (in this example, it's $$\frac{10/20}{10/20}=1$$.) <br/><br/> By the same token, you can effectively double your population and create a hypothetical _pseudo-population_ in which everyone had received both treatments: <br/> <img src="/assets/hernan_dags/2_3.png" width="300"> <br/><br/> This process amounts to weighting each individual in the population by the inverse of the conditional probability of receiving the treatment she received (see formula on right above). Hence the name _inverse probability (IP) weighting_. | I.20 |
 
-### Chapter 3
+### Chapter 3: Observational Studies
 
 | Term | Notation or Formula | English Definition  | Notes | Page | 
 | :-----------: |:-------------:|
@@ -49,7 +55,8 @@ mathjax: true
 | __Conditional exchangeability__ | Y^a $$\unicode{x2AEB}$$ A \| L for all a <br/><br/> or <br/><br/> Pr[Y^a=1 \| A=1, L=1] = Pr[Y^a=1 \| A=0, L=1] = Pr[Y^a=1] \| L=1 | "The conditional probability of receiving every value of treatment is randomized or depends only on measured covariates" | Think conditional RCT where assigment depends only on $$L$$. <br/><br/> In observational studies, this is an untestable assumption, thus relies on domain expertise. | I.27 |
 | __Positivity__ | Pr[A=a \| L=$$l$$ ] > 0 for all values $$l$$ with Pr[L=$$l$$] $$\neq$$ 0 in the population of interest | "The conditional probability of receiving every value of treatment is greater than zero, i.e. positive." | Aka "Experimental treatment assumption" <br/><br/> Example of positivity not holding: doctors always give heart transplants to patients in critical condition, eliminitating positivity from that stratum of an observational study. <br/><br/> Unlike exchangeability, positivity, _can_ be empricially verified.| I.30 |
 
-### Chapter 4
+### Chapter 4: Effect Modification
+
 | Term | Notation or Formula | English Definition  | Notes | Page | 
 | :-----------: |:-------------:|
 | __Effect modification__ <br/> aka effect-measure modification | _Additive effect modification_: <br/> E[Y^(a=1)-Y^(a=0) \| M = 1] $$\neq$$ E[Y^(a=1)-Y^(a=0) \| M = 0] <br/><br/> _Multiplicative effect modification_: <br/>  $$\frac{E[Y^{a=1} \| M = 1]}{E[Y^{a=0} \| M = 1]}$$ $$\neq$$ $$\frac{E[Y^{a=1}\| M = 0]}{E[Y^{a=0}\| M = 0]}$$ |  $$M$$ is a modifier of the effect of $$A$$ on $$Y$$ when the average causal effect of $$A$$ on $$Y$$ varies across levels of $$M$$. | The _null hypothesis of no average causal effect_ does *not* necessarily imply the absence of effect modification (e.g. equal and oppositive effect modifications in men and women could cancel at the population level), but the _sharp null hypothesis of no causal effect_ does imply no effect modicifaction. <br/><br/>  We only count variables _unaffected by treatment_ as effect modifiers. Similar variables that are effected by treatment are termed __mediators__. | I.41 |
@@ -60,7 +67,8 @@ mathjax: true
 | __Interference__ | | Treatment of one individual effects treatment status of other individuals in the population. | Example: A socially active individual convinces friends to join him while exercising.   | I.48 |
 | __Transportability__ | | Ability to use causal effect estimation from one population in order to inform decisions in another ("target") population.  <br/><br/>  | Requires that the target population is characterized by comparable patterns of: <br/> - Effect modification <br/> - Interference, and <br/> - Versions of treatment |  I.48 |
 
-### Chapter 5 
+### Chapter 5: Interaction
+
 | Term | Notation or Formula | English Definition  | Notes | Page | 
 | :-----------: |:-------------:|
 | __Joint counterfactual__ | Y^(a,e) | Counterfactual outcome that would have been observed if we had intervented to set the individual's values of $$A$$ (treatment component 1) to $$a$$ and $$E$$ (treatment component 2) to $$e$$. | | I.55 | 
