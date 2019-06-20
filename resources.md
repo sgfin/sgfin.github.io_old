@@ -120,6 +120,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | File | Description   |
 | :-----------: |:-------------:|
 |  [Hernan and Robbins Causal Inference Book](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/)  |  Long-upcoming textbook on causal inference (from the epidemiology perspective), with drafts fairly frequently updated on the web page. |
+| [All the DAGs from the Causal Inference Book](https://sgfin.github.io/2019/06/19/Causal-Inference-Book-All-DAGs/) and [Glossary and Notes](https://sgfin.github.io/2019/06/19/Causal-Inference-Book-Glossary-and-Notes/)| In the first post, I'm compiling all the DAGs from Hernan and Robbins book into one place for easier use. In the second, I have some additional notes to accompany part one of the book. |
 |  [Robert Osazuwa Causal Modeling in ML Book](https://github.com/robertness/causalML)  |  Looks to be a nice course in development on causal and generative modeling. Lecture notes are being produced in a bookdown [here](https://bookdown.org/connect/#/apps/2584/access) |
 | [Causal Inference Papers](https://github.com/logangraham/arXausality) | Nice Github repo that compiles a bunch of Arxiv papers on Causal Machine Learning |
 |  [Hernan Selection Bias](/files/notes/structured_approach_selection_bias_Hernan.pdf)  |  Nice summary of selection bias via DAGs by Hernan et al. |
