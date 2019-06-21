@@ -4,7 +4,7 @@ email: samuel_finlayson@hms.harvard.edu
 description: "By Sam Finlayson, MD-PhD student at Harvard-MIT"
 baseurl: ""
 url: "http://sgfin.github.io"
-# twitter_username: IAmSamFin
+twitter_username: IAmSamFin
 github_username: sgfin
 
 # Build settings
