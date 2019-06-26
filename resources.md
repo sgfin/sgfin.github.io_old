@@ -65,6 +65,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | File | Description   |
 | :-----------: |:-------------:|
 |  [R dplyr cheatsheet](/files/cheatsheets/R_cheatsheet_dplyr.pdf)  |  Cheatsheet for Hadley's amazing data wrangling package, dplyr. One of many from [RStudio](https://www.rstudio.com/resources/cheatsheets/) |
+| [R dplyr and data.table side by side](https://atrebas.github.io/post/2019-03-03-datatable-dplyr/) | Nice side-by-side comparison of dplyr and data.table by Atrebas.|
 |  [R ggplot2 cheatsheet](/files/cheatsheets/R_cheatsheet_ggplot2.pdf)  |  Cheatsheet for Hadley's amazing plotting package, ggplot2. One of many from [RStudio](https://www.rstudio.com/resources/cheatsheets/)|
 |  [SQL Joins cheatsheet](/files/cheatsheets/SQL_joins.png)  |  Graphical description of classic SQL joins w/ toy code  |
 |  [Python pandas cheatsheet](/files/cheatsheets/Python_cheatsheet_pandas.pdf)  |  Cheatsheet for python's data wrangling package, pandas. Downloaded from [here](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)|
