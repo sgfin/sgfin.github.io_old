@@ -197,20 +197,12 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | [CS294-158 Deep Unsupervised Learning](https://sites.google.com/view/berkeley-cs294-158-sp19/home) | Open course on deep unsupervised learning from Berkeley.  Looks fantastic.|
 
 
-#### Instructive Codebases
-
-| File | Description   |
-| :-----------: |:-------------:|
-| Sebastian Raschka's [Deep Learning Models Github](https://github.com/rasbt/deeplearning-models)| An impressively comprehensive set of TensorFlow and Pytorch models, annotated and perusable in 80+ Jupyter Notebooks. |
-|[Pytorch Tutorials](https://pytorch.org/tutorials/) | The tutorials put out by the pytorch developers are really fantastic. Easy to see why the community is growing so fast. |
-| Wiseodd's [Website](https://wiseodd.github.io/) and [Deep Generative Models Github](https://github.com/wiseodd/generative-models) and | An amazing collection of deep learning implementations. | 
-
-
 #### Special Topics and Blog Posts
 
 | File | Description   |
 | :-----------: |:-------------:|
 |Karpathy's [Recipe for Training NNs](https://karpathy.github.io/2019/04/25/recipe/) | A great blog post that contains a bunch of little tricks for training deep neural networks |
+| Troubleshoting Deep Neural Networks [video](https://www.youtube.com/watch?v=XtCNNwDi9xg) and [slides](http://josh-tobin.com/assets/pdf/troubleshooting-deep-neural-networks-01-19.pdf?utm_campaign=NLP%20News&utm_medium=email&utm_source=Revue%20newsletter) by Josh Tobin | "A field gudie to fixing your model," which has some nice tips. |
 |Adversarial Examples/Robust ML [Part 1](http://people.csail.mit.edu/madry/lab/blog/adversarial/2018/07/06/adversarial_intro/), [Part 2](http://people.csail.mit.edu/madry/lab/blog/adversarial/2018/07/11/robust_optimization_part1/), and [Part 3](http://people.csail.mit.edu/madry/lab/blog/adversarial/2018/08/10/robust_optimization_part2/) | The [Madry lab](https://people.csail.mit.edu/madry/lab/) is one of the top research groups in robust deep learning research. They put together a fantastic intro to these topics on their blog. I hope they keep making posts... |
 |[Distill Attention](https://distill.pub/2016/augmented-rnns/)| Amazingly clear presentation of the attention mechanism and its (early) variants |
 | [Lilian Weng Attention post](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html) | Nice blog post on attention, self-attention, trasnformers, etc |
@@ -220,7 +212,15 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | [Intro to Federated Learning](https://github.com/OpenMined/PySyft/tree/master/examples/tutorials) | Intro to federated learning and PySyft from Andrew Trask and others using PyTorch.|
 | [Triplet Loss and Online triplet mining blog post](https://omoindrot.github.io/triplet-loss) | Nice exposition on Olivier Moindrot's blog |
 | [Graph Convolutional Neural Networks](https://tkipf.github.io/graph-convolutional-networks/) | Blog post on GCNNs by Thomas Kipf | 
-| Troubleshoting Deep Neural Networks [video](https://www.youtube.com/watch?v=XtCNNwDi9xg) and [slides](http://josh-tobin.com/assets/pdf/troubleshooting-deep-neural-networks-01-19.pdf?utm_campaign=NLP%20News&utm_medium=email&utm_source=Revue%20newsletter) by Josh Tobin | "A field gudie to fixing your model," which has some nice tips. |
+
+#### Instructive Codebases
+
+| File | Description   |
+| :-----------: |:-------------:|
+| Sebastian Raschka's [Deep Learning Models Github](https://github.com/rasbt/deeplearning-models)| An impressively comprehensive set of TensorFlow and Pytorch models, annotated and perusable in 80+ Jupyter Notebooks. |
+|[Pytorch Tutorials](https://pytorch.org/tutorials/) | The tutorials put out by the pytorch developers are really fantastic. Easy to see why the community is growing so fast. |
+| Wiseodd's [Website](https://wiseodd.github.io/) and [Deep Generative Models Github](https://github.com/wiseodd/generative-models) and | An amazing collection of deep learning implementations. | 
+
 
 ### <a name="NLP"></a>  Natural Language Processing
 
