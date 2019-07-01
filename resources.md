@@ -220,6 +220,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | [Intro to Federated Learning](https://github.com/OpenMined/PySyft/tree/master/examples/tutorials) | Intro to federated learning and PySyft from Andrew Trask and others using PyTorch.|
 | [Triplet Loss and Online triplet mining blog post](https://omoindrot.github.io/triplet-loss) | Nice exposition on Olivier Moindrot's blog |
 | [Graph Convolutional Neural Networks](https://tkipf.github.io/graph-convolutional-networks/) | Blog post on GCNNs by Thomas Kipf | 
+| Troubleshoting Deep Neural Networks [video](https://www.youtube.com/watch?v=XtCNNwDi9xg) and [slides](http://josh-tobin.com/assets/pdf/troubleshooting-deep-neural-networks-01-19.pdf?utm_campaign=NLP%20News&utm_medium=email&utm_source=Revue%20newsletter) by Josh Tobin | "A field gudie to fixing your model," which has some nice tips. |
 
 ### <a name="NLP"></a>  Natural Language Processing
 
