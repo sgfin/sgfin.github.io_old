@@ -178,6 +178,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 | File | Description   |
 | :-----------: |:-------------:|
 |  [CS 228 PGM Notes](https://ermongroup.github.io/cs228-notes/)  |  Really great course notes on Probabilistic Graphical Models from at Stanford. PDF export wasn't ideal so linking only to website.|
+| CMU PGM Course [2019](https://sailinglab.github.io/pgm-spring-2019/lectures/) and [2014](http://www.cs.cmu.edu/~epxing/Class/10708/lecture.html) | Nice course from CMU (10-708) that covers PGMs and -- in newer offerings -- relevant parts of DL, too.  Has videos, scribe notes, and slides. |
 |  [Blei Foundations of Graphical Models Course](http://www.cs.columbia.edu/~blei/fogm/2016F/index.html)  |  2016 course notes on Foundations of Graphical Models from David Blei 2016 website|
 [Blei Exponential Familes/Variational Inference](/files/notes/blei_exponFam_varInf.pdf)| A couple of the course notes I particularly like from Blei's [2011 Probabilistic Modeling Course](https://www.cs.princeton.edu/courses/archive/fall11/cos597C/) )
 |  [Blei Variational Inference Review](/files/notes/blei_variational_review.pdf) |  Overview on Variational Inference from David Blei available on [arxiv](https://arxiv.org/abs/1601.00670)|
