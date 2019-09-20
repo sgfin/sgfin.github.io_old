@@ -53,7 +53,7 @@ table a:link, table a:visited, table a:active{
 If you stumble upon this list and have suggestions for me to add, feel free to reach out!
 
 
-### <a name="Start"></a> Where should I start?
+### <a name="Start"></a> Where should I start (in ML)?
 
 If you're looking to get started in machine learning, I would proceed in the following order:
 
