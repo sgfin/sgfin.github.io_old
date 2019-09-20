@@ -18,6 +18,8 @@ table a:link, table a:visited, table a:active{
 
 <a name="top"></a> Some of my favorite resources for learning statistics and machine learning:
 
+- [_Where Should I Start?_](#Start)
+
 - [_Computer Science_](#CS)
 
 - [_Real Analysis_](#realA)
@@ -49,6 +51,19 @@ table a:link, table a:visited, table a:active{
 - [_Favorite Websites_](#misc)
 
 If you stumble upon this list and have suggestions for me to add, feel free to reach out!
+
+
+### <a name="Start"></a> Where should I start?
+
+If you're looking to get started in machine learning, I would proceed in the following order:
+
+- [Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/) by James, Witten, Hastie, and Tibshirani. This textbook is a fantastic introduction to the field, written by some of its leading experts. It is short and well-written enough to be read cover-to-cover, high-level enough to be accessible to people from various backgrounds, yet rigorous in the sense that it teaches you to think about the problems rather than just giving you a cookbook.  The textbook is free as a PDF at the book website, and the authors have also provided a collection of excellent videos that accompany the text on Youtube (the videos are nicely organized into a collection [here](https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/)). Note that this textbook also has a "big sister", the classic [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/), which covers the same content at much more mathematical depth. However, I would start with ISL and then move to ESL from there as your interest directs.  Note that the code in this book and class is in R and covers most of the classical ML toolkit but doesn't cover deep learning.
+
+- [Fast.ai](https://course.fast.ai/) by Jeremy Howard and Rachel Thomas. This course provides an accessible but extremely effective introduction to deep learning, the most popular branch of modern machine learning. The course is hands-on and immensely practical, but each lesson will equip you with the tools to build a very effective model for some new branch of ML (computer vision, NLP, etc.). The course is taught in Python using Pytorch and their own library.
+
+Once you make your way through ISL and fast.ai, you will have a solid handle on all the most commonly used techniques in ML (classic and cutting edge). You will have a decent intuition for which methods can work when, and an ability to at least understand and modify code for ML analysis in both R and Python. From there, you should be prepared to jump at greater depth into any subarea of the field that you fancy.
+
+Depending on background and bandwidth, a motivated student could probably work through the above material in 1-4 months. Go get 'em! :)
 
 
 ### <a name="CS"></a> Computer Science
