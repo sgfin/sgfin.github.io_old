@@ -55,7 +55,7 @@ If you stumble upon this list and have suggestions for me to add, feel free to r
 
 ### <a name="Start"></a> Where should I start (in ML)?
 
-If you're a relative newcomer and looking to get started in machine learning, I would proceed in the following order:
+If you're here looking for a general introduction to machine learning, I would proceed in the following order:
 
 - [Introduction to Statistical Learning](http://faculty.marshall.usc.edu/gareth-james/ISL/) by James, Witten, Hastie, and Tibshirani. This textbook is a fantastic introduction to the field, written by some of its leading experts. It is short and well-written enough to be read cover-to-cover, high-level enough to be accessible to people from various backgrounds, yet rigorous in the sense that it teaches you to think about the problems rather than just giving you a cookbook.  The textbook is free as a PDF at the book website, and the authors have also provided a collection of excellent videos that accompany the text on Youtube (the videos are nicely organized into a collection [here](https://www.r-bloggers.com/in-depth-introduction-to-machine-learning-in-15-hours-of-expert-videos/)). Note that this textbook also has a "big sister", the classic [Elements of Statistical Learning](https://web.stanford.edu/~hastie/ElemStatLearn/), which covers the same content at much more mathematical depth. However, I would start with ISL and then move to ESL from there as your interest directs.  Note that the code in this book and class is in R and covers most of the classical ML toolkit but doesn't cover deep learning.
 
