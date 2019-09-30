@@ -46,7 +46,7 @@ table a:link, table a:visited, table a:active{
 
 - [_Reinforcement Learning_](#RL)
 
-- [_ML for Biology and Medicine_](#bio)
+- [Applications in Biology and Medicine_](#bio)
 
 - [_Favorite Websites_](#misc)
 
@@ -279,13 +279,13 @@ Depending on background and bandwidth, a motivated student could probably work t
 |[Weng's A (Long) Peek into RL](https://lilianweng.github.io/lil-log/2018/02/19/a-long-peek-into-reinforcement-learning.html)| A nice blog post covering the foundations of reinforcement learning|
 |[OpenAI's Intro to RL](https://spinningup.openai.com/en/latest/spinningup/rl_intro.html)| The introductory tutorial for OpenAIs new ["Spinning Up in Deep RL" website](https://blog.openai.com/spinning-up-in-deep-rl/) |
 
-### <a name="bio"></a> Machine Learning for Biology and Medicine
+### <a name="bio"></a> Applications in Biology and Medicine
 
 | File | Description   |
 | :-----------: |:-------------:|
 | [Medical ML Datasets github](https://github.com/beamandrew/medical-data) | Github repo of a bunch of medical ML datasets, compiled by Andrew Beam. |
 |[ML for protein design github](https://github.com/yangkky/Machine-learning-for-proteins)| Nice github repo put together by Kevin Yang, covering a bunch of ground in the ML for proteins space.|
-
+|[Best Practices in Single-Cell RNA-Seq Tutorial](https://www.embopress.org/doi/10.15252/msb.20188746)| Excelllent tutorial on single-cell RNA-seq, walking through current best practices at every stage of scRNA-seq analysis.|
 
 
 ### <a name="misc"></a> Miscellaneous websites
