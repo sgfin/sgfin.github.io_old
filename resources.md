@@ -245,8 +245,9 @@ Depending on background and bandwidth, a motivated student could probably work t
 
 | File | Description   |
 | :-----------: |:-------------:|
+| [Fast.ai Intro to NLP](https://www.fast.ai/2019/07/08/fastai-nlp/) | Code-first intro to NLP from the excellent folks at fast.ai. |
 |  [CS224W Deep Learning for NLP 2017](/files/notes/cs224n-2017-merged.pdf)  |  Fantastic course notes on Deep Learning for NLP from Stanford's [CS224](http://web.stanford.edu/class/cs224n/). Updated noteset appears to live [here](https://web.stanford.edu/class/cs224n/readings/). |
-|  [CMU CS 11-747](http://www.phontron.com/class/nn4nlp2018/schedule.html)  |  Fantastic course on Deep Learning for NLP from CMU's Graham Neubig. Really great lecture videos on Youtube [here](https://www.youtube.com/playlist?list=PLbdKUKMAnh9Qqs5uwEBDfRb_L3YaLbRKq) |
+|  [CMU CS 11-747 Deep Learning for NLP](http://www.phontron.com/class/nn4nlp2018/schedule.html)  |  Fantastic course on Deep Learning for NLP from CMU's Graham Neubig. Really great lecture videos on Youtube [here](https://www.youtube.com/playlist?list=PLbdKUKMAnh9Qqs5uwEBDfRb_L3YaLbRKq) |
 |  [CS224U Natural Language Understanding 2019](/http://web.stanford.edu/class/cs224u/)  |  Another DL+NLP course at Stanford.  Also has accompanying [Youtube videos](https://www.youtube.com/watch?v=tZ_Jrc_nRJY&list=PLoROMvodv4rObpMCir6rNNUlFAn56Js20) and a [Github repo](https://github.com/cgpotts/cs224u/) |
 
 #### Special Topics and Blog Posts
