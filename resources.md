@@ -130,6 +130,8 @@ Depending on background and bandwidth, a motivated student could probably work t
 |  [Modern Statistics for Modern Biology](https://www-huber.embl.de/msmb/)  |  This online textbook is from Susan Holmes and Wolfgang Huber, and provides a nice and accessible intro to the parts of modern data science revelant to computational biologists.  It also happens to be a piece of typographic *art*, created with [bookdown](https://bookdown.org/yihui/bookdown/).  |
 |  [Statistical Rethinking](https://xcelab.net/rm/statistical-rethinking/)  |  Lecture Videos on [youtube](https://www.youtube.com/playlist?list=PLDcUM9US4XdM9_N6XUUFrhghGJ4K25bFc) accompany this fantastic introductory textbook. |
 | [Seeing Theory Frequentist Inference](https://seeing-theory.brown.edu/frequentist-inference/index.html) | This is a really beautiful visual presentation of the basic ideas of frequentist inference, from the Seeing Theory textbook.  I love it.|
+| [Estadística Multivariada](https://est-mult.netlify.com) | Beautiful note set on multivariate stats from María Teresa Ortiz and Felipe González. Covers bayesian networks, gaussian models, missing data, latent variable models, and baysian methods.|
+| [Estadística Computacional](https://tereom.github.io/est-computacional-2019/) | Beautiful note set on computational stats from María Teresa Ortiz. Covers basic probability, simulation, visualization, inference, and some basic bayesian methods.|
 
 
 ### <a name="causal"></a> Causal Inference
