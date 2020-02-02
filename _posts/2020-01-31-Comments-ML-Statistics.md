@@ -1,7 +1,7 @@
 ---
 layout: post
 comments: false
-include: false
+include: true
 title:  'Comments on ML "versus" statistics'
 excerpt: ""
 date:   2020-01-31 10:00:00
@@ -19,7 +19,7 @@ As time goes on, I might even write a bot to post this on relevant twitter threa
 **Outline**
 - [Neglected historical context: The term "machine learning" was not coined to contrast with statistics, but to contrast the field with competing paradigms for building intelligent computer systems.](#Sect1)
 - [Arguments about who "owns" regression miss the point](#Sect2)
-- [Distinctions in goals have yielded divergence in methods and cultures, which explains shifting connotations of the term "machine learning"](#Sect3)
+- [Distinctions in goals have yielded a divergence in methods and cultures, which explains shifting connotations of the term "machine learning."](#Sect3)
 - [Isn't this whole "debate" a massive waste of time?](#Sect4)
 
 
@@ -73,7 +73,7 @@ In my opinion, the careers of Trevor Hastie and Rob Tibshirani highlight the bes
 All the above being said, I do appreciate that perfectly reasonable people have come to think of ML as a disjoint set of _methods_ from statistics. The following sections elaborate on why I think this has happened, and what I think this means as a takeaway for the overall discussion.
 
 
-### <a name="Sect3"></a> Distinctions in goals have yielded a divergence in methods and cultures, which explains shifting connotations of the term "machine learning."  Thus many "debates" are doomed to futility before they begin.
+### <a name="Sect3"></a> Distinctions in goals have yielded a divergence in methods and cultures, which explains shifting connotations of the term "machine learning."  Disconnects in language doom many "debates" to futility before they begin.
 
 As stated above, the field of machine learning research was founded as computer scientists sought to build and understand intelligent computer systems, and this continues to be the case today. Major ML applications include things like speech recognition, computer vision, robotics/autonomous systems, computational advertising (sigh...), surveillance (sigh...), chat-bots (sigh...), etc. In seeking to solve these problems, machine learning researchers will almost _always_ start by first trying classical statistical methods, including the relevant simple GLM (in fact, this is often considered a mandatory baseline for publication in many applied ML areas). Hence my whole discussion about ML not being predicated on a specific method. _However_, computer scientists have, of course, also significantly added to this toolkit over the years through the development of additional methods.
 
