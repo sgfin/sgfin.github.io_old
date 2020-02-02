@@ -16,7 +16,7 @@ I have allowed myself to get pulled down this rabbit hole far too many times, wa
 
 As time goes on, I might even write a bot to post this on relevant twitter threads. If I do, I will _intentionally_ code this bot using logistic regression and call it machine learning, just to maximize peskiness.
 
-**TOC**
+**Outline**
 - [Neglected historical context: The term "machine learning" was not coined to contrast with statistics, but to contrast the field with competing paradigms for building intelligent computer systems.](#Sect1)
 - [Arguments about who "owns" regression miss the point](#Sect2)
 - [Distinctions in goals have yielded divergence in methods and cultures, which explains shifting connotations of the term "machine learning"](#Sect3)
