@@ -30,7 +30,7 @@ Before getting to Machine Learning (ML), a couple paragraphs on Artificial Intel
 
 Engineers have dreamed of building something "smart" for thousands of years, but the term "artificial intelligence" itself was coined by John McCarthy in preparation for the famous "Dartmouth Conference" of 1956. McCarthy defined artificial intelligence as "the science and engineering of making intelligent machines," and that's not too bad for a pithy one-liner. Importantly for this discussion, McCarthy was able to convince his colleagues to adopt this term at Dartmouth in large part because it was _vague_.  At that point in time, computer scientists who were trying to crack intelligence were focused _not_ on data-driven methods, but on things like automata theory, formal logic, and cybernetics. McCarthy wanted to create a term that would capture all of these paradigms (and other ones yet to come) rather than favoring any specific approach.
 
-It was with _this_ context that Arthur Samuel (one of the attendees at the Dartmouth Conference) coined the term "Machine Learning" in 1959, which he defined as:
+It was with this context that Arthur Samuel (one of the attendees at the Dartmouth Conference) coined the term "Machine Learning" in 1959, which he defined as:
 
 > Field of study that gives computers the ability to learn without being explicitly programmed.
 
