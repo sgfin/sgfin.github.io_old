@@ -10,7 +10,7 @@ mathjax: false
 
 **Why am I writing this?**
 
-Over the last few years, I've observed many vigorous debates that, at their crux, boil down to a dispute about "machine learning versus statistics." Often, these are sparked by some paper/blog post/press release that either (a) involves some use of logistic regression (or some other type of GLM) being described as machine learning, or (b) performs a meta-analysis attempting to pit the fields against each other.
+Over the last few years, I've observed many vigorous debates about "machine learning versus statistics." Often, these are sparked by some paper/blog post/press release that either (a) involves some use of logistic regression (or some other type of GLM) being described as machine learning, or (b) performs a meta-analysis attempting to pit the fields against each other.
 
 I have allowed myself to get pulled down this rabbit hole far too many times, wasting hours of my time in fruitless debate. As such, I have decided to write this post as a way to inoculate myself against the urge to enter future discussions. The first two sections explain why I consider most ML "versus" Stats debates to be fundamentally flawed, even in their very premise. The following two sections explain why I _do_ validate where people are coming from in having these debates, but still think they (the debates!) are a colossal waste of time.
 
