@@ -70,8 +70,6 @@ The great irony with the whole recurring snafoo around who "owns" regression -- 
 
 In my opinion, the careers of Trevor Hastie and Rob Tibshirani highlight the best of what happens when statisticians interact richly with machine learning researchers. Rather than getting caught up in drawing methodological border lines, they have taken tools developed first by machine learning researchers and helped formally situate them _within_ the world of statistics proper. In this light, I enjoy their frequent use of the term "statistical learning" (as in the title of their textbook), which I think nicely emphasizes the fact that their _goals_ are those of statistics, even if many of the _methods_ in the book have been developed by and for people in ML. (I'll also point out, a bit immaturely, that I've never heard a machine learning researcher complain that Hastie and Tibshirani are trying to annex their methods by not using the phrase "machine learning" when describing neural networks, tree-based methods, etc. Nor have I heard complaints about who "owns" computational statistics, even though its very existence is built on 20th century CS.) Of course, all of the above is to say nothing of the new methods Hastie and Tibs have generated themselves, which have impacted the daily work of both statisticians and machine learning researchers.
 
-** Transition to phase two of these post... **
-
 All the above being said, I do appreciate that perfectly reasonable people have come to think of ML as a disjoint set of _methods_ from statistics. The following sections elaborate on why I think this has happened, and what I think this means as a takeaway for the overall discussion.
 
 
