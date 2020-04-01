@@ -1,0 +1,534 @@
+/* Default/layout
+===================================*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+html {
+  color: #212121;
+  background-color: #fdfdfd;
+}
+
+.hidden {
+  display: none;
+}
+
+#wrapper {
+  display: block;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 2000px;
+  min-height: 34em;
+}
+
+/* Checkboxes
+===================================*/
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Top Bar
+===================================*/
+#top-bar {
+  background-color: #00bcd4;
+  margin-top: -1.5em;
+  color: #212121;
+}
+#top-bar h3 {
+  padding-top: .1em;
+  font-weight: 500;
+  text-align: center;
+}
+#top-bar h5 {
+  color: white;
+  background-color: #00acc1;
+  text-align: center;
+  margin-top: -1.3em;
+  padding-bottom: .2em;
+}
+
+#css-switch {
+  position: absolute;
+  font-weight: 700;
+  margin-left: 90%;
+  margin-top: -2.6em;
+}
+#css-switch a {
+  color: #00695c;
+}
+#css-switch a:hover {
+  color: #00897b;
+}
+
+/* Main app
+====================================*/
+#app-wrapper {
+  border: 5px solid #212121;
+  display: block;
+  left: 0;
+  right: 0;
+  height: 26.6em;
+  background-color: white;
+  text-align: center;
+}
+
+#button-wrapper {
+  display: block;
+  left: 0;
+  right: 0;
+  margin-top: 3em;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+#timer {
+  padding: 0;
+  margin: 0;
+}
+
+#current-timer {
+  height: 25.85em;
+  margin-left: -.8em;
+  background-color: #ef9a9a;
+}
+#current-timer h3 {
+  font-weight: 500;
+  color: #424242;
+  margin-top: .2em;
+  margin-bottom: .3em;
+}
+
+.time-left-numbers {
+  font-weight: 600;
+  font-size: 5em;
+  color: #212121;
+}
+
+#round {
+  height: 25.85em;
+}
+#round h4 {
+  font-weight: 500;
+  color: #424242;
+}
+
+#round-numbers {
+  margin-top: 1em;
+  font-weight: 600;
+  font-size: 2.5em;
+  color: #00acc1;
+}
+
+#options {
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.option-input {
+  height: 5em;
+  box-sizing: border-box;
+  width: 105.1%;
+}
+.option-input p {
+  display: inline-block;
+  margin-left: .8em;
+  margin-right: .8em;
+  width: 4.2em;
+}
+
+.adjust {
+  position: absolute;
+  margin-top: .6em;
+  margin-left: -.5em;
+  color: #f57c00;
+  -webkit-user-select: none;
+  /* Chrome/Safari */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* IE10+ */
+  user-select: none;
+}
+.adjust:hover {
+  cursor: pointer;
+  color: #212121;
+}
+
+/* Footer
+====================================*/
+footer {
+  background-color: #00bcd4;
+  color: white;
+}
+
+.fa {
+  color: #ff9800;
+  font-size: 2em;
+  display: inline;
+  margin-left: .5em;
+}
+.fa:hover {
+  color: #f57c00;
+}
+
+#lower-footer {
+  background-color: #00acc1;
+  height: 4em;
+}
+#lower-footer p {
+  display: inline;
+  font-size: 1.2em;
+  margin-left: 2em;
+  color: #212121;
+}
+#lower-footer p > a {
+  color: #ff9800;
+  font-weight: 600;
+  margin-left: .3em;
+}
+#lower-footer p > a:hover {
+  color: #f57c00;
+}
+
+#about-tabata {
+  max-width: 38em;
+  margin-left: 3em;
+}
+
+#about-developer {
+  max-width: 38em;
+  float: right;
+  padding-right: 1em;
+}
+
+/* Media Queries
+====================================*/
+@media screen and (min-width: 1600px) {
+  #about-tabata {
+    margin-left: 11em;
+  }
+
+  #about-developer {
+    max-width: 38em;
+    padding-right: 1em;
+    margin-right: 7em;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .option-input {
+    width: 107%;
+  }
+}
+@media screen and (max-width: 1215px) {
+  .adjust-minus {
+    margin-left: -.4em;
+  }
+
+  .adjust-plus {
+    margin-left: -.8em;
+  }
+
+  .option-input p {
+    margin-left: .2em;
+    margin-right: .6em;
+  }
+
+  #about-tabata {
+    max-width: 32em;
+    margin-left: 3em;
+  }
+
+  #about-developer {
+    max-width: 32em;
+    float: right;
+    padding-right: 1em;
+  }
+}
+@media screen and (max-width: 992px) {
+  .adjust-minus {
+    margin-left: -.2em;
+  }
+
+  .adjust-plus {
+    margin-left: -.7em;
+  }
+
+  .option-input p {
+    margin-left: .8em;
+    margin-right: .8em;
+  }
+
+  #about-tabata {
+    width: 30em;
+    margin-left: 2em;
+  }
+}
+@media screen and (max-width: 915px) {
+  #about-tabata {
+    max-width: 27em;
+    margin-left: 2em;
+  }
+
+  #about-developer {
+    max-width: 27em;
+    float: right;
+    padding-right: 1em;
+  }
+}
+@media screen and (max-width: 840px) {
+  .adjust-minus {
+    margin-left: -.6em;
+  }
+
+  .adjust-plus {
+    margin-left: -1.1em;
+  }
+
+  .option-input p {
+    margin-left: 0em;
+    margin-right: 1.2em;
+  }
+
+  #about-tabata {
+    max-width: 25em;
+    margin-left: 1em;
+  }
+
+  #about-developer {
+    max-width: 25em;
+    float: right;
+    padding-right: .5em;
+  }
+
+  #css-switch {
+    margin-left: 80%;
+  }
+}
+@media screen and (max-width: 765px) {
+  .option-input p {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: .5em;
+    margin-bottom: -.2em;
+  }
+
+  .adjust-minus {
+    margin-left: -1.9em;
+    margin-top: .2em;
+  }
+
+  .adjust-plus {
+    margin-left: 1em;
+    margin-top: -.8em;
+  }
+}
+@media screen and (max-width: 747px) {
+  #about-tabata {
+    width: 23em;
+    margin-left: .4em;
+  }
+
+  #about-developer {
+    width: 23em;
+    padding-right: .5em;
+  }
+}
+@media screen and (max-width: 670px) {
+  #about-tabata {
+    width: 20em;
+    margin-left: .2em;
+  }
+
+  #about-developer {
+    width: 20em;
+    padding-right: .2em;
+  }
+}
+@media screen and (max-width: 600px) {
+
+  footer {
+    margin-top: 24em;
+  }
+
+  .column {
+    width: 60%;
+  }
+
+  #current-timer {
+    height: 25.15em;
+  }
+  #current-timer h3 {
+    margin-top: 0em;
+    margin-bottom: -.5em;
+  }
+
+  #app-wrapper {
+    display: block;
+    left: 0;
+    right: 0;
+    height: 25.85em;
+    background-color: white;
+    margin-bottom: 20em;
+  }
+
+  #round {
+    height: 25em;
+  }
+  #round h4 {
+    margin-top: .2em;
+    margin-bottom: -.6em;
+  }
+
+  #options {
+    border: 5px solid #212121;
+  }
+
+  .option-input {
+    width: 100%;
+    height: 4.5em;
+  }
+  .option-input p {
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    width: auto;
+    margin-top: .3em;
+    margin-bottom: -.1em;
+  }
+
+  .switch {
+    height: 4.5em;
+    font-weight: 500;
+  }
+  .switch p {
+    margin-top: .2em;
+  }
+
+  .adjust-minus {
+    margin-left: -2.5em;
+  }
+
+  .adjust-plus {
+    margin-left: .9em;
+  }
+
+  #about-tabata,
+  #about-developer {
+    display: block;
+    left: 0;
+    right: 0;
+    position: relative;
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    float: none;
+  }
+  #about-tabata h4,
+  #about-developer h4 {
+    padding-top: .5em;
+    margin-bottom: -1em;
+  }
+
+  #top-bar h5 {
+    font-size: 1.3em;
+    padding-left: .3em;
+    padding-right: .3em;
+  }
+}
+@media screen and (max-width: 500px) {
+  #round h4 {
+    margin-top: .6em;
+    font-size: 1.8em;
+    margin-bottom: .5em;
+  }
+
+  #round-numbers {
+    font-size: 2.5em;
+  }
+
+  #current-timer h3 {
+    margin-top: .1em;
+    margin-bottom: -.2em;
+  }
+
+  .time-left-numbers {
+    font-size: 3.5em;
+  }
+
+  #lower-footer {
+    height: 4em;
+  }
+  #lower-footer p {
+    font-size: 1em;
+    margin-left: .7em;
+  }
+  #lower-footer p > a {
+    font-weight: 600;
+    margin-left: .3em;
+  }
+
+  #css-switch {
+    margin-left: 79%;
+  }
+
+  #top-bar h3 {
+    padding-top: .5em;
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 410px) {
+  #about-tabata,
+  #about-developer {
+    width: 22em;
+    padding-left: .3em;
+    padding-right: .3em;
+  }
+
+  #lower-footer {
+    height: 6em;
+  }
+  #lower-footer p {
+    font-size: 1em;
+    margin-left: .7em;
+    display: block;
+  }
+  #lower-footer p > a {
+    font-weight: 600;
+    margin-left: .3em;
+  }
+
+  #css-switch {
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: -1em;
+  }
+}
+@media screen and (max-width: 370px) {
+  #round h4 {
+    font-size: 1.6em;
+    margin-bottom: .5em;
+  }
+}
+@media screen and (max-width: 350px) {
+  #about-tabata,
+  #about-developer {
+    width: 18em;
+  }
+}

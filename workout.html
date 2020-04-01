@@ -1,0 +1,178 @@
+---
+layout: page
+title: Workout Generator
+permalink: /workout-generator/
+---
+
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <title>Workout</title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script><link rel="stylesheet" href="./assets/workout_applet/workout.css">
+    </head>
+    <!-- partial:index.partial.html -->
+    <body ng-app="tabataApp">
+        <div id="wrapper" ng-controller="tabataAppCtrl">
+            <!--Title bar
+            <div id="top-bar">
+                <h3>Interval Timer</h3>
+            </div>
+            End title bar-->
+            <!--Timer control buttons-->
+
+            <div id="button-wrapper">
+                <a class="waves-effect waves-light btn orange darken-2" id="start-button" ng-click="startClock()"><i class="material-icons left">alarm_on</i>Start</a>
+                <a class="waves-effect waves-light btn pink orange darken-2 hidden" id="pause-button" ng-click="pauseClock()"><i class="material-icons left">pause</i>Pause</a>
+                <a class="waves-effect waves-light btn orange" ng-click="clear()"><i class="material-icons left">stop</i>Clear</a>
+            </div>
+            <!--End timer control buttons-->
+            <div class="row">
+                <div class="col s12 m10 offset-m1 l8 offset-l2 z-depth-2" id="app-wrapper">
+                    <!--Clock-->
+                    <div class="col s12 m9 l9" id="timer">
+                        <div class="row">
+                            <div class="col s9 m8 l8" id="current-timer">
+                                <div id="time-left" class="hidden">
+                                    <h3>{{current_round[0]}}</h3>
+                                    <br><span class="time-left-numbers" ng-cloak>{{timerTimes.workTime}}</span>
+                                </div>
+                                <div id="break-left">
+                                    <h3>Transition</h3>
+                                    <span class="time-left-numbers" ng-cloak>{{timerTimes.breakTime}}</span>
+                                    <h3>Up Next: {{current_round[0]}}</h3>
+                                </div>
+                            </div>
+                            <div class="col s3 m4 l4" id="round">
+                                <h4>Round</h4>
+                                <ul>
+                                    <li data-ng-repeat="exer in workout track by $index" >
+                                        <span ng-style="{'font-weight': (exer ==  current_round[0]) ? 'bold' : 'normal' }"> {{exer}} </span>
+                                    </li>
+                                </ul>
+                                <span id="round-numbers" ng-cloak>{{rounds.roundsLeft}}/{{rounds.totalRounds}}</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!--End clock-->
+                    <!--Options grid-->
+                    <div class="col s10 offset-s1 m3 l" id="options">
+                        <div class="switch">
+                            <p>Volume:<p>
+                            <label>
+                                Off
+                                <input type="checkbox" id="volume-switch" checked="true" >
+                                <span class="lever"></span>
+                                On
+                            </label>
+                        </div>
+                        <br>
+                        <div class="option-input">
+                            <p>Time on:</p>
+                            <i class="material-icons adjust adjust-minus" ng-click="changeTimeOn(optionTimes.timeOn, '-1')">remove</i>
+                            <p class="option-time" ng-cloak>{{optionTimes.timeOn}}</p>
+                            <i class="material-icons adjust adjust-plus" ng-click="changeTimeOn(optionTimes.timeOn, '+1')">add</i>
+                        </div>
+                        
+                        <div class="option-input">
+                            <p>Transition:</p>
+                            <i class="material-icons adjust adjust-minus" ng-click="changeTimeOff(optionTimes.timeOff, '-1')">remove</i>
+                            <p class="option-time" ng-cloak>{{optionTimes.timeOff}}</p>
+                            <i class="material-icons adjust adjust-plus" ng-click="changeTimeOff(optionTimes.timeOff, '+1')">add</i>
+                        </div>
+                        
+                        <div class="option-input">
+                            <p>Rounds:</p>
+                            <i class="material-icons adjust adjust-minus" ng-click="changeRounds(rounds.totalRounds, '-1')">remove</i>
+                            <p class="option-time" ng-cloak>{{rounds.totalRounds}}</p>
+                            <i class="material-icons adjust adjust-plus" ng-click="changeRounds(rounds.totalRounds, '+1')">add</i>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+            <div name="checkbox_columns" align="right">
+                <div id="button-wrapper">
+                    <a class="waves-effect waves-light btn orange" ng-click="generateWorkout()">Generate New Workout</a>
+                    <br> <br>
+                   <a class="waves-effect waves-light orange white-text btn-small z-depth-1" ng-click="checkAllBoxes()">Check All</a>
+                   &nbsp
+                   <a class="waves-effect waves-light orange white-text btn-small z-depth-1" ng-click="uncheckAllBoxes()">Uncheck All</a>
+                </div>
+
+                <div class="row">
+                    <div class="column">
+                        <h5 >Pull</h5>
+                        Sample:  <input type="number" min="0" max="5" name="Pull_n" value="1" style="width: 2em;">
+                        <div data-ng-repeat="exer in workouts.Pull" class="switch" align="right">
+                            {{exer}}
+                            <label>
+                                <input type="checkbox" checked="true" name="Pull_Exercises" exercise_name = {{exer}}>
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h5>Push</h5>
+                        Sample:  <input type="number" min="0" max="5" name="Push_n" value="1" style="width: 2em;">
+                        <div data-ng-repeat="exer in workouts.Push" class="switch" align="right">
+                            {{exer}}
+                            <label>
+                                <input type="checkbox" checked="true" name="Push_Exercises" exercise_name = {{exer}}>
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h5>Legs</h5>
+                        Sample:  <input type="number" min="0" max="5" name="Legs_n" value="2" style="width: 2em;">
+                        <div data-ng-repeat="exer in workouts.Legs" class="switch" align="right">
+                            {{exer}}
+                            <label>
+                                <input type="checkbox" checked="true" name="Legs_Exercises" exercise_name = {{exer}}>
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="column">
+                        <h5>Abs</h5>
+                        Sample:  <input type="number" min="0" max="5" name="Abs_n" value="1" style="width: 2em;">
+                        <div data-ng-repeat="exer in workouts.Abs" class="switch" align="right">
+                            {{exer}}
+                            <label>
+                                <input type="checkbox" checked="true" name="Abs_Exercises" exercise_name = {{exer}}>
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <h5>Misc.</h5>
+                        Sample:  <input type="number" min="0" max="5" name="Arms_n" value="1" style="width: 2em;">
+                        <div data-ng-repeat="exer in workouts.Arms" class="switch" align="right">
+                            {{exer}}
+                            <label>
+                                <input type="checkbox" checked="true" name="Arms_Exercises" exercise_name = {{exer}}>
+                                <span class="lever"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--End wrapper-->
+            <!-- partial -->
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+            <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js'></script><script  src="./assets/workout_applet/workout.js"></script>
+        </body>
+    </html>
