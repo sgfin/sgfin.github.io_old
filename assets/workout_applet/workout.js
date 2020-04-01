@@ -120,22 +120,22 @@ app.controller("tabataAppCtrl", ["$scope", function($scope) {
   function makeSound(currentSeconds) {
       if (currentSeconds >= 2) {
         if (currentSeconds == 46){
-            var endBeep = new buzz.sound("./assets/workout_applet/sound_effects/45.wav").play();
+            var endBeep = new buzz.sound("./workout_applet/sound_effects/45.wav").play();
         }
         else if (currentSeconds == 31){
-            var endBeep = new buzz.sound("./assets/workout_applet/sound_effects/30.wav").play();
+            var endBeep = new buzz.sound("./workout_applet/sound_effects/30.wav").play();
         }
         else if (currentSeconds == 21){
-            var endBeep = new buzz.sound("./assets/workout_applet/sound_effects/20.wav").play();
+            var endBeep = new buzz.sound("./workout_applet/sound_effects/20.wav").play();
         }
         else if (currentSeconds == 11){
-            var endBeep = new buzz.sound("./assets/workout_applet/sound_effects/10.wav").play();
+            var endBeep = new buzz.sound("./workout_applet/sound_effects/10.wav").play();
         }
         else if (currentSeconds == 6){
-            var endBeep = new buzz.sound("./assets/workout_applet/sound_effects/5.wav").play();
+            var endBeep = new buzz.sound("./workout_applet/sound_effects/5.wav").play();
         }
       } else {
-        var endBeep = new buzz.sound("./assets/workout_applet/sound_effects/tone.mp3").play();
+        var endBeep = new buzz.sound("./workout_applet/sound_effects/tone.mp3").play();
       }
    }
 
