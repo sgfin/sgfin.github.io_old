@@ -184,20 +184,37 @@ jQuery(function(){
     <h2 id="publications">Selected Research</h2>
     <div class="pub">
     <ul>
-<!--         <li>
-          <img src="./assets/small_mol_ge_coord/figure1.png" class="pub-image">
+        <li>
+          <img src="./assets/subgnn/subgnn_fig1.png" class="pub-image">
           <div class="pub-info">
-            <h3>Approaching Small Molecule Prioritization as a Cross-Modal Information Retrieval Task through Coordinated Representation Learning</h3>
-            <u>Samuel Finlayson</u>, Matthew McDermott, Alex Pickering, Scott Lipnick, William Yuan, Isaac Kohane <br>
-              <i>In Submission. 2019<br>
-              [<a class="showSingle", target="25">Abstract</a>]
-              [<a href="./assets/small_mol_ge_coord/finlayson_small_mol_ir.pdf">Paper</a>]
+            <h3>Subgraph Neural Networks</h3>
+            Emily Alsentzer*, <u>Samuel Finlayson*</u>, Michelle Li, Marinka Zitnik <br>
+              <i>In Submission, 2020<br>
+              <i>*Co-first, listed alphabetically<br>
+              [<a class="showSingle", target="27">Abstract</a>]
+              [<a href="">Paper</a>]
             </p>
-            <div id="div25" class="abstract">
-              Modeling the relationship between chemical structure and molecular activity is a key task in drug development and precision medicine. In this paper, we utilize a novel deep learning architecture to jointly train coordinated embeddings of chemical structure and transcriptional signatures. We then evaluate these embeddings' utility for small molecule prioritization on a new benchmark task. Our method outperforms a series of baselines on this task, but still struggles to generalize to entirely unseen chemical structures.
+            <div id="div27" class="abstract">
+              Deep learning methods for graphs achieve remarkable performance on many node-level and graph-level prediction tasks. However, despite the proliferation of the methods and their success, prevailing Graph Neural Networks (GNNs) neglect subgraphs, rendering subgraph prediction tasks challenging to tackle in many impactful applications. Further, subgraph prediction tasks present several unique challenges: subgraphs can have non-trivial internal topology, but also carry a notion of position and external connectivity information relative to the underlying graph in which they exist.
+              <br/>
+              Here, we introduce Sub-GNN, a subgraph neural network to learn disentangled subgraph representations. We propose a novel subgraph routing mechanism that propagates neural messages between the subgraph’s components and randomly sampled anchor patches from the underlying graph, yielding highly accurate subgraph representations. Sub-GNN specifies three channels, each designed to capture a distinct aspect of subgraph topology, and we provide empirical evidence that the channels encode their intended properties. We design a series of new synthetic and real-world subgraph datasets. Empirical results for subgraph classification on eight datasets show that Sub-GNN achieves considerable performance gains, outperforming strong baseline methods, including node-level and graph-level GNNs, by 12.4% over the strongest baseline. Sub-GNN performs well on challenging biomedical datasets when subgraphs have complex topology and even comprise multiple disconnected components.
             </div>
           </div>
-        </li> -->
+        </li>
+        <li>
+          <img src="./assets/small_mol_ge_coord/figure1.png" class="pub-image">
+          <div class="pub-info">
+            <h3>Cross-Modal Representation Alignment of Transcriptional Porfiles and Small Molecule Therapeutics</h3>
+            <u>Samuel Finlayson</u>, Matthew McDermott, Alex Pickering, Scott Lipnick, Isaac Kohane <br>
+              <i>In Submission, 2020<br>
+              [<a class="showSingle", target="26">Abstract</a>]
+              [<a href="">Paper</a>]
+            </p>
+            <div id="div26" class="abstract">
+              Modeling the relationship between chemical structure and molecular activity is a key goal in drug development and precision medicine. Many benchmark tasks have been proposed for molecular property prediction of specific biophysical/structural properties, but few efforts have sought to measure chemical representations' ability to simultaneously encode functional information of broad physiological relevance. In this work, we propose a new chemical modeling task inspired by connectivity mapping, a framework for modern drug development that leverages transcriptomics. More specifically, we seek chemical representations that can encode the full space of transcriptional changes induced by perturbation with a small molecule. We develop this task formally as multi-view alignment problem, and present a coordinated deep learning approach that jointly optimizes representations of both chemical structure and gene expression. We probe the changes in chemical representations that are induced by this training task, and benchmark our results against oracle models and principled baselines.
+            </div>
+          </div>
+        </li>
         <li>
         <img src="./assets/misc_paper_figures/cpt.png" class="pub-image">
         <div class="pub-info">

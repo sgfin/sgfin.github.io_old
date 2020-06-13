@@ -143,3 +143,29 @@ __Note__:  I have almost no notes in here, because the DAG section contains pret
 ### Chapter 10:  Random Variability
 
 Sorry, I'm skipping this section, because the key terms are all stats concepts and its mostly a pump-up chapter for the rest of the book.
+
+### Chapter 11: Why Model?
+
+| Concept | Definition or Notes| Page | 
+| :-----------: |:-------------:|
+| __Saturated Models__ | Models that do not impose restrctions on the data distribution. Generally, these are models whose number of parameters in a conditional mean model is equal to the number of means. For example, a linear model E[ y | x] ~ b0 + b1*x when the population is stratified into only two groups. These are _non-parametric models_. | II.143 |
+| __Non-parametric estimator__ | Estimators that produce estimates from the data without any a priori restrictions on the true function. When using the entire population rather than a sample, these yield the true value of the population parameter. | II.143 |
+
+### Chapter 12: 
+
+| Concept | Definition or Notes| Page | 
+| :-----------: |:-------------:|
+| __Stabilized Weights__ |   |  |
+| __Marginal Structure Model__ |   |  |
+
+
+
+To-do:
+| Concept | Formula | Code | Notes |
+| :-----------: |:-------------:|
+| __IP Weighting__ |   |  |
+| __Standardized IP Weighting__ |   |  |
+| __Marginal Structure model__ |   |  |
+
+DONT MISS THE DOUBLY ROBUST ESTIMATOR in TECHNICAL POINT 13.2
+
